@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://xviyat66ggib"]
+[gd_scene load_steps=3 format=3 uid="uid://bgvd0wq7h5cap"]
 
-[ext_resource type="Script" path="res://ButtonJumpScene.gd" id="1_w1de6"]
-[ext_resource type="PackedScene" uid="uid://bgvd0wq7h5cap" path="res://Kalamar.tscn" id="2_d3ptg"]
+[ext_resource type="Script" path="res://ButtonJumpScene.gd" id="1_g8bcp"]
+[ext_resource type="PackedScene" uid="uid://bmxalgl1eohw0" path="res://end.tscn" id="2_5lh0x"]
 
-[node name="DEVizzent" type="Node2D"]
+[node name="Kalamar" type="Node2D"]
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 204.0
@@ -17,7 +17,7 @@ offset_left = 266.0
 offset_top = 71.0
 offset_right = 424.0
 offset_bottom = 97.0
-text = "DEVizzent en Escena"
+text = "Kalamar en Escena"
 
 [node name="ChangeSceneButton" type="Button" parent="Panel"]
 layout_mode = 0
@@ -26,5 +26,5 @@ offset_top = 175.0
 offset_right = 412.0
 offset_bottom = 206.0
 text = "Siguiente escena"
-script = ExtResource("1_w1de6")
-nextScene = ExtResource("2_d3ptg")
+script = ExtResource("1_g8bcp")
+nextScene = ExtResource("2_5lh0x")
