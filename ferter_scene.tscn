@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ulx5jddsh8ls"]
+
+[ext_resource type="Script" path="res://FerterScene.gd" id="1_trs6h"]
+[ext_resource type="PackedScene" uid="uid://bmxalgl1eohw0" path="res://end.tscn" id="2_hxahc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g766i"]
+bg_color = Color(0.996078, 0, 0.878431, 1)
+
+[node name="FerterScene" type="Node2D"]
+script = ExtResource("1_trs6h")
+next_scene = ExtResource("2_hxahc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.85098, 1, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 312.0
+offset_top = 222.0
+offset_right = 425.0
+offset_bottom = 261.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_g766i")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.58

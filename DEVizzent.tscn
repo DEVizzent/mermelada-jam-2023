@@ -28,10 +28,3 @@ offset_bottom = 206.0
 text = "Siguiente escena"
 script = ExtResource("1_w1de6")
 nextScene = ExtResource("2_d3ptg")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 259.0
-offset_top = 263.0
-offset_right = 299.0
-offset_bottom = 286.0
-text = "ferterTest"
