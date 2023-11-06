@@ -1,6 +1,6 @@
 # mermelada-jam-2023
 Repositorio para desarrollar un juego en la Mermelada Jam 2023
-
+[https://itch.io/jam/mermelada-jam](https://itch.io/jam/mermelada-jam)
 ## Requisitos:
 Para poder interactuar con el repositorio necetitas:
 	- Tener git instalado
