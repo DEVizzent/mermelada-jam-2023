@@ -57,6 +57,7 @@ sources/0 = SubResource("TileSetAtlasSource_dhia0")
 
 [node name="Level1" type="Node2D" groups=["level"]]
 script = ExtResource("1_jfv7o")
+word = "hola"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4siov")
