@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://61rh154cdswe"]
+
+[ext_resource type="Script" path="res://StarsRain/StarsRain.gd" id="1_0qet5"]
+
+[node name="StarsRain" type="Node"]
+script = ExtResource("1_0qet5")
