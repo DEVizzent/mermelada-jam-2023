@@ -1,23 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddferw3gjbr1d"]
+[gd_scene load_steps=7 format=3 uid="uid://ddferw3gjbr1d"]
 
-[ext_resource type="Texture2D" uid="uid://hbsfvyn0oyrv" path="res://StarsRain/EstrellaFugaz/estrella_particula.png" id="1_a0ua0"]
+[ext_resource type="Texture2D" uid="uid://8ht2c2msm0mi" path="res://StarsRain/EstrellaFugaz/estrella_difuminada.png" id="1_dx5qt"]
+
+[sub_resource type="Gradient" id="Gradient_hsb6h"]
+offsets = PackedFloat32Array(0, 0.832787)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_11dcb"]
+gradient = SubResource("Gradient_hsb6h")
+
+[sub_resource type="Curve" id="Curve_8aqxu"]
+_data = [Vector2(0, 0.337079), 0.0, -0.722311, 0, 1, Vector2(0.466667, 0), 0.0, 0.0, 0, 0, Vector2(0.506061, 0), 0.0, 0.0, 1, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_1tgiu"]
+curve = SubResource("Curve_8aqxu")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sevpu"]
-lifetime_randomness = 1.0
 particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
 spread = 0.0
 gravity = Vector3(0, 0, 0)
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
-angle_max = 15.2
-scale_min = 0.5
+scale_curve = SubResource("CurveTexture_1tgiu")
+color_ramp = SubResource("GradientTexture1D_11dcb")
 
 [node name="GPUParticles2D" type="GPUParticles2D"]
-emitting = false
-amount = 500
+amount = 450
 process_material = SubResource("ParticleProcessMaterial_sevpu")
-texture = ExtResource("1_a0ua0")
-lifetime = 0.4
-randomness = 0.08
-interpolate = false
-fract_delta = false
+texture = ExtResource("1_dx5qt")
+fixed_fps = 60

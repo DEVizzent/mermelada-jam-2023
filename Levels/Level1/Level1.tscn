@@ -79,4 +79,4 @@ position = Vector2(1522, -44)
 position = Vector2(2, -65)
 
 [node name="RainEnviromentParticles" parent="." instance=ExtResource("7_iq0n7")]
-position = Vector2(6, -194)
+position = Vector2(0, -302)
