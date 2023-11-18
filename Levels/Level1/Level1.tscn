@@ -66,10 +66,10 @@ layer_0/tile_data = PackedInt32Array(589822, 65536, 0, 655358, 65536, 1, 589823,
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("2_y3ktd")]
 
-[node name="StarsRain" parent="." node_paths=PackedStringArray("positionReference") instance=ExtResource("3_4b7tw")]
-positionReference = NodePath("../Player")
-levelLongitude = 1500
+[node name="StarsRain" parent="." node_paths=PackedStringArray("player", "goal_area") instance=ExtResource("3_4b7tw")]
+player = NodePath("../Player")
 word = "PATATA"
+goal_area = NodePath("../LevelGoalArea")
 
 [node name="LevelGoalArea" parent="." instance=ExtResource("5_eqtli")]
 position = Vector2(1522, -44)
