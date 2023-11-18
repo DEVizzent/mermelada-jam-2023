@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://beasfbp8kes6f"]
+
+[ext_resource type="Theme" uid="uid://cqwidxi43kv5d" path="res://ButtonTheme/new_theme1.tres" id="1_wrx6j"]
+
+[node name="testbuttons" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 179.0
+offset_top = 126.0
+offset_right = 327.0
+offset_bottom = 158.0
+theme = ExtResource("1_wrx6j")
+text = "press me"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 462.0
+offset_top = 87.0
+offset_right = 626.0
+offset_bottom = 124.0
+theme = ExtResource("1_wrx6j")
+text = "press me"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 252.0
+offset_top = 62.0
+offset_right = 417.0
+offset_bottom = 93.0
+text = "hola"

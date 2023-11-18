@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cqwidxi43kv5d"]
+
+[ext_resource type="Texture2D" uid="uid://cue0dk3qsmqoy" path="res://ButtonTheme/kenneyPack/blue_button00.png" id="1_2j675"]
+[ext_resource type="Texture2D" uid="uid://cgclaxqhj7ab6" path="res://ButtonTheme/kenneyPack/blue_button02.png" id="1_jaywv"]
+[ext_resource type="Texture2D" uid="uid://u04rmlr3mb2j" path="res://ButtonTheme/kenneyPack/blue_button05.png" id="3_rewro"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ysfbt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_joyft"]
+texture = ExtResource("1_2j675")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l65sw"]
+texture = ExtResource("1_jaywv")
+modulate_color = Color(1, 1, 0.415686, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhevv"]
+texture = ExtResource("3_rewro")
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_ysfbt")
+Button/styles/hover = SubResource("StyleBoxTexture_joyft")
+Button/styles/normal = SubResource("StyleBoxTexture_l65sw")
+Button/styles/pressed = SubResource("StyleBoxTexture_hhevv")

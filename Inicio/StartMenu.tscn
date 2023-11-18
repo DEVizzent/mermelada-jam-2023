@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://xviyat66ggib"]
+[gd_scene load_steps=8 format=3 uid="uid://xviyat66ggib"]
 
 [ext_resource type="Script" path="res://Inicio/StartMenu.gd" id="1_keq2j"]
 [ext_resource type="Script" path="res://Inicio/ButtonJumpScene.gd" id="1_wqmyn"]
 [ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="2_4tn62"]
 [ext_resource type="PackedScene" uid="uid://ch4qu2cv74nik" path="res://Levels/Level1/Level1.tscn" id="2_26uak"]
 [ext_resource type="Texture2D" uid="uid://ccxvwsthy6mhk" path="res://Inicio/Background.png" id="2_mt6pw"]
+[ext_resource type="Theme" uid="uid://cqwidxi43kv5d" path="res://ButtonTheme/new_theme1.tres" id="4_0ips1"]
 [ext_resource type="AudioStream" uid="uid://c3b4wpj0lnnj1" path="res://Inicio/Menu.wav" id="5_qw5x1"]
 
 [node name="StartMenu" type="Node2D"]
@@ -38,19 +39,23 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(150, 28)
 layout_mode = 2
+theme = ExtResource("4_0ips1")
 text = "Start"
 script = ExtResource("1_wqmyn")
 nextScene = ExtResource("2_26uak")
 
 [node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
+theme = ExtResource("4_0ips1")
 text = "Settings"
 
 [node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(150, 28)
 layout_mode = 2
+theme = ExtResource("4_0ips1")
 text = "Exit Game"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
