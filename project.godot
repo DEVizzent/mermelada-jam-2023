@@ -15,6 +15,10 @@ run/main_scene="res://Inicio/StartMenu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 boot_splash/bg_color=Color(0.00392157, 0.109804, 0.25098, 1)
 
+[autoload]
+
+EventBus="*res://Singletons/EventBusClass.gd"
+
 [input]
 
 ui_accept={
