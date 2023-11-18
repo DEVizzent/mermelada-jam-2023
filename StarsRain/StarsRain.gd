@@ -1,13 +1,16 @@
 extends Node
 
 @export var player:CharacterBody2D
-@export var word:String
 @export var goal_area : Area2D
 @export var debug : bool = true
+
+var word
 var positionsToThrowStars:Array[int] = []
 var levelLongitude:int
 
 func _ready():
+	await get_parent().ready
+	word = get_parent().word
 	if debug:
 		print(self)
 	calc_level_longitude()
