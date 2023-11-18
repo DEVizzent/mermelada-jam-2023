@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://8l4e0feev8ra"]
+[gd_scene load_steps=5 format=3 uid="uid://8l4e0feev8ra"]
 
 [ext_resource type="Script" path="res://TypeWordAtEnd/type_word_at_end.gd" id="1_c8wdt"]
+[ext_resource type="Theme" uid="uid://cqwidxi43kv5d" path="res://ButtonTheme/new_theme1.tres" id="2_c31vg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qclgm"]
 line_spacing = 3.055
@@ -22,10 +23,10 @@ offset_bottom = 580.0
 color = Color(0.184314, 0.184314, 0.184314, 1)
 
 [node name="Label" type="Label" parent="TypeWordAtEnd"]
-offset_left = 115.0
-offset_top = 195.0
-offset_right = 1106.0
-offset_bottom = 342.0
+offset_left = 93.0
+offset_top = 186.0
+offset_right = 1075.0
+offset_bottom = 320.0
 text = "Has podido leer la palabra que han formado las estrellas fugaces...
 ...o has pestañeado y te las has perdido?"
 label_settings = SubResource("LabelSettings_qclgm")
@@ -37,6 +38,7 @@ offset_left = 530.0
 offset_top = 498.0
 offset_right = 651.0
 offset_bottom = 546.0
+theme = ExtResource("2_c31vg")
 text = "Aceptar"
 
 [node name="LineEdit" type="LineEdit" parent="TypeWordAtEnd"]
