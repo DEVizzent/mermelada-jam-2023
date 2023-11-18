@@ -26,14 +26,3 @@ func flip_sprite():
 	elif direction > 0:
 		animated_sprite.flip_h = false
 
-func _animate_movement()->void:
-	if velocity.x != 0 && is_on_floor():
-		$AnimatedSprite2D.play("run")
-	$AnimatedSprite2D.flip_h = Input.is_action_pressed("ui_left")
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = machine_state.current_state.jump_velocity
-		$AnimatedSprite2D.play("jump")
-	
-	if !Input.is_anything_pressed():
-		$AnimatedSprite2D.play("idle")
-
