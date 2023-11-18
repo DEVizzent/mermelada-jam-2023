@@ -10,6 +10,7 @@ func _ready():
 	init_timer()
 
 func init_timer():
+	actual_time = get_tree().get_first_node_in_group("level").time_to_complete
 	timer.wait_time = timer_tick
 	timer.timeout.connect(timer_timeout)
 	timer.start()

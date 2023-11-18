@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwsqgd4tix7bb"]
+
+[ext_resource type="PackedScene" uid="uid://bu8au1q5bnkqm" path="res://TimerCountdown/timer_countdown.tscn" id="1_3kcax"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kq768"]
+font_size = 20
+
+[node name="HeaderBar" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1284.0
+offset_bottom = 65.0
+color = Color(1, 1, 1, 0.168627)
+
+[node name="TimerCountdown" parent="." instance=ExtResource("1_3kcax")]
+position = Vector2(1130, 15)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 900.0
+offset_top = 22.0
+offset_right = 1099.0
+offset_bottom = 45.0
+text = "Time to push button:"
+label_settings = SubResource("LabelSettings_kq768")

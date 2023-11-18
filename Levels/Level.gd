@@ -4,6 +4,7 @@ extends Node2D
 @onready var type_word_scene = preload("res://TypeWordAtEnd/type_word_at_end.tscn")
 @export var con_lluvia : bool = true
 @export var word : String = "abracadabra"
+@export var time_to_complete : float = 24.5
 
 func _ready():
 	EventBus.levelCompleted.connect(_on_level_completed)

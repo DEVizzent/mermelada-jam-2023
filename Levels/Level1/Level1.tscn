@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://ch4qu2cv74nik"]
+[gd_scene load_steps=11 format=3 uid="uid://ch4qu2cv74nik"]
 
 [ext_resource type="Texture2D" uid="uid://d0j3qvm306j4r" path="res://Levels/TilemapBase.png" id="1_830um"]
 [ext_resource type="Script" path="res://Levels/Level.gd" id="1_jfv7o"]
+[ext_resource type="PackedScene" uid="uid://dwsqgd4tix7bb" path="res://HeaderLevelBar/header_bar.tscn" id="2_57w8f"]
 [ext_resource type="PackedScene" uid="uid://c71545ntm6a25" path="res://Player/Player.tscn" id="2_y3ktd"]
 [ext_resource type="PackedScene" uid="uid://61rh154cdswe" path="res://StarsRain/StarsRain.tscn" id="3_4b7tw"]
 [ext_resource type="PackedScene" uid="uid://hop855rd06b8" path="res://Levels/LevelGoalArea.tscn" id="5_eqtli"]
@@ -59,6 +60,8 @@ sources/0 = SubResource("TileSetAtlasSource_dhia0")
 [node name="Level1" type="Node2D" groups=["level"]]
 script = ExtResource("1_jfv7o")
 word = "ferter"
+
+[node name="HeaderBar" parent="." instance=ExtResource("2_57w8f")]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4siov")
