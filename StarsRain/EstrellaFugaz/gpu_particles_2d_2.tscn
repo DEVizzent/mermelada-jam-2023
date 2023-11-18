@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://drnpgr6u0plp"]
 
-[ext_resource type="Texture2D" uid="uid://dhvlyiax8heak" path="res://estrella_particula.png" id="1_k446e"]
+[ext_resource type="Texture2D" uid="uid://hbsfvyn0oyrv" path="res://StarsRain/EstrellaFugaz/estrella_particula.png" id="1_86drf"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kxhli"]
 lifetime_randomness = 0.13
@@ -16,7 +16,7 @@ scale_max = 2.5
 emitting = false
 amount = 3
 process_material = SubResource("ParticleProcessMaterial_kxhli")
-texture = ExtResource("1_k446e")
+texture = ExtResource("1_86drf")
 lifetime = 0.1
 one_shot = true
 explosiveness = 0.1

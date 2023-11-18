@@ -11,10 +11,13 @@ func _random_position_estrella():
 	var y = randi_range(0,spawnArea.shape.get_rect().size.y)
 	x = x - (spawnArea.shape.get_rect().size.x/2)
 	y = y - (spawnArea.shape.get_rect().size.y/2)
-	return Vector2(x,y)
+	return Vector2(x,y) + spawnArea.global_position
 	
 func spawn(letter:String):
 	var new_estrella = estrella.instantiate()
 	new_estrella.setText(letter)
 	new_estrella.posicion_inicial = _random_position_estrella()
-	add_child(new_estrella)
+	get_tree().get_first_node_in_group("level").add_child(new_estrella)
+
+func _process(delta):
+	position.x = get_tree().get_first_node_in_group("player").position.x
