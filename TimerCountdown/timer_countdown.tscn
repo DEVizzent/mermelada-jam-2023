@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu8au1q5bnkqm"]
+
+[ext_resource type="Script" path="res://TimerCountdown/timer_countdown.gd" id="1_3q67d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yrhe7"]
+font_size = 41
+
+[node name="TimerCountdown" type="Node2D"]
+script = ExtResource("1_3q67d")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "00:00"
+label_settings = SubResource("LabelSettings_yrhe7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
