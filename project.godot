@@ -13,8 +13,17 @@ config_version=5
 config/name="MermeladaJam"
 run/main_scene="res://Inicio/StartMenu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+boot_splash/bg_color=Color(0.00392157, 0.109804, 0.25098, 1)
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Dangers"
+2d_physics/layer_3="Others"
+2d_physics/layer_4="Floor"
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.00392157, 0.109804, 0.25098, 1)

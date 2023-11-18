@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://xviyat66ggib"]
+[gd_scene load_steps=3 format=3 uid="uid://xviyat66ggib"]
 
 [ext_resource type="Script" path="res://Inicio/ButtonJumpScene.gd" id="1_wqmyn"]
+[ext_resource type="PackedScene" uid="uid://ch4qu2cv74nik" path="res://Levels/Level1/Level1.tscn" id="2_26uak"]
 
 [node name="DEVizzent" type="Node2D"]
 
@@ -26,3 +27,4 @@ offset_right = 412.0
 offset_bottom = 206.0
 text = "Empezar"
 script = ExtResource("1_wqmyn")
+nextScene = ExtResource("2_26uak")

@@ -21,4 +21,3 @@ func _process(_delta)->void:
 	print("Activamos star")
 	print(positionsToThrowStars.size())
 	positionsToThrowStars.remove_at(0) 
-
