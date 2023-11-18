@@ -1,32 +1,61 @@
-[gd_scene load_steps=4 format=3 uid="uid://xviyat66ggib"]
+[gd_scene load_steps=5 format=3 uid="uid://xviyat66ggib"]
 
 [ext_resource type="Script" path="res://Inicio/StartMenu.gd" id="1_keq2j"]
 [ext_resource type="Script" path="res://Inicio/ButtonJumpScene.gd" id="1_wqmyn"]
+[ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="2_4tn62"]
 [ext_resource type="PackedScene" uid="uid://ch4qu2cv74nik" path="res://Levels/Level1/Level1.tscn" id="2_26uak"]
 
 [node name="StartMenu" type="Node2D"]
 script = ExtResource("1_keq2j")
 
+[node name="Settings" parent="." instance=ExtResource("2_4tn62")]
+
 [node name="Panel" type="Panel" parent="."]
-offset_left = 204.0
-offset_top = 140.0
-offset_right = 900.0
-offset_bottom = 467.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 219.0
+offset_top = 150.0
+offset_right = 915.0
+offset_bottom = 477.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 266.0
-offset_top = 71.0
-offset_right = 424.0
-offset_bottom = 97.0
-text = "Menu inicio"
+offset_right = 700.0
+offset_bottom = 300.0
 
-[node name="StartButton" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 274.0
-offset_top = 175.0
-offset_right = 412.0
-offset_bottom = 206.0
-text = "Empezar"
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Welcome"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="Panel/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Start"
 script = ExtResource("1_wqmyn")
 nextScene = ExtResource("2_26uak")
+
+[node name="SettingsButton" type="Button" parent="Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="Panel/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Exit Game"
+
+[connection signal="settingsClosed" from="Settings" to="." method="_on_settings_settings_closed"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/SettingsButton" to="Panel/CenterContainer/VBoxContainer/SettingsButton" method="_on_pressed"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
