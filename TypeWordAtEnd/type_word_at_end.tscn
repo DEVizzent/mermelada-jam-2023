@@ -1,53 +1,89 @@
-[gd_scene load_steps=5 format=3 uid="uid://8l4e0feev8ra"]
+[gd_scene load_steps=7 format=3 uid="uid://8l4e0feev8ra"]
 
 [ext_resource type="Script" path="res://TypeWordAtEnd/type_word_at_end.gd" id="1_c8wdt"]
 [ext_resource type="Theme" uid="uid://cqwidxi43kv5d" path="res://ButtonTheme/new_theme1.tres" id="2_c31vg"]
+[ext_resource type="Texture2D" uid="uid://ccxvwsthy6mhk" path="res://Inicio/Background.png" id="2_ltl4i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0866"]
+bg_color = Color(0, 0.968627, 0, 0.0901961)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaljn"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_qclgm"]
 line_spacing = 3.055
 font_size = 33
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaljn"]
-bg_color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
 [node name="TypeWordAtEnd" type="Node2D" parent="."]
 script = ExtResource("1_c8wdt")
 
-[node name="ColorRect" type="ColorRect" parent="TypeWordAtEnd"]
-offset_left = 90.0
-offset_top = 158.0
-offset_right = 1077.0
-offset_bottom = 580.0
-color = Color(0.184314, 0.184314, 0.184314, 1)
+[node name="Background" type="Sprite2D" parent="TypeWordAtEnd"]
+position = Vector2(641.5, 363.5)
+scale = Vector2(2.22743, 2.24383)
+texture = ExtResource("2_ltl4i")
 
-[node name="Label" type="Label" parent="TypeWordAtEnd"]
-offset_left = 93.0
-offset_top = 186.0
-offset_right = 1075.0
-offset_bottom = 320.0
+[node name="TextureRect" type="Panel" parent="TypeWordAtEnd"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 123.0
+offset_top = 117.0
+offset_right = 1174.0
+offset_bottom = 631.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e0866")
+
+[node name="LineEdit" type="LineEdit" parent="TypeWordAtEnd/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.5
+offset_top = 38.0
+offset_right = 120.5
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jaljn")
+placeholder_text = "escribe aquí..."
+
+[node name="Button" type="Button" parent="TypeWordAtEnd/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.5
+offset_top = 141.0
+offset_right = 55.5
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_c31vg")
+text = "Aceptar"
+
+[node name="Label" type="Label" parent="TypeWordAtEnd/TextureRect"]
+offset_left = 4.0
+offset_top = 69.0
+offset_right = 1046.0
+offset_bottom = 203.0
 text = "Has podido leer la palabra que han formado las estrellas fugaces...
 ...o has pestañeado y te las has perdido?"
 label_settings = SubResource("LabelSettings_qclgm")
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Button" type="Button" parent="TypeWordAtEnd"]
-offset_left = 530.0
-offset_top = 498.0
-offset_right = 651.0
-offset_bottom = 546.0
-theme = ExtResource("2_c31vg")
-text = "Aceptar"
-
-[node name="LineEdit" type="LineEdit" parent="TypeWordAtEnd"]
-offset_left = 445.0
-offset_top = 410.0
-offset_right = 736.0
-offset_bottom = 472.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_jaljn")
-placeholder_text = "escribe aquí..."
-
-[connection signal="pressed" from="TypeWordAtEnd/Button" to="TypeWordAtEnd" method="_on_button_pressed"]
-[connection signal="text_submitted" from="TypeWordAtEnd/LineEdit" to="TypeWordAtEnd" method="_on_line_edit_text_submitted"]
+[connection signal="text_submitted" from="TypeWordAtEnd/TextureRect/LineEdit" to="TypeWordAtEnd" method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="TypeWordAtEnd/TextureRect/Button" to="TypeWordAtEnd" method="_on_button_pressed"]

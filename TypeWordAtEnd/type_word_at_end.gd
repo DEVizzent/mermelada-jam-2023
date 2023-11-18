@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var line_text : LineEdit = $LineEdit
+@onready var line_text : LineEdit = $TextureRect/LineEdit
 
 func _ready():
 	line_text.grab_focus()
