@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bueyv6qwi0jrw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ppluw"]
+size = Vector2(855.75, 101)
+
+[node name="SpawnerEstrellas" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(588, 167)
+shape = SubResource("RectangleShape2D_ppluw")
+debug_color = Color(0.0784314, 0.811765, 0, 0.419608)

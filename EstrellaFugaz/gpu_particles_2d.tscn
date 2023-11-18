@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddferw3gjbr1d"]
+
+[ext_resource type="Texture2D" uid="uid://hbsfvyn0oyrv" path="res://EstrellaFugaz/estrella_particula.png" id="1_a0ua0"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sevpu"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+angle_max = 15.2
+scale_min = 0.5
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+emitting = false
+amount = 500
+process_material = SubResource("ParticleProcessMaterial_sevpu")
+texture = ExtResource("1_a0ua0")
+lifetime = 0.4
+randomness = 0.08
+interpolate = false
+fract_delta = false
