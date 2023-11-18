@@ -1,14 +1,14 @@
 extends Node
 
 @export var positionReference:Node2D
-@export var levelRange:Range
+@export var levelLongitude:int
 @export var word:String
 var positionsToThrowStars:Array[int] = []
 
 func _ready():
 	var rnd = RandomNumberGenerator.new()
 	for letter in word:
-		positionsToThrowStars.append(randf_range(levelRange.min_value, levelRange.max_value))
+		positionsToThrowStars.append(int(randf_range(100, levelLongitude)))
 	positionsToThrowStars.sort_custom(compare_int)
 
 func compare_int(a:int,b:int)->bool:
@@ -20,4 +20,6 @@ func _process(_delta)->void:
 	#TODO: Activar star y eliminar prints
 	print("Activamos star")
 	print(positionsToThrowStars.size())
-	positionsToThrowStars.remove_at(0) 
+	positionsToThrowStars.remove_at(0)
+	if positionsToThrowStars.size() == 0:
+		set_process(false)
