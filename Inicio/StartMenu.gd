@@ -1,10 +1,10 @@
 extends Node2D
 
 func _ready():
-	$Panel/CenterContainer/VBoxContainer/StartButton.grab_focus()
+	$CenterContainer/VBoxContainer/StartButton.grab_focus()
 
 func _on_settings_settings_closed():
-	$Panel/CenterContainer/VBoxContainer/SettingsButton.grab_focus()
+	$CenterContainer/VBoxContainer/SettingsButton.grab_focus()
 
 func _on_settings_button_pressed():
 	var menu_event = InputEventAction.new()
