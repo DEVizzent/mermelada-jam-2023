@@ -12,6 +12,5 @@ func _on_settings_button_pressed():
 	menu_event.pressed = true
 	Input.parse_input_event(menu_event)
 
-
 func _on_exit_button_pressed():
 	get_tree().quit()
