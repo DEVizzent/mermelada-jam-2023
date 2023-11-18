@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://hxij2mcb8i5o"]
+
+[ext_resource type="Script" path="res://StarsRain/EstrellaFugaz/Estrella.gd" id="1_cok3k"]
+[ext_resource type="PackedScene" uid="uid://ddferw3gjbr1d" path="res://StarsRain/EstrellaFugaz/gpu_particles_2d.tscn" id="2_2ycrl"]
+[ext_resource type="PackedScene" uid="uid://drnpgr6u0plp" path="res://StarsRain/EstrellaFugaz/gpu_particles_2d_2.tscn" id="3_aceib"]
+[ext_resource type="PackedScene" uid="uid://ch7evgggyreuk" path="res://StarsRain/EstrellaFugaz/animation_player.tscn" id="4_1lfpb"]
+[ext_resource type="Texture2D" uid="uid://hbsfvyn0oyrv" path="res://StarsRain/EstrellaFugaz/estrella_particula.png" id="4_bdpy7"]
+
+[node name="Estrella" type="Node2D"]
+script = ExtResource("1_cok3k")
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("2_2ycrl")]
+emitting = true
+
+[node name="GPUParticles2D2" parent="." instance=ExtResource("3_aceib")]
+texture = ExtResource("4_bdpy7")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -3.0
+offset_top = -15.0
+offset_right = 7.0
+offset_bottom = 11.0
+text = "a"
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("4_1lfpb")]

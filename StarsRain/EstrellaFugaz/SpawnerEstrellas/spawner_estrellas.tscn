@@ -1,11 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bueyv6qwi0jrw"]
+[gd_scene load_steps=3 format=3 uid="uid://bueyv6qwi0jrw"]
+
+[ext_resource type="Script" path="res://StarsRain/EstrellaFugaz/SpawnerEstrellas/spawnerEstrellas.gd" id="1_thfew"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppluw"]
-size = Vector2(855.75, 101)
+size = Vector2(855.75, 232.5)
 
 [node name="SpawnerEstrellas" type="Area2D"]
+script = ExtResource("1_thfew")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(588, 167)
+position = Vector2(0, -65.75)
 shape = SubResource("RectangleShape2D_ppluw")
 debug_color = Color(0.0784314, 0.811765, 0, 0.419608)

@@ -21,13 +21,16 @@ func _ready():
 	if !posicion_inicial:
 		posicion_inicial = Vector2(100,100)
 	position = posicion_inicial
-	direction = random_direction()
+	direction = _random_direction()
 	animation_player.play("life_time_estrella")
+
+func setText(letra:String)->void:
+	$Label.text = letra
 
 func _process(delta):
 	position += direction * delta
 
-func random_direction() -> Vector2:
+func _random_direction() -> Vector2:
 	var x = randi_range(velocity_x_min, velocity_x_max)
 	var y = randi_range(velocity_y_min, velocity_y_max)
 	

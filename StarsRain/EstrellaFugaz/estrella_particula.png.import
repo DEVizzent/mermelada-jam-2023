@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hbsfvyn0oyrv"
-path="res://.godot/imported/estrella_particula.png-c0a59184cff6578af135a5047e8c2c41.ctex"
+path="res://.godot/imported/estrella_particula.png-ee459236a78b768690a8e6c795275fc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EstrellaFugaz/estrella_particula.png"
-dest_files=["res://.godot/imported/estrella_particula.png-c0a59184cff6578af135a5047e8c2c41.ctex"]
+source_file="res://StarsRain/EstrellaFugaz/estrella_particula.png"
+dest_files=["res://.godot/imported/estrella_particula.png-ee459236a78b768690a8e6c795275fc0.ctex"]
 
 [params]
 

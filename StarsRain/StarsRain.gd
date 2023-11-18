@@ -17,9 +17,8 @@ func compare_int(a:int,b:int)->bool:
 func _process(_delta)->void:
 	if positionReference.global_position.x < positionsToThrowStars[0]:
 		return
-	#TODO: Activar star y eliminar prints
-	print("Activamos star")
-	print(positionsToThrowStars.size())
+	EventBus.emit_signal("showStar", word.left(1))
+	word = word.erase(0,1)
 	positionsToThrowStars.remove_at(0)
 	if positionsToThrowStars.size() == 0:
 		set_process(false)
