@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MermeladaJam"
-run/main_scene="res://Levels/Level1/Level1.tscn"
+run/main_scene="res://Inicio/StartMenu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 boot_splash/bg_color=Color(0.00392157, 0.109804, 0.25098, 1)
 

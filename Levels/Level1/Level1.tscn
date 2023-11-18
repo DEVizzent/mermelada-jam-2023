@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ch4qu2cv74nik"]
+[gd_scene load_steps=11 format=3 uid="uid://ch4qu2cv74nik"]
 
 [ext_resource type="Texture2D" uid="uid://d0j3qvm306j4r" path="res://Levels/TilemapBase.png" id="1_830um"]
 [ext_resource type="Script" path="res://Levels/Level.gd" id="1_jfv7o"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://hop855rd06b8" path="res://Levels/LevelGoalArea.tscn" id="5_eqtli"]
 [ext_resource type="PackedScene" uid="uid://bueyv6qwi0jrw" path="res://StarsRain/EstrellaFugaz/SpawnerEstrellas/spawner_estrellas.tscn" id="6_gjp6n"]
 [ext_resource type="PackedScene" uid="uid://6eolvn4p0iw7" path="res://RainEnviroment/rain_enviroment_particles.tscn" id="7_iq0n7"]
-[ext_resource type="PackedScene" uid="uid://bt0q7q5tfblkb" path="res://Levels/Parallax/ParallaxBackground.tscn" id="9_bex74"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dhia0"]
 texture = ExtResource("1_830um")
@@ -83,10 +82,4 @@ position = Vector2(1522, -44)
 position = Vector2(2, -65)
 
 [node name="RainEnviromentParticles" parent="." instance=ExtResource("7_iq0n7")]
-<<<<<<< Updated upstream
-position = Vector2(0, -302)
-
-[node name="ParallaxBackground" parent="." instance=ExtResource("9_bex74")]
-=======
-position = Vector2(39, -300)
->>>>>>> Stashed changes
+position = Vector2(-7, -303)
