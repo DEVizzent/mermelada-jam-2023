@@ -75,6 +75,7 @@ theme = ExtResource("2_c31vg")
 text = "Aceptar"
 
 [node name="Label" type="Label" parent="TypeWordAtEnd/TextureRect"]
+layout_mode = 0
 offset_left = 4.0
 offset_top = 69.0
 offset_right = 1046.0

@@ -1,23 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://6eolvn4p0iw7"]
 
-[ext_resource type="Texture2D" uid="uid://c6t1btlmqgq7c" path="res://RainEnviroment/gota.png" id="1_fqkr0"]
 [ext_resource type="Script" path="res://RainEnviroment/rain_enviroment_particles.gd" id="1_kikyi"]
+[ext_resource type="Texture2D" uid="uid://dn152i3ks080f" path="res://RainEnviroment/gota_ralla_1.png" id="2_gudgs"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tskj4"]
 emission_shape = 3
 emission_box_extents = Vector3(1152, 0, 1)
 particle_flag_disable_z = true
-gravity = Vector3(0, 70, 0)
+direction = Vector3(1, 1, 0)
+gravity = Vector3(-150, 750, 0)
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
-scale_min = 0.2
-scale_max = 0.5
+angle_min = -12.0
+angle_max = -12.0
+scale_min = 0.15
+scale_max = 0.25
 
 [node name="RainEnviromentParticles" type="Node2D"]
 script = ExtResource("1_kikyi")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-amount = 300
+amount = 1500
 process_material = SubResource("ParticleProcessMaterial_tskj4")
-texture = ExtResource("1_fqkr0")
+texture = ExtResource("2_gudgs")
 lifetime = 5.0

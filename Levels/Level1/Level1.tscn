@@ -83,6 +83,10 @@ position = Vector2(1522, -44)
 position = Vector2(2, -65)
 
 [node name="RainEnviromentParticles" parent="." instance=ExtResource("7_iq0n7")]
+<<<<<<< Updated upstream
 position = Vector2(0, -302)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("9_bex74")]
+=======
+position = Vector2(39, -300)
+>>>>>>> Stashed changes
