@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://xviyat66ggib"]
+[gd_scene load_steps=4 format=3 uid="uid://xviyat66ggib"]
 
+[ext_resource type="Script" path="res://Inicio/StartMenu.gd" id="1_keq2j"]
 [ext_resource type="Script" path="res://Inicio/ButtonJumpScene.gd" id="1_wqmyn"]
 [ext_resource type="PackedScene" uid="uid://ch4qu2cv74nik" path="res://Levels/Level1/Level1.tscn" id="2_26uak"]
 
-[node name="DEVizzent" type="Node2D"]
+[node name="StartMenu" type="Node2D"]
+script = ExtResource("1_keq2j")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 204.0
@@ -19,7 +21,7 @@ offset_right = 424.0
 offset_bottom = 97.0
 text = "Menu inicio"
 
-[node name="Buttons" type="Button" parent="Panel"]
+[node name="StartButton" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 274.0
 offset_top = 175.0
