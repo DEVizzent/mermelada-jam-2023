@@ -32,7 +32,6 @@ func calc_positions_to_throw():
 		posicion_letra += dif_between_star
 		positionsToThrowStars.append(posicion_letra)
 
-
 func compare_int(a:int,b:int)->bool:
 	return a < b
 
