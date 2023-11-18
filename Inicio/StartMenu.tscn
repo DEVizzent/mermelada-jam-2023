@@ -18,7 +18,7 @@ offset_right = 424.0
 offset_bottom = 97.0
 text = "Menu inicio"
 
-[node name="ChangeSceneButton" type="Button" parent="Panel"]
+[node name="Buttons" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 274.0
 offset_top = 175.0
