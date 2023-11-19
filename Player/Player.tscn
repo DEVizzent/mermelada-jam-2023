@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://c71545ntm6a25"]
+[gd_scene load_steps=36 format=3 uid="uid://c71545ntm6a25"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_jp80u"]
 [ext_resource type="Texture2D" uid="uid://c01pn4s5jow3y" path="res://Player/Sprites/idle.png" id="3_gc34y"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Player/States/AirUp.gd" id="7_fanxp"]
 [ext_resource type="Script" path="res://Player/States/AirDown.gd" id="8_jkhww"]
 [ext_resource type="Script" path="res://Player/Stop.gd" id="9_3crs1"]
+[ext_resource type="AudioStream" uid="uid://cdlcdrdg6ltg5" path="res://Player/ClasesMachineState/Miau.ogg" id="10_2fgc1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcoms"]
 size = Vector2(33, 31)
@@ -247,3 +248,8 @@ script = ExtResource("8_jkhww")
 
 [node name="Stop" type="Node" parent="MachineState"]
 script = ExtResource("9_3crs1")
+can_move = false
+
+[node name="Miau" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_2fgc1")
+bus = &"Effect"
