@@ -33,7 +33,6 @@ func turn_off():
 func _on_fair_play_timeout():
 	colision_muerte.disabled = false
 
-
 func _on_area_muerte_body_entered(body):
 	if body.is_in_group("player"):
 		EventBus.emit_signal("chimenea_hit")
