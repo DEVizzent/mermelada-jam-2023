@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cl4ayh8478a6v"]
+[gd_scene load_steps=7 format=3 uid="uid://cl4ayh8478a6v"]
 
 [ext_resource type="Script" path="res://Settings/SettingsMenu.gd" id="1_bvmxg"]
 [ext_resource type="Script" path="res://Settings/AudioSlider.gd" id="1_xbsvi"]
 [ext_resource type="Script" path="res://Settings/EffectAudioSlider.gd" id="3_j8rcg"]
 [ext_resource type="Script" path="res://Settings/FullScreenToggle.gd" id="4_nwjrl"]
 [ext_resource type="Theme" uid="uid://cjtm05baiqrbl" path="res://Settings/ButtonTheme.tres" id="5_8qox8"]
+[ext_resource type="PackedScene" uid="uid://crvq24xrg2gdc" path="res://Settings/UISounds.tscn" id="6_vcka0"]
 
 [node name="Settings" type="CanvasLayer"]
 process_mode = 3
@@ -106,5 +107,17 @@ layout_mode = 2
 theme = ExtResource("5_8qox8")
 text = "Exit"
 
+[node name="UISounds" parent="." instance=ExtResource("6_vcka0")]
+
+[connection signal="drag_ended" from="Panel/CenterContainer/VBoxContainer/GridContainer/MasterAudioSlider" to="UISounds" method="_on_slider_drag_ended"]
+[connection signal="focus_entered" from="Panel/CenterContainer/VBoxContainer/GridContainer/MasterAudioSlider" to="UISounds" method="_on_focus_entered_slider"]
+[connection signal="drag_ended" from="Panel/CenterContainer/VBoxContainer/GridContainer/MusicAudioSlider" to="UISounds" method="_on_slider_drag_ended"]
+[connection signal="focus_entered" from="Panel/CenterContainer/VBoxContainer/GridContainer/MusicAudioSlider" to="UISounds" method="_on_focus_entered_slider"]
+[connection signal="drag_ended" from="Panel/CenterContainer/VBoxContainer/GridContainer/EffectAudioSlider" to="UISounds" method="_on_slider_drag_ended"]
+[connection signal="focus_entered" from="Panel/CenterContainer/VBoxContainer/GridContainer/EffectAudioSlider" to="UISounds" method="_on_focus_entered_slider"]
+[connection signal="focus_entered" from="Panel/CenterContainer/VBoxContainer/FullScreenToggle" to="UISounds" method="_on_focus_entered_button"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/FullScreenToggle" to="UISounds" method="_on_pressed_button"]
 [connection signal="toggled" from="Panel/CenterContainer/VBoxContainer/FullScreenToggle" to="Panel/CenterContainer/VBoxContainer/FullScreenToggle" method="_on_toggled"]
+[connection signal="focus_entered" from="Panel/CenterContainer/VBoxContainer/CenterContainer/Button" to="UISounds" method="_on_focus_entered_button"]
 [connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/CenterContainer/Button" to="." method="toggleMenu"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/CenterContainer/Button" to="UISounds" method="_on_button_pressed"]

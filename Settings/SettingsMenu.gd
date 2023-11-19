@@ -7,9 +7,9 @@ func _input(event):
 		toggleMenu()
 
 func toggleMenu()->void:
+	if !visible:
+		$Panel/CenterContainer/VBoxContainer/CenterContainer/Button.grab_focus()
 	visible = !visible
 	get_tree().paused = visible
-	if visible:
-		$Panel/CenterContainer/VBoxContainer/CenterContainer/Button.grab_focus()
-		return
-	emit_signal("settingsClosed")
+	if !visible:
+		emit_signal("settingsClosed")
