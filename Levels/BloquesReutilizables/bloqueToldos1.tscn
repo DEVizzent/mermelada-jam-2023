@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxfxoc4bs7mff"]
+
+[ext_resource type="Texture2D" uid="uid://c7nql3l278q4o" path="res://Levels/Assets/Toldo/casaToldo.png" id="1_8joak"]
+[ext_resource type="PackedScene" uid="uid://dyci26obxjgta" path="res://Levels/Assets/Toldo/toldo.tscn" id="2_rl3io"]
+[ext_resource type="PackedScene" uid="uid://brr2ppmwcwy00" path="res://LightEnvironment/orange_farol.tscn" id="3_3r3gm"]
+[ext_resource type="PackedScene" uid="uid://dhxdgsmkhja1y" path="res://LightEnvironment/green_light.tscn" id="4_xdqkr"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(772, 179)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(4, 4)
+texture = ExtResource("1_8joak")
+
+[node name="Toldo" parent="." instance=ExtResource("2_rl3io")]
+position = Vector2(-226, 0)
+
+[node name="Toldo2" parent="." instance=ExtResource("2_rl3io")]
+
+[node name="Toldo3" parent="." instance=ExtResource("2_rl3io")]
+position = Vector2(224, 0)
+
+[node name="OrangeFarol" parent="." instance=ExtResource("3_3r3gm")]
+
+[node name="GreenLight" parent="." instance=ExtResource("4_xdqkr")]
+position = Vector2(-68, -28)
+
+[node name="GreenLight2" parent="." instance=ExtResource("4_xdqkr")]
+position = Vector2(68, -28)
+
+[node name="GreenLight3" parent="." instance=ExtResource("4_xdqkr")]
+position = Vector2(-294, -28)
+
+[node name="GreenLight4" parent="." instance=ExtResource("4_xdqkr")]
+position = Vector2(292, -28)

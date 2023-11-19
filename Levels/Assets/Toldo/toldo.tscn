@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://dyci26obxjgta"]
+[gd_scene load_steps=20 format=3 uid="uid://dyci26obxjgta"]
 
 [ext_resource type="Script" path="res://Levels/Assets/Toldo/Toldo.gd" id="1_ibxlv"]
+[ext_resource type="Texture2D" uid="uid://gv40d4tmhlkh" path="res://Levels/Assets/Toldo/Toldo.png" id="1_w6jm2"]
 [ext_resource type="Texture2D" uid="uid://bh8cwasa31yqh" path="res://Levels/Assets/Toldo/Toldo2.png" id="3_4386v"]
 [ext_resource type="Texture2D" uid="uid://bcf7ansmp4fjt" path="res://Levels/Assets/Toldo/Toldo1.png" id="4_5lui2"]
 [ext_resource type="Texture2D" uid="uid://cdhyhj0v5wr15" path="res://Levels/Assets/Toldo/Toldo3.png" id="5_12ixs"]
@@ -24,7 +25,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [null]
+"values": [ExtResource("4_5lui2")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -92,7 +93,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [null]
+"values": [ExtResource("4_5lui2")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -119,7 +120,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [null, ExtResource("3_4386v"), null, ExtResource("3_4386v"), null, ExtResource("3_4386v"), null, ExtResource("3_4386v"), null, ExtResource("3_4386v"), null]
+"values": [ExtResource("1_w6jm2"), ExtResource("3_4386v"), ExtResource("1_w6jm2"), ExtResource("3_4386v"), ExtResource("1_w6jm2"), ExtResource("3_4386v"), ExtResource("1_w6jm2"), ExtResource("3_4386v"), ExtResource("1_w6jm2"), ExtResource("3_4386v"), ExtResource("1_w6jm2")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cemc6"]
@@ -140,6 +141,7 @@ size = Vector2(122, 7)
 script = ExtResource("1_ibxlv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 2.0
 libraries = {
 "": SubResource("AnimationLibrary_cemc6")
 }
@@ -147,6 +149,7 @@ libraries = {
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
 scale = Vector2(2, 2)
+texture = ExtResource("4_5lui2")
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
 collision_layer = 8
@@ -163,7 +166,7 @@ position = Vector2(0, -35.5)
 shape = SubResource("RectangleShape2D_bvgvx")
 
 [node name="RegenerationTimer" type="Timer" parent="."]
-wait_time = 1.5
+wait_time = 0.8
 one_shot = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
