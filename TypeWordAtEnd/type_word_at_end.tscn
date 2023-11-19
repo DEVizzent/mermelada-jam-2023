@@ -1,22 +1,333 @@
-[gd_scene load_steps=7 format=3 uid="uid://8l4e0feev8ra"]
+[gd_scene load_steps=39 format=3 uid="uid://8l4e0feev8ra"]
 
 [ext_resource type="Script" path="res://TypeWordAtEnd/type_word_at_end.gd" id="1_c8wdt"]
 [ext_resource type="Theme" uid="uid://cqwidxi43kv5d" path="res://ButtonTheme/new_theme1.tres" id="2_c31vg"]
 [ext_resource type="Texture2D" uid="uid://ccxvwsthy6mhk" path="res://Inicio/Background.png" id="2_ltl4i"]
+[ext_resource type="PackedScene" uid="uid://dhcqkivmh5tqg" path="res://Levels/BloquesReutilizables/bloque_final.tscn" id="4_yacqs"]
+[ext_resource type="Texture2D" uid="uid://c01pn4s5jow3y" path="res://Player/Sprites/idle.png" id="5_c8225"]
+[ext_resource type="Texture2D" uid="uid://tpv64vn05nvs" path="res://Player/Sprites/jumping.png" id="6_yujig"]
+[ext_resource type="Texture2D" uid="uid://cimakeeym1fmm" path="res://Player/Sprites/running.png" id="7_yiahf"]
+[ext_resource type="Texture2D" uid="uid://bbo4h1ght4j8t" path="res://TypeWordAtEnd/bocadillo.png" id="8_c867i"]
+[ext_resource type="PackedScene" uid="uid://hxij2mcb8i5o" path="res://StarsRain/EstrellaFugaz/estrella.tscn" id="9_vebo4"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0866"]
-bg_color = Color(0, 0.968627, 0, 0.0901961)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h12y"]
+atlas = ExtResource("5_c8225")
+region = Rect2(5, 0, 27, 40)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaljn"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqajw"]
+atlas = ExtResource("5_c8225")
+region = Rect2(45, 0, 27, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5nr8"]
+atlas = ExtResource("5_c8225")
+region = Rect2(85, 0, 27, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0dlh"]
+atlas = ExtResource("5_c8225")
+region = Rect2(125, 0, 27, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_464vu"]
+atlas = ExtResource("5_c8225")
+region = Rect2(165, 0, 27, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk2oc"]
+atlas = ExtResource("5_c8225")
+region = Rect2(205, 0, 27, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucxed"]
+atlas = ExtResource("5_c8225")
+region = Rect2(245, 0, 27, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcncl"]
+atlas = ExtResource("5_c8225")
+region = Rect2(285, 0, 27, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msrjo"]
+atlas = ExtResource("5_c8225")
+region = Rect2(325, 0, 27, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixoa6"]
+atlas = ExtResource("5_c8225")
+region = Rect2(365, 0, 27, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c34lr"]
+atlas = ExtResource("5_c8225")
+region = Rect2(405, 0, 27, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5tng"]
+atlas = ExtResource("5_c8225")
+region = Rect2(445, 0, 27, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1jkf"]
+atlas = ExtResource("6_yujig")
+region = Rect2(220, 0, 44, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rs23k"]
+atlas = ExtResource("6_yujig")
+region = Rect2(264, 0, 44, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uujyo"]
+atlas = ExtResource("7_yiahf")
+region = Rect2(44, 3, 44, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vk2p0"]
+atlas = ExtResource("7_yiahf")
+region = Rect2(88, 3, 44, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3c7e"]
+atlas = ExtResource("6_yujig")
+region = Rect2(44, 0, 44, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cofvn"]
+atlas = ExtResource("6_yujig")
+region = Rect2(132, 0, 44, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lphrs"]
+atlas = ExtResource("6_yujig")
+region = Rect2(176, 0, 44, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph70f"]
+atlas = ExtResource("7_yiahf")
+region = Rect2(0, 3, 44, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spjun"]
+atlas = ExtResource("7_yiahf")
+region = Rect2(132, 3, 44, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbrl6"]
+atlas = ExtResource("7_yiahf")
+region = Rect2(176, 3, 44, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yur8a"]
+atlas = ExtResource("7_yiahf")
+region = Rect2(220, 3, 44, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7pdrg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h12y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqajw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5nr8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0dlh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_464vu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rk2oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucxed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcncl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msrjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ixoa6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c34lr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5tng")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_t1jkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rs23k")
+}],
+"loop": true,
+"name": &"jump_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uujyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vk2p0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3c7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cofvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lphrs")
+}],
+"loop": false,
+"name": &"jump_up",
+"speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph70f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uujyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vk2p0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spjun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbrl6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yur8a")
+}],
+"loop": true,
+"name": &"run",
+"speed": 6.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qclgm"]
 line_spacing = 3.055
-font_size = 33
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaljn"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_tun4p"]
+resource_name = "new_animation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TypeWordAtEnd/AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(523, 451), Vector2(696, 450)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TypeWordAtEnd/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"run", &"run", &"idle"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TypeWordAtEnd/bocadillo1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TypeWordAtEnd/bocadillo2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.3, 4.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TypeWordAtEnd/bocadillo3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_g5gko"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TypeWordAtEnd/AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(523, 451)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TypeWordAtEnd/bocadillo1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TypeWordAtEnd/bocadillo2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TypeWordAtEnd/bocadillo3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_se7jy"]
+_data = {
+"RESET": SubResource("Animation_g5gko"),
+"new_animation": SubResource("Animation_tun4p")
+}
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -24,67 +335,108 @@ font_size = 33
 script = ExtResource("1_c8wdt")
 
 [node name="Background" type="Sprite2D" parent="TypeWordAtEnd"]
+self_modulate = Color(0.690196, 0.776471, 0.678431, 0.85098)
 position = Vector2(641.5, 363.5)
 scale = Vector2(2.22743, 2.24383)
 texture = ExtResource("2_ltl4i")
 
-[node name="TextureRect" type="Panel" parent="TypeWordAtEnd"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 123.0
-offset_top = 117.0
-offset_right = 1174.0
-offset_bottom = 631.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_e0866")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TypeWordAtEnd"]
+position = Vector2(523, 451)
+scale = Vector2(3.6, 3.6)
+sprite_frames = SubResource("SpriteFrames_7pdrg")
+animation = &"idle"
+autoplay = "idle"
 
-[node name="LineEdit" type="LineEdit" parent="TypeWordAtEnd/TextureRect"]
-layout_mode = 1
+[node name="bocadillo1" type="Node2D" parent="TypeWordAtEnd"]
+visible = false
+
+[node name="Bocadillo" type="Sprite2D" parent="TypeWordAtEnd/bocadillo1"]
+position = Vector2(817, 359)
+texture = ExtResource("8_c867i")
+
+[node name="Label" type="Label" parent="TypeWordAtEnd/bocadillo1"]
+offset_left = 743.0
+offset_top = 304.0
+offset_right = 880.0
+offset_bottom = 382.0
+text = "Quieto parao!"
+label_settings = SubResource("LabelSettings_qclgm")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="bocadillo2" type="Node2D" parent="TypeWordAtEnd"]
+visible = false
+position = Vector2(169, 8)
+
+[node name="Bocadillo" type="Sprite2D" parent="TypeWordAtEnd/bocadillo2"]
+position = Vector2(817, 359)
+texture = ExtResource("8_c867i")
+flip_h = true
+
+[node name="Label" type="Label" parent="TypeWordAtEnd/bocadillo2"]
+offset_left = 745.0
+offset_top = 303.0
+offset_right = 904.0
+offset_bottom = 381.0
+text = "quien eres tu?"
+label_settings = SubResource("LabelSettings_qclgm")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="bocadillo3" type="Node2D" parent="TypeWordAtEnd"]
+visible = false
+position = Vector2(28, -51)
+
+[node name="Bocadillo" type="Sprite2D" parent="TypeWordAtEnd/bocadillo3"]
+position = Vector2(817, 359)
+texture = ExtResource("8_c867i")
+flip_h = true
+
+[node name="LineEdit" type="LineEdit" parent="TypeWordAtEnd/bocadillo3"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -117.5
-offset_top = 38.0
-offset_right = 120.5
-offset_bottom = 93.0
+offset_left = 720.0
+offset_top = 296.0
+offset_right = 906.0
+offset_bottom = 351.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_jaljn")
 placeholder_text = "escribe aquí..."
 
-[node name="Button" type="Button" parent="TypeWordAtEnd/TextureRect"]
-layout_mode = 1
+[node name="Button" type="Button" parent="TypeWordAtEnd/bocadillo3"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -65.5
-offset_top = 141.0
-offset_right = 55.5
-offset_bottom = 189.0
+offset_left = 816.0
+offset_top = 353.0
+offset_right = 905.0
+offset_bottom = 391.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_c31vg")
 text = "Aceptar"
 
-[node name="Label" type="Label" parent="TypeWordAtEnd/TextureRect"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 69.0
-offset_right = 1046.0
-offset_bottom = 203.0
-text = "Has podido leer la palabra que han formado las estrellas fugaces...
-...o has pestañeado y te las has perdido?"
-label_settings = SubResource("LabelSettings_qclgm")
-horizontal_alignment = 1
-autowrap_mode = 3
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TypeWordAtEnd"]
+root_node = NodePath("../..")
+autoplay = "new_animation"
+libraries = {
+"": SubResource("AnimationLibrary_se7jy")
+}
 
-[connection signal="text_submitted" from="TypeWordAtEnd/TextureRect/LineEdit" to="TypeWordAtEnd" method="_on_line_edit_text_submitted"]
-[connection signal="pressed" from="TypeWordAtEnd/TextureRect/Button" to="TypeWordAtEnd" method="_on_button_pressed"]
+[node name="BloqueFinal" parent="TypeWordAtEnd" instance=ExtResource("4_yacqs")]
+position = Vector2(-2186, 199)
+scale = Vector2(2, 2)
+
+[node name="Estrella" parent="TypeWordAtEnd" instance=ExtResource("9_vebo4")]
+position = Vector2(616, 227)
+
+[connection signal="text_submitted" from="TypeWordAtEnd/bocadillo3/LineEdit" to="TypeWordAtEnd" method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="TypeWordAtEnd/bocadillo3/Button" to="TypeWordAtEnd" method="_on_button_pressed"]

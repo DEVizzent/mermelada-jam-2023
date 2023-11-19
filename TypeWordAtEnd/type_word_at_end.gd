@@ -1,10 +1,10 @@
 extends Node2D
 
-@onready var line_text : LineEdit = $TextureRect/LineEdit
+@onready var line_text : LineEdit = $bocadillo3/LineEdit
 
-func _ready():
+func put_focus_on_line_text():
 	line_text.grab_focus()
-
+	
 func _on_button_pressed():
 	emit_result()
 

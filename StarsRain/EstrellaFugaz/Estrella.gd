@@ -19,7 +19,7 @@ var direction
 
 func _ready():
 	if !posicion_inicial:
-		posicion_inicial = Vector2(100,100)
+		posicion_inicial = Vector2(250,100)
 	position = posicion_inicial
 	direction = _random_direction()
 	animation_player.play("life_time_estrella")

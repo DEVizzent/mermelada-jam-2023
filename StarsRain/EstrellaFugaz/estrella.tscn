@@ -178,9 +178,9 @@ emitting = false
 visible = false
 offset_left = -17.0
 offset_top = -49.0
-offset_right = -7.0
+offset_right = 18.0
 offset_bottom = -24.0
-text = "a"
+text = "yeah"
 label_settings = SubResource("LabelSettings_ubm1u")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
