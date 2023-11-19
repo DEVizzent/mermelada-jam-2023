@@ -150,23 +150,91 @@ position = Vector2(556, 171)
 scale = Vector2(-3, 3)
 sprite_frames = SubResource("SpriteFrames_ist40")
 autoplay = "default"
-frame_progress = 0.298639
+frame_progress = 0.671163
 
 [node name="PointLight2D" type="PointLight2D" parent="Lights/OrangeFarol"]
 position = Vector2(1.33334, -7)
 color = Color(76.93, 3.55, 0.6, 0.1)
 texture = SubResource("GradientTexture2D_7tcdf")
 
+[node name="OrangeFarol" type="AnimatedSprite2D" parent="Lights/OrangeFarol"]
+position = Vector2(556, 171)
+rotation = -3.14159
+scale = Vector2(3, -3)
+sprite_frames = SubResource("SpriteFrames_ist40")
+autoplay = "default"
+frame_progress = 0.463731
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights/OrangeFarol/OrangeFarol"]
+position = Vector2(1.33334, -7)
+color = Color(76.93, 3.55, 0.6, 0.1)
+texture = SubResource("GradientTexture2D_7tcdf")
+
 [node name="GreenLight" type="AnimatedSprite2D" parent="Lights"]
-position = Vector2(736, 103)
+position = Vector2(317, 135)
 sprite_frames = SubResource("SpriteFrames_w5133")
 autoplay = "default"
 
 [node name="PointLight2D" type="PointLight2D" parent="Lights/GreenLight"]
+color = Color(0, 4.01176, 0.188235, 0.309804)
+texture = SubResource("GradientTexture2D_7tcdf")
+texture_scale = 1.75
+
+[node name="GreenLight2" type="AnimatedSprite2D" parent="Lights"]
+position = Vector2(702, 103)
+sprite_frames = SubResource("SpriteFrames_w5133")
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights/GreenLight2"]
 position = Vector2(12, -2)
 color = Color(0, 4.01176, 0.188235, 0.309804)
 texture = SubResource("GradientTexture2D_7tcdf")
 texture_scale = 1.75
+
+[node name="GreenLight3" type="AnimatedSprite2D" parent="Lights"]
+position = Vector2(976, 36)
+sprite_frames = SubResource("SpriteFrames_w5133")
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights/GreenLight3"]
+position = Vector2(12, -2)
+color = Color(0, 4.01176, 0.188235, 0.309804)
+texture = SubResource("GradientTexture2D_7tcdf")
+texture_scale = 1.75
+
+[node name="GreenLight4" type="AnimatedSprite2D" parent="Lights"]
+position = Vector2(1016, 36)
+sprite_frames = SubResource("SpriteFrames_w5133")
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights/GreenLight4"]
+position = Vector2(12, -2)
+color = Color(0, 4.01176, 0.188235, 0.309804)
+texture = SubResource("GradientTexture2D_7tcdf")
+texture_scale = 1.75
+
+[node name="GreenLight5" type="AnimatedSprite2D" parent="Lights"]
+position = Vector2(1056, 36)
+sprite_frames = SubResource("SpriteFrames_w5133")
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights/GreenLight5"]
+position = Vector2(12, -2)
+color = Color(0, 4.01176, 0.188235, 0.309804)
+texture = SubResource("GradientTexture2D_7tcdf")
+texture_scale = 1.75
+
+[node name="OrangeFarol2" type="AnimatedSprite2D" parent="Lights"]
+position = Vector2(776, 171)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_ist40")
+autoplay = "default"
+frame_progress = 0.463731
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights/OrangeFarol2"]
+position = Vector2(1.33334, -7)
+color = Color(76.93, 3.55, 0.6, 0.1)
+texture = SubResource("GradientTexture2D_7tcdf")
 
 [node name="Platforms" type="StaticBody2D" parent="."]
 collision_layer = 8
