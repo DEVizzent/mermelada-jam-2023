@@ -12,7 +12,7 @@ class_name MachineState
 
 @export var current_state : State
 @export_group("Array Miaus")
-@export var array_miaus : Array[AudioStreamPlayer2D]
+@export var array_miaus : Array[AudioStreamPlayer]
 
 var arrayStates : Array[State]
 

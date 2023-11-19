@@ -350,44 +350,44 @@ script = ExtResource("12_8usea")
 
 [node name="Miaus" type="Node" parent="."]
 
-[node name="Miau1" type="AudioStreamPlayer2D" parent="Miaus"]
+[node name="Miau1" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("10_f2ve2")
 bus = &"Effect"
 
-[node name="Miau2" type="AudioStreamPlayer2D" parent="Miaus"]
+[node name="Miau2" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("11_ol40c")
 volume_db = 4.379
 bus = &"Effect"
 
-[node name="Miau3" type="AudioStreamPlayer2D" parent="Miaus"]
+[node name="Miau3" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("12_i44d4")
 volume_db = 3.831
 
-[node name="Miau4" type="AudioStreamPlayer2D" parent="Miaus"]
+[node name="Miau4" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("13_fdca7")
 volume_db = 8.803
 
-[node name="Miau5" type="AudioStreamPlayer2D" parent="Miaus"]
+[node name="Miau5" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("14_7ehx6")
 volume_db = -5.474
 
-[node name="Miau6" type="AudioStreamPlayer2D" parent="Miaus"]
+[node name="Miau6" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("15_7yf0m")
 volume_db = -4.378
 
-[node name="Miau7" type="AudioStreamPlayer2D" parent="Miaus"]
+[node name="Miau7" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("16_uldso")
 volume_db = -3.284
 
-[node name="Miau8" type="AudioStreamPlayer2D" parent="Miaus"]
+[node name="Miau8" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("17_rb4pv")
 volume_db = 2.737
 
-[node name="Miau9" type="AudioStreamPlayer2D" parent="Miaus"]
+[node name="Miau9" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("18_tbug3")
 volume_db = 4.379
 
-[node name="MiauMuerte" type="AudioStreamPlayer2D" parent="."]
+[node name="MiauMuerte" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_80kx0")
 volume_db = 5.474
 bus = &"Effect"
@@ -399,13 +399,13 @@ offset_top = -50.0
 offset_right = 20.0
 offset_bottom = -34.0
 
-[node name="Walk" type="AudioStreamPlayer2D" parent="."]
+[node name="Walk" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_25qyx")
 volume_db = 6.227
 pitch_scale = 0.85
 bus = &"Effect"
 
-[node name="Land" type="AudioStreamPlayer2D" parent="."]
+[node name="Land" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("21_lhtp5")
 pitch_scale = 0.49
 

@@ -1,7 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://b47d8o6yixsuf"]
+[gd_scene load_steps=24 format=3 uid="uid://b47d8o6yixsuf"]
 
 [ext_resource type="Texture2D" uid="uid://cioa2wvh8jiyk" path="res://Levels/Assets/b3.png" id="1_5q4e0"]
 [ext_resource type="Texture2D" uid="uid://bccpcdopfv7jj" path="res://Levels/Assets/green-light-1.png" id="2_eig2m"]
+[ext_resource type="Texture2D" uid="uid://gkhsoqwjudy6" path="res://HumoChimeneas/mota_moving.png" id="3_l4jtr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnwbu"]
+size = Vector2(47.1667, 4.41667)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0srnh"]
 atlas = ExtResource("2_eig2m")
@@ -83,51 +87,226 @@ gradient = SubResource("Gradient_ngmus")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_44kou"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_v2v2s"]
+colors = PackedColorArray(1, 1, 1, 1, 0.576471, 0.576471, 0.576471, 0.207843)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_khm5r"]
+gradient = SubResource("Gradient_v2v2s")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u8q1a"]
+emission_shape = 3
+emission_box_extents = Vector3(50, 1, 1)
+particle_flag_disable_z = true
+spread = 0.0
+gravity = Vector3(0, -400, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 1.5
+scale_max = 1.5
+color_ramp = SubResource("GradientTexture1D_khm5r")
+
+[sub_resource type="Animation" id="Animation_dwni0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("platform:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GPUParticles2D:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_an6hv"]
+resource_name = "caida"
+length = 2.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.22173]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("platform:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.872665, 1.5708]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(5, 5), Vector2(-3, -2), Vector2(3, 3), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GPUParticles2D:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vjkhp"]
+_data = {
+"RESET": SubResource("Animation_dwni0"),
+"caida": SubResource("Animation_an6hv")
+}
+
 [node name="Bloque3" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(1001.1, 245)
+position = Vector2(-17, -199.5)
 scale = Vector2(3, 3)
 
 [node name="CpB3" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
 position = Vector2(4.33331, -21.3333)
 scale = Vector2(0.333333, 0.333333)
-polygon = PackedVector2Array(-39, 283, -40, -95, -82, -94, -81, -107, 55, -107, 55, -95, 43, -95, 45, 281)
+polygon = PackedVector2Array(-39, 283, -40, -58.5002, -9.99994, -60.5002, -9.99994, -96.5002, 3.00007, -97.5002, 5.00007, -61.5002, 45.0001, -61.5002, 45, 281)
 
 [node name="B3" type="Sprite2D" parent="."]
-position = Vector2(1001.1, 245)
+position = Vector2(-1, -147)
 scale = Vector2(3, 3)
 texture = ExtResource("1_5q4e0")
+region_enabled = true
+region_rect = Rect2(10.0584, 30.3832, 37.7447, 114.91)
 
-[node name="GreenLight3" type="AnimatedSprite2D" parent="."]
-position = Vector2(976, 36)
+[node name="B5" type="Sprite2D" parent="."]
+position = Vector2(-9, -321)
+scale = Vector2(3, 3)
+texture = ExtResource("1_5q4e0")
+region_enabled = true
+region_rect = Rect2(13.1452, 45.2863, 5.00547, 53.3191)
+
+[node name="platform" type="Node2D" parent="."]
+position = Vector2(-8, -401)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platform"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform/StaticBody2D"]
+position = Vector2(-0.25, -0.375061)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_fnwbu")
+
+[node name="B4" type="Sprite2D" parent="platform"]
+position = Vector2(1, -23)
+scale = Vector2(3, 3)
+texture = ExtResource("1_5q4e0")
+region_enabled = true
+region_rect = Rect2(-0.797485, 0, 48.2741, 20.425)
+
+[node name="GreenLight3" type="AnimatedSprite2D" parent="platform"]
+position = Vector2(-29.1, -38.5)
 sprite_frames = SubResource("SpriteFrames_w5133")
 autoplay = "default"
 
-[node name="PointLight2D" type="PointLight2D" parent="GreenLight3"]
+[node name="PointLight2D" type="PointLight2D" parent="platform/GreenLight3"]
 position = Vector2(12, -2)
 color = Color(0, 4.01176, 0.188235, 0.309804)
 texture = SubResource("GradientTexture2D_7tcdf")
 texture_scale = 1.75
 
-[node name="GreenLight4" type="AnimatedSprite2D" parent="."]
-position = Vector2(1016, 36)
+[node name="GreenLight4" type="AnimatedSprite2D" parent="platform"]
+position = Vector2(10.9, -38.5)
 sprite_frames = SubResource("SpriteFrames_w5133")
 autoplay = "default"
 
-[node name="PointLight2D" type="PointLight2D" parent="GreenLight4"]
+[node name="PointLight2D" type="PointLight2D" parent="platform/GreenLight4"]
 position = Vector2(12, -2)
 color = Color(0, 4.01176, 0.188235, 0.309804)
 texture = SubResource("GradientTexture2D_7tcdf")
 texture_scale = 1.75
 
-[node name="GreenLight5" type="AnimatedSprite2D" parent="."]
-position = Vector2(1056, 36)
+[node name="GreenLight5" type="AnimatedSprite2D" parent="platform"]
+position = Vector2(50.9, -38.5)
 sprite_frames = SubResource("SpriteFrames_w5133")
 autoplay = "default"
 
-[node name="PointLight2D" type="PointLight2D" parent="GreenLight5"]
+[node name="PointLight2D" type="PointLight2D" parent="platform/GreenLight5"]
 position = Vector2(12, -2)
 color = Color(0, 4.01176, 0.188235, 0.309804)
 texture = SubResource("GradientTexture2D_7tcdf")
 texture_scale = 1.75
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_44kou")
+position = Vector2(-2, 34)
+emitting = false
+amount = 16
+process_material = SubResource("ParticleProcessMaterial_u8q1a")
+texture = ExtResource("3_l4jtr")
+lifetime = 0.5
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vjkhp")
+}

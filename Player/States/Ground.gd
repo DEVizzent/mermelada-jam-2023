@@ -2,8 +2,8 @@ extends State
 
 @export var coyote_time_margin : float = 0.1
 @onready var coyote_time : Timer = $CoyoteTimer
-@export var walk_sound : AudioStreamPlayer2D
-@export var land_sound : AudioStreamPlayer2D
+@export var walk_sound : AudioStreamPlayer
+@export var land_sound : AudioStreamPlayer
 
 
 var im_on_floor = true
