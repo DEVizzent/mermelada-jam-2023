@@ -1,0 +1,104 @@
+[gd_scene load_steps=17 format=3 uid="uid://dp5bpgy4dp573"]
+
+[ext_resource type="Script" path="res://Levels/Level.gd" id="1_gde85"]
+[ext_resource type="PackedScene" uid="uid://dwsqgd4tix7bb" path="res://HeaderLevelBar/header_bar.tscn" id="2_k2oft"]
+[ext_resource type="PackedScene" uid="uid://c71545ntm6a25" path="res://Player/Player.tscn" id="3_hih1r"]
+[ext_resource type="PackedScene" uid="uid://61rh154cdswe" path="res://StarsRain/StarsRain.tscn" id="4_4p0rn"]
+[ext_resource type="PackedScene" uid="uid://hop855rd06b8" path="res://Levels/LevelGoalArea.tscn" id="5_41map"]
+[ext_resource type="PackedScene" uid="uid://bueyv6qwi0jrw" path="res://StarsRain/EstrellaFugaz/SpawnerEstrellas/spawner_estrellas.tscn" id="6_tynb2"]
+[ext_resource type="PackedScene" uid="uid://6eolvn4p0iw7" path="res://RainEnviroment/rain_enviroment_particles.tscn" id="7_0ncd7"]
+[ext_resource type="PackedScene" uid="uid://bt0q7q5tfblkb" path="res://Levels/Parallax/ParallaxBackground.tscn" id="8_0jmfq"]
+[ext_resource type="PackedScene" uid="uid://m1ogxiuopf84" path="res://Levels/BloquesReutilizables/bloque_1.tscn" id="9_ko4iy"]
+[ext_resource type="PackedScene" uid="uid://bonv1t645efqn" path="res://Levels/BloquesReutilizables/bloque_2.tscn" id="10_mja5a"]
+[ext_resource type="PackedScene" uid="uid://bg00sa1mtcdsx" path="res://Levels/BloquesReutilizables/bloque_3.tscn" id="11_5ej4x"]
+[ext_resource type="PackedScene" uid="uid://dhcqkivmh5tqg" path="res://Levels/BloquesReutilizables/bloque_final.tscn" id="12_pn10v"]
+[ext_resource type="PackedScene" uid="uid://ck3p64601iieq" path="res://DeathZone/DeathZone.tscn" id="13_aq1m5"]
+[ext_resource type="PackedScene" uid="uid://hnykdr510k4u" path="res://ElectricTower/ElectricTower5Sections.tscn" id="13_j4g1q"]
+[ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="14_j7pcv"]
+[ext_resource type="AudioStream" uid="uid://2t8bx7eigr7s" path="res://Levels/Level2/Level2.mp3" id="15_t8egl"]
+
+[node name="Level4" type="Node2D" groups=["level"]]
+script = ExtResource("1_gde85")
+word = "ferter"
+time_to_complete = 15.0
+
+[node name="HeaderBar" parent="." instance=ExtResource("2_k2oft")]
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("3_hih1r")]
+position = Vector2(0, 118)
+collision_mask = 9
+
+[node name="StarsRain" parent="." node_paths=PackedStringArray("player", "goal_area") instance=ExtResource("4_4p0rn")]
+player = NodePath("../Player")
+goal_area = NodePath("../LevelGoalArea")
+debug = false
+
+[node name="LevelGoalArea" parent="." instance=ExtResource("5_41map")]
+position = Vector2(2544, 3)
+
+[node name="SpawnerEstrellas" parent="." instance=ExtResource("6_tynb2")]
+position = Vector2(2, -65)
+
+[node name="RainEnviromentParticles" parent="." instance=ExtResource("7_0ncd7")]
+position = Vector2(-7, -303)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("8_0jmfq")]
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="Bloque1" parent="Platforms" instance=ExtResource("9_ko4iy")]
+
+[node name="Bloque2" parent="Platforms" instance=ExtResource("10_mja5a")]
+position = Vector2(24, -82)
+
+[node name="Bloque3" parent="Platforms" instance=ExtResource("11_5ej4x")]
+position = Vector2(460, 4)
+
+[node name="BloqueFinal" parent="Platforms" instance=ExtResource("12_pn10v")]
+position = Vector2(985, 13)
+
+[node name="Bloque4" parent="Platforms" instance=ExtResource("11_5ej4x")]
+position = Vector2(718, -51)
+
+[node name="Bloque5" parent="Platforms" instance=ExtResource("10_mja5a")]
+position = Vector2(1792, -76)
+scale = Vector2(-1, 1)
+
+[node name="Bloque6" parent="Platforms" instance=ExtResource("11_5ej4x")]
+position = Vector2(999, -63)
+
+[node name="TorresElectrivas" type="Node2D" parent="Platforms"]
+
+[node name="ElectricTower5Sections" parent="Platforms/TorresElectrivas" instance=ExtResource("13_j4g1q")]
+z_index = -1
+position = Vector2(311, 42)
+scale = Vector2(2, 2)
+
+[node name="ElectricTower5Sections2" parent="Platforms/TorresElectrivas" instance=ExtResource("13_j4g1q")]
+z_index = -1
+position = Vector2(784, 59)
+scale = Vector2(2, 2)
+
+[node name="ElectricTower5Sections3" parent="Platforms/TorresElectrivas" instance=ExtResource("13_j4g1q")]
+z_index = -1
+position = Vector2(1619, -55)
+scale = Vector2(2, 2)
+
+[node name="ElectricTower5Sections5" parent="Platforms/TorresElectrivas" instance=ExtResource("13_j4g1q")]
+z_index = -1
+position = Vector2(1876, -59)
+scale = Vector2(2, 2)
+
+[node name="ElectricTower5Sections4" parent="Platforms/TorresElectrivas" instance=ExtResource("13_j4g1q")]
+z_index = -1
+position = Vector2(1362, 13)
+scale = Vector2(2, 2)
+
+[node name="DeathZone" parent="." instance=ExtResource("13_aq1m5")]
+
+[node name="Settings" parent="." instance=ExtResource("14_j7pcv")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("15_t8egl")
+autoplay = true

@@ -26,7 +26,7 @@
 [ext_resource type="AudioStream" uid="uid://bxnxpu76wbkp" path="res://Player/SoundEffects/land.mp3" id="21_lhtp5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcoms"]
-size = Vector2(33, 31)
+size = Vector2(41, 51)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1y4rb"]
 atlas = ExtResource("2_iyw37")
@@ -280,7 +280,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sx1in"]
-radius = 23.0
+radius = 24.0
 height = 56.0
 
 [node name="Player" type="CharacterBody2D"]
@@ -298,15 +298,13 @@ position_smoothing_enabled = true
 position_smoothing_speed = 2.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4.5, 5.5)
+position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_mcoms")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_y10sk")
-animation = &"damage"
-frame = 7
-frame_progress = 1.0
+animation = &"idle"
 
 [node name="MachineState" type="Node" parent="." node_paths=PackedStringArray("character", "animated_sprite", "ground_state", "air_up_state", "air_down_state", "stop_state", "chimenea_hit_state", "vapor_hit_state", "current_state", "array_miaus")]
 script = ExtResource("6_hf7wk")
@@ -412,7 +410,7 @@ pitch_scale = 0.49
 [node name="hitBox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitBox"]
-position = Vector2(-1, -5)
+position = Vector2(1, 0)
 shape = SubResource("CapsuleShape2D_sx1in")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="MachineState" method="_on_animaciones_animation_finished"]
