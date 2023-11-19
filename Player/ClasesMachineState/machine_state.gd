@@ -26,7 +26,6 @@ func init_states():
 			arrayStates.append(child)
 
 func _physics_process(delta):
-	print(current_state)
 	if current_state.next_state != null:
 		change_state(current_state.next_state)
 	current_state.state_process(delta)
