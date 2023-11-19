@@ -1,7 +1,7 @@
 extends State
 
 
-func state_process(delta):
+func state_process(_delta):
 	if character.direction != 0:
 		animated_sprite.play("run")
 	else:

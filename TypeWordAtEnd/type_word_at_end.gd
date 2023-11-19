@@ -8,7 +8,7 @@ func _ready():
 func _on_button_pressed():
 	emit_result()
 
-func _on_line_edit_text_submitted(new_text):
+func _on_line_edit_text_submitted(_new_text):
 	emit_result()
 
 func emit_result():

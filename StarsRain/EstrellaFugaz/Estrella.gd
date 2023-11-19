@@ -24,7 +24,8 @@ func _ready():
 	direction = _random_direction()
 	animation_player.play("life_time_estrella")
 
-func setText(letra:String)->void:
+func setText(_letra:String)->void:
+	letra = _letra
 	$Label.text = letra
 
 func _process(delta):
