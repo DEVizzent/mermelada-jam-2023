@@ -14,3 +14,6 @@ bus = &"Effect"
 [node name="PressedButton" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_nixe0")
 bus = &"Effect"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4

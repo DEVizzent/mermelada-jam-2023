@@ -8,6 +8,7 @@ func _input(event):
 
 func toggleMenu()->void:
 	if !visible:
+		$UISounds/PressedButton.play()
 		$Panel/CenterContainer/VBoxContainer/CenterContainer/Button.grab_focus()
 	visible = !visible
 	get_tree().paused = visible
