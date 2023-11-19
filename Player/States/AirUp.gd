@@ -1,6 +1,6 @@
 extends State
 
-func state_process(delta):
+func state_process(_delta):
 	if character.velocity.y > 0:
 		animated_sprite.play("jump_down")
 		next_state = machine_state.air_down_state
