@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bt0q7q5tfblkb"]
+[gd_scene load_steps=5 format=3 uid="uid://bt0q7q5tfblkb"]
 
 [ext_resource type="Texture2D" uid="uid://c2sskiufaeu74" path="res://Levels/Parallax/2.png" id="1_a8pmt"]
+[ext_resource type="PackedScene" uid="uid://b6uo2fy16fvxi" path="res://HumoChimeneas/intento_humo_1.tscn" id="2_54nop"]
 [ext_resource type="Texture2D" uid="uid://b1rm6o5fseg5d" path="res://Levels/Parallax/3.png" id="2_nq582"]
 [ext_resource type="Texture2D" uid="uid://d2s2q4htthtpt" path="res://Levels/Parallax/5.png" id="3_8r43s"]
 
@@ -10,6 +11,9 @@
 motion_scale = Vector2(0.2, 1)
 motion_offset = Vector2(800, 0)
 motion_mirroring = Vector2(1280, 0)
+
+[node name="GPUParticles2D" parent="ParallaxLayer" instance=ExtResource("2_54nop")]
+position = Vector2(-546, -51)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2(-640, -360)

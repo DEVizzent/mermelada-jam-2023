@@ -7,6 +7,7 @@ var timer_tick : float = 0.1
 var actual_time : float = 13.0
 
 func _ready():
+	await get_parent().ready
 	init_timer()
 
 func init_timer():
