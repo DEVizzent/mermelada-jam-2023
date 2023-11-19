@@ -16,7 +16,6 @@ var arrayStates : Array[State]
 
 func _ready():
 	EventBus.levelCompleted.connect(level_completed)
-	EventBus.chimenea_hit.connect(chimenea_hit)
 	init_states()
 
 func init_states():
@@ -50,3 +49,9 @@ func level_completed():
 func chimenea_hit():
 	print("chimenea hited cat!")
 	print("falta programar reaccion")
+
+func _on_hit_box_area_entered(area : Area2D):
+	if area.get_parent().is_in_group("chimenea"):
+		print("chimenea hit")
+	elif area.get_parent().is_in_group("vapor"):
+		print("vapor hit")

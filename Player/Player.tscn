@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://c71545ntm6a25"]
+[gd_scene load_steps=58 format=3 uid="uid://c71545ntm6a25"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_jp80u"]
 [ext_resource type="Texture2D" uid="uid://bn10v3jh2ovdd" path="res://Player/Sprites/damage.png" id="2_iyw37"]
@@ -278,6 +278,10 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sx1in"]
+radius = 23.0
+height = 56.0
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 8
 script = ExtResource("1_jp80u")
@@ -398,4 +402,11 @@ bus = &"Effect"
 stream = ExtResource("21_lhtp5")
 pitch_scale = 0.49
 
+[node name="hitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitBox"]
+position = Vector2(-1, -5)
+shape = SubResource("CapsuleShape2D_sx1in")
+
 [connection signal="timeout" from="MachineState/Ground/CoyoteTimer" to="MachineState/Ground" method="coyote_time_end"]
+[connection signal="area_entered" from="hitBox" to="MachineState" method="_on_hit_box_area_entered"]

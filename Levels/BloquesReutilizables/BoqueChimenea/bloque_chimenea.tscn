@@ -46,7 +46,7 @@ shape = SubResource("RectangleShape2D_cfpmu")
 [node name="TimerCiclo" type="Timer" parent="."]
 autostart = true
 
-[node name="AreaMuerte" type="Area2D" parent="."]
+[node name="AreaMuerte" type="Area2D" parent="." groups=["chimenea"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMuerte"]
 position = Vector2(-2, -40)
@@ -57,5 +57,4 @@ wait_time = 0.5
 one_shot = true
 
 [connection signal="timeout" from="TimerCiclo" to="." method="_on_timer_ciclo_timeout"]
-[connection signal="body_entered" from="AreaMuerte" to="." method="_on_area_muerte_body_entered"]
 [connection signal="timeout" from="AreaMuerte/FairPlay" to="." method="_on_fair_play_timeout"]

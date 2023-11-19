@@ -7,7 +7,7 @@
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nx3xs"]
 emission_shape = 3
-emission_box_extents = Vector3(10, 1, 1)
+emission_box_extents = Vector3(15, 1, 1)
 particle_flag_disable_z = true
 direction = Vector3(0, 1, 0)
 spread = 0.0
@@ -32,7 +32,7 @@ fill_from = Vector2(0.123932, 1)
 fill_to = Vector2(0.777778, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ykj8"]
-size = Vector2(46, 332)
+size = Vector2(38, 344)
 
 [node name="BloqueSalidaVapor" type="Node2D"]
 script = ExtResource("1_ei3iu")
@@ -45,7 +45,7 @@ lifetime = 2.0
 
 [node name="ChimneyVapor" type="Sprite2D" parent="."]
 position = Vector2(0, -4)
-scale = Vector2(2.5, 2.5)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_l1eq7")
 
 [node name="ChimneyVaporExtension" type="Sprite2D" parent="."]
@@ -55,16 +55,23 @@ texture = ExtResource("2_a2ect")
 [node name="TextureRect" type="TextureRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.254902)
 material = SubResource("CanvasItemMaterial_rnv4t")
-offset_left = -57.0
-offset_top = -597.0
-offset_right = 66.0
-offset_bottom = -37.0
+offset_left = -30.0
+offset_top = -594.0
+offset_right = 34.0
+offset_bottom = -24.0
 texture = SubResource("GradientTexture2D_6s640")
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="AreaPushPlayer" type="Area2D" parent="."]
+[node name="AreaPushPlayer" type="Area2D" parent="." groups=["vapor"]]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPushPlayer"]
-position = Vector2(0, -195)
+position = Vector2(0, -189)
 shape = SubResource("RectangleShape2D_4ykj8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(-22, 20, -22, -25, -18, -25, -18, 15, 18, 15, 18, -25, 22, -25, 22, 20)

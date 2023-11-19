@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://yhc18mcq1uk7"]
+[gd_scene load_steps=17 format=3 uid="uid://yhc18mcq1uk7"]
 
 [ext_resource type="Script" path="res://Levels/Level.gd" id="1_vdmso"]
 [ext_resource type="PackedScene" uid="uid://dwsqgd4tix7bb" path="res://HeaderLevelBar/header_bar.tscn" id="2_l5spm"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bg00sa1mtcdsx" path="res://Levels/BloquesReutilizables/bloque_3.tscn" id="11_ocuuo"]
 [ext_resource type="PackedScene" uid="uid://dhcqkivmh5tqg" path="res://Levels/BloquesReutilizables/bloque_final.tscn" id="12_eyiku"]
 [ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="14_2vlkn"]
+[ext_resource type="PackedScene" uid="uid://cy53ls3dwj051" path="res://Levels/BloquesReutilizables/BoqueChimenea/bloque_chimenea.tscn" id="15_a7oyw"]
+[ext_resource type="PackedScene" uid="uid://fudli33bukc1" path="res://Levels/BloquesReutilizables/BloqueVapor/bloque_salida_vapor.tscn" id="16_shsg0"]
 [ext_resource type="PackedScene" uid="uid://ck3p64601iieq" path="res://DeathZone/DeathZone.tscn" id="17_rjag8"]
 
 [node name="Level2" type="Node2D" groups=["level"]]
@@ -65,3 +67,9 @@ position = Vector2(1003, 0)
 [node name="DeathZone" parent="." instance=ExtResource("17_rjag8")]
 
 [node name="Settings" parent="." instance=ExtResource("14_2vlkn")]
+
+[node name="BloqueChimenea" parent="." instance=ExtResource("15_a7oyw")]
+position = Vector2(291, 117)
+
+[node name="BloqueSalidaVapor" parent="." instance=ExtResource("16_shsg0")]
+position = Vector2(-77, 124)

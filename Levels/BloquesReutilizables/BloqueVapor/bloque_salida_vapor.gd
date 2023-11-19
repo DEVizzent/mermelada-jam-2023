@@ -36,5 +36,4 @@ func vapor_off():
 	particles.emitting = false
 	textura.visible = false
 	colision_push.disabled = true
-	
-	
+
