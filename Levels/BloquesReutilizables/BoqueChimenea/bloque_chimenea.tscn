@@ -46,8 +46,6 @@ shape = SubResource("RectangleShape2D_cfpmu")
 [node name="TimerCiclo" type="Timer" parent="."]
 autostart = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="AreaMuerte" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMuerte"]
