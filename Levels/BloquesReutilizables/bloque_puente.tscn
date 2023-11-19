@@ -14,7 +14,7 @@ texture = ExtResource("1_03ryg")
 
 [node name="CpBr" type="CollisionPolygon2D" parent="StaticBody2D"]
 visible = false
-polygon = PackedVector2Array(180, 171, -184, 169, -183, -133, -223, -134, -223, -169, 220, -169, 221, -132, 179, -132)
+polygon = PackedVector2Array(149, 141, -154, 142, -156, -110, -185, -111, -186, -141, 185, -140, 184, -111, 149, -110)
 
 [node name="GreenLight" parent="." instance=ExtResource("2_y1vye")]
 position = Vector2(168, -145)

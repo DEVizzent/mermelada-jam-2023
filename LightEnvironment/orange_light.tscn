@@ -1,0 +1,93 @@
+[gd_scene load_steps=14 format=3 uid="uid://c0v2xj684cwdm"]
+
+[ext_resource type="Texture2D" uid="uid://dg8hfmytcqovd" path="res://Levels/Assets/orange-light-1.png" id="1_jolws"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xe142"]
+atlas = ExtResource("1_jolws")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phwlt"]
+atlas = ExtResource("1_jolws")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5x5e"]
+atlas = ExtResource("1_jolws")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v384g"]
+atlas = ExtResource("1_jolws")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2ilk"]
+atlas = ExtResource("1_jolws")
+region = Rect2(32, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyw74"]
+atlas = ExtResource("1_jolws")
+region = Rect2(40, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxfnn"]
+atlas = ExtResource("1_jolws")
+region = Rect2(48, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a53w"]
+atlas = ExtResource("1_jolws")
+region = Rect2(56, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51cpx"]
+atlas = ExtResource("1_jolws")
+region = Rect2(64, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w5133"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xe142")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phwlt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5x5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v384g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2ilk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyw74")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxfnn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6a53w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51cpx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_faimk"]
+offsets = PackedFloat32Array(0, 0.709677)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7tcdf"]
+gradient = SubResource("Gradient_faimk")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="OrangeLight" type="AnimatedSprite2D"]
+position = Vector2(317, 135)
+sprite_frames = SubResource("SpriteFrames_w5133")
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(76.93, 3.55, 0.6, 0.1)
+texture = SubResource("GradientTexture2D_7tcdf")
+texture_scale = 1.75
