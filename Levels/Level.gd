@@ -5,7 +5,8 @@ extends Node2D
 @export var con_lluvia : bool = true
 @export var word : String = "abracadabra"
 @export var time_to_complete : float = 24.5
-@export var nextScene:PackedScene
+
+var wait_one_second : Timer = Timer.new()
 
 func _ready():
 	EventBus.levelCompleted.connect(_on_level_completed)
@@ -14,19 +15,23 @@ func _ready():
 		nodo_lluvia.queue_free()
 
 func _on_level_completed()->void:
-	print("LevelCompleted")
 	var new_type_word_scene = type_word_scene.instantiate()
 	call_deferred("add_child",new_type_word_scene)
 
-	
-func _changeScene()->void:
-	get_tree().change_scene_to_packed(nextScene)
-	
-	
 func _on_word_submited(typed_word)->void:
 	if word == typed_word:
 		print("el juegador a ganado")
-		var tween = get_tree().create_tween()
-		tween.tween_callback(_changeScene).set_delay(0.5)
+		wait_one_second.wait_time = 1
+		wait_one_second.timeout.connect(cambia_pantalla)
+		add_child(wait_one_second)
+		wait_one_second.start()
+		
 	else:
 		print("el jugador a perdido")
+
+func cambia_pantalla():
+	wait_one_second.stop()
+	if self.name == "Level1":
+		get_tree().change_scene_to_file("res://Levels/Level2/Level2.tscn")
+	elif self.name == "Level2":
+		get_tree().change_scene_to_file("res://Levels/Level3/Level3.tscn")
