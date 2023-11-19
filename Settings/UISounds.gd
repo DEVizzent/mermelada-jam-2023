@@ -10,7 +10,6 @@ func _on_pressed_button()->void:
 func _on_slider_drag_ended(value_changed)->void:
 	_on_pressed_button()
 
-
 func _on_button_pressed()->void:
 	_on_pressed_button()
 

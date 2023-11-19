@@ -2,6 +2,7 @@ extends Node2D
 
 func _ready():
 	$CenterContainer/VBoxContainer/StartButton.grab_focus()
+	$UISounds/FocusEnterButton.stop()
 
 func _on_settings_settings_closed():
 	$CenterContainer/VBoxContainer/SettingsButton.grab_focus()
