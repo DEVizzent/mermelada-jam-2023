@@ -40,3 +40,6 @@ func init_debug():
 		state_debug.visible = true
 	else:
 		state_debug.queue_free()
+func electric_damage() -> void:
+	
+	pass
