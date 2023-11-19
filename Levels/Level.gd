@@ -31,7 +31,7 @@ func _on_word_submited(typed_word)->void:
 
 func cambia_pantalla():
 	wait_one_second.stop()
-	if self.name == "Level1":
-		get_tree().change_scene_to_file("res://Levels/Level2/Level2.tscn")
-	elif self.name == "Level2":
+	if self.name == "Level2":
+		get_tree().change_scene_to_file("res://Levels/LevelChimneys/LevelChimneys.tscn")
+	elif self.name == "LevelChimneys":
 		get_tree().change_scene_to_file("res://Levels/Level3/Level3.tscn")
