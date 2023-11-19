@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c07f4g3u4hq6e"]
+
+[ext_resource type="Texture2D" uid="uid://blfva1x5fdvov" path="res://Levels/Assets/bridge.png" id="1_03ryg"]
+[ext_resource type="PackedScene" uid="uid://dhxdgsmkhja1y" path="res://LightEnvironment/green_light.tscn" id="2_y1vye"]
+
+[node name="bloque_puente" type="Node2D"]
+
+[node name="Bridge" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_03ryg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CpBr" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+polygon = PackedVector2Array(180, 171, -184, 169, -183, -133, -223, -134, -223, -169, 220, -169, 221, -132, 179, -132)
+
+[node name="GreenLight" parent="." instance=ExtResource("2_y1vye")]
+position = Vector2(168, -145)
+
+[node name="GreenLight2" parent="." instance=ExtResource("2_y1vye")]
+position = Vector2(-2, -145)
+
+[node name="GreenLight3" parent="." instance=ExtResource("2_y1vye")]
+position = Vector2(-173, -145)

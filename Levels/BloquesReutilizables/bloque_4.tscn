@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://d26dy00lnhvjh"]
+
+[ext_resource type="Texture2D" uid="uid://cjepeua24raeh" path="res://Levels/Assets/building.png" id="1_iq5q6"]
+
+[node name="Bloque3" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1001.1, 245)
+scale = Vector2(3, 3)
+
+[node name="CpB4" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(4.33331, -21.3333)
+scale = Vector2(0.333333, 0.333333)
+polygon = PackedVector2Array(-95.1, -13.0001, -93.1, -96.0002, -76.1, -96.0002, -76.1, -121, 85.9002, -121, 86.9002, -97.0002, 96.9002, -97.0002, 98.9002, 247, -124.1, 248, -125.1, -13.0001)
+
+[node name="B4" type="Sprite2D" parent="."]
+position = Vector2(1001.1, 245)
+scale = Vector2(3, 3)
+texture = ExtResource("1_iq5q6")
