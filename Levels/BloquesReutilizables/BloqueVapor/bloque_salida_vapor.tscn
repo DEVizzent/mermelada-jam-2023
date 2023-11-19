@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://fudli33bukc1"]
+[gd_scene load_steps=11 format=3 uid="uid://fudli33bukc1"]
 
 [ext_resource type="Script" path="res://Levels/BloquesReutilizables/BloqueVapor/bloque_salida_vapor.gd" id="1_ei3iu"]
 [ext_resource type="Texture2D" uid="uid://dvoa2pijycsx3" path="res://Chimney/Sprites/ChimneyVapor.png" id="1_l1eq7"]
@@ -32,7 +32,10 @@ fill_from = Vector2(0.123932, 1)
 fill_to = Vector2(0.777778, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ykj8"]
-size = Vector2(38, 344)
+size = Vector2(38, 334)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbphh"]
+size = Vector2(41, 45)
 
 [node name="BloqueSalidaVapor" type="Node2D"]
 script = ExtResource("1_ei3iu")
@@ -64,14 +67,14 @@ texture = SubResource("GradientTexture2D_6s640")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="AreaPushPlayer" type="Area2D" parent="." groups=["vapor"]]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPushPlayer"]
-position = Vector2(0, -189)
+position = Vector2(0, -194)
 shape = SubResource("RectangleShape2D_4ykj8")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-build_mode = 1
-polygon = PackedVector2Array(-22, 20, -22, -25, -18, -25, -18, 15, 18, 15, 18, -25, 22, -25, 22, 20)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_xbphh")
+debug_color = Color(0.890196, 0.294118, 0.34902, 0.419608)
