@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://fudli33bukc1"]
+
+[ext_resource type="Script" path="res://Levels/BloquesReutilizables/BloqueVapor/bloque_salida_vapor.gd" id="1_ei3iu"]
+[ext_resource type="Texture2D" uid="uid://dvoa2pijycsx3" path="res://Chimney/Sprites/ChimneyVapor.png" id="1_l1eq7"]
+[ext_resource type="Texture2D" uid="uid://d3v1cx6qm4k0p" path="res://Chimney/Sprites/ChimneyVaporExtension.png" id="2_a2ect"]
+[ext_resource type="Texture2D" uid="uid://1uv60xdqnbxk" path="res://HumoChimeneas/mota.png" id="2_urycr"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nx3xs"]
+emission_shape = 3
+emission_box_extents = Vector3(10, 1, 1)
+particle_flag_disable_z = true
+direction = Vector3(0, 1, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = -200.0
+initial_velocity_max = -100.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.05
+scale_max = 0.15
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rnv4t"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_v0pm0"]
+offsets = PackedFloat32Array(0, 0.412338, 0.555195, 1)
+colors = PackedColorArray(0.596078, 0.356863, 0, 0, 0.596078, 0.356863, 0, 1, 0.957925, 0.620343, 0.302124, 1, 1, 0.65098, 0.337255, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6s640"]
+gradient = SubResource("Gradient_v0pm0")
+fill_from = Vector2(0.123932, 1)
+fill_to = Vector2(0.777778, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ykj8"]
+size = Vector2(46, 332)
+
+[node name="BloqueSalidaVapor" type="Node2D"]
+script = ExtResource("1_ei3iu")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 24
+process_material = SubResource("ParticleProcessMaterial_nx3xs")
+texture = ExtResource("2_urycr")
+lifetime = 2.0
+
+[node name="ChimneyVapor" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_l1eq7")
+
+[node name="ChimneyVaporExtension" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_a2ect")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.254902)
+material = SubResource("CanvasItemMaterial_rnv4t")
+offset_left = -57.0
+offset_top = -597.0
+offset_right = 66.0
+offset_bottom = -37.0
+texture = SubResource("GradientTexture2D_6s640")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AreaPushPlayer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPushPlayer"]
+position = Vector2(0, -195)
+shape = SubResource("RectangleShape2D_4ykj8")
