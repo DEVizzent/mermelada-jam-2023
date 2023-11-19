@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://brr2ppmwcwy00"]
+
+[ext_resource type="Texture2D" uid="uid://eyxd0f56xkpy" path="res://Levels/Level1/Assets/orange-farol.png" id="1_a0jsv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcqe3"]
+atlas = ExtResource("1_a0jsv")
+region = Rect2(0, 0, 10, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bb50"]
+atlas = ExtResource("1_a0jsv")
+region = Rect2(10, 0, 10, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ist40"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcqe3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bb50")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_ngmus"]
+offsets = PackedFloat32Array(0, 0.709677)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7tcdf"]
+gradient = SubResource("Gradient_ngmus")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="OrangeFarol" type="AnimatedSprite2D"]
+position = Vector2(556, 171)
+scale = Vector2(-3, 3)
+sprite_frames = SubResource("SpriteFrames_ist40")
+autoplay = "default"
+frame_progress = 0.97821
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1.33334, -7)
+color = Color(76.93, 3.55, 0.6, 0.1)
+texture = SubResource("GradientTexture2D_7tcdf")
+
+[node name="OrangeFarol" type="AnimatedSprite2D" parent="."]
+position = Vector2(556, 171)
+rotation = -3.14159
+scale = Vector2(3, -3)
+sprite_frames = SubResource("SpriteFrames_ist40")
+autoplay = "default"
+frame_progress = 0.463731
+
+[node name="PointLight2D" type="PointLight2D" parent="OrangeFarol"]
+position = Vector2(1.33334, -7)
+color = Color(76.93, 3.55, 0.6, 0.1)
+texture = SubResource("GradientTexture2D_7tcdf")

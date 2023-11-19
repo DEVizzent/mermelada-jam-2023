@@ -8,14 +8,16 @@ font_size = 20
 [node name="HeaderBar" type="CanvasLayer"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 1284.0
 offset_bottom = 65.0
 color = Color(1, 1, 1, 0.168627)
 
 [node name="TimerCountdown" parent="." instance=ExtResource("1_3kcax")]
-position = Vector2(1130, 15)
+position = Vector2(600, 31)
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = 900.0
 offset_top = 22.0
 offset_right = 1099.0

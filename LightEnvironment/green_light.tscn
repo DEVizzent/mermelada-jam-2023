@@ -1,0 +1,93 @@
+[gd_scene load_steps=14 format=3 uid="uid://dhxdgsmkhja1y"]
+
+[ext_resource type="Texture2D" uid="uid://bccpcdopfv7jj" path="res://Levels/Level1/Assets/green-light-1.png" id="1_lkhxs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0srnh"]
+atlas = ExtResource("1_lkhxs")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttt05"]
+atlas = ExtResource("1_lkhxs")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2irh"]
+atlas = ExtResource("1_lkhxs")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrqoh"]
+atlas = ExtResource("1_lkhxs")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8rnm"]
+atlas = ExtResource("1_lkhxs")
+region = Rect2(32, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frr0f"]
+atlas = ExtResource("1_lkhxs")
+region = Rect2(40, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vohox"]
+atlas = ExtResource("1_lkhxs")
+region = Rect2(48, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svxkp"]
+atlas = ExtResource("1_lkhxs")
+region = Rect2(56, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea81g"]
+atlas = ExtResource("1_lkhxs")
+region = Rect2(64, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w5133"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0srnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttt05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2irh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrqoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8rnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frr0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vohox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svxkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea81g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_ngmus"]
+offsets = PackedFloat32Array(0, 0.709677)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7tcdf"]
+gradient = SubResource("Gradient_ngmus")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="GreenLight" type="AnimatedSprite2D"]
+position = Vector2(317, 135)
+sprite_frames = SubResource("SpriteFrames_w5133")
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0, 4.01176, 0.188235, 0.309804)
+texture = SubResource("GradientTexture2D_7tcdf")
+texture_scale = 1.75
