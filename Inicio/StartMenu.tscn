@@ -1,146 +1,13 @@
-[gd_scene load_steps=43 format=3 uid="uid://xviyat66ggib"]
+[gd_scene load_steps=9 format=3 uid="uid://xviyat66ggib"]
 
 [ext_resource type="Script" path="res://Inicio/StartMenu.gd" id="1_keq2j"]
 [ext_resource type="Script" path="res://Inicio/ButtonJumpScene.gd" id="1_wqmyn"]
 [ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="2_4tn62"]
 [ext_resource type="Texture2D" uid="uid://ccxvwsthy6mhk" path="res://Inicio/Background.png" id="2_mt6pw"]
 [ext_resource type="Theme" uid="uid://cjtm05baiqrbl" path="res://Settings/ButtonTheme.tres" id="4_cceg4"]
-[ext_resource type="Script" path="res://Levels/Level.gd" id="6_twhn4"]
+[ext_resource type="PackedScene" uid="uid://yhc18mcq1uk7" path="res://Levels/Level1/Level1.tscn" id="6_ext52"]
 [ext_resource type="AudioStream" uid="uid://b88nyxqsn6pb" path="res://Inicio/Menu.mp3" id="7_ckv4g"]
-[ext_resource type="PackedScene" uid="uid://dwsqgd4tix7bb" path="res://HeaderLevelBar/header_bar.tscn" id="7_k48nq"]
-[ext_resource type="PackedScene" uid="uid://c71545ntm6a25" path="res://Player/Player.tscn" id="8_85qrw"]
 [ext_resource type="PackedScene" uid="uid://crvq24xrg2gdc" path="res://Settings/UISounds.tscn" id="8_p75bp"]
-[ext_resource type="PackedScene" uid="uid://61rh154cdswe" path="res://StarsRain/StarsRain.tscn" id="9_qe120"]
-[ext_resource type="PackedScene" uid="uid://hop855rd06b8" path="res://Levels/LevelGoalArea.tscn" id="10_f663v"]
-[ext_resource type="PackedScene" uid="uid://bueyv6qwi0jrw" path="res://StarsRain/EstrellaFugaz/SpawnerEstrellas/spawner_estrellas.tscn" id="11_ipi7v"]
-[ext_resource type="PackedScene" uid="uid://6eolvn4p0iw7" path="res://RainEnviroment/rain_enviroment_particles.tscn" id="12_3utvw"]
-[ext_resource type="PackedScene" uid="uid://bt0q7q5tfblkb" path="res://Levels/Parallax/ParallaxBackground.tscn" id="13_7blvx"]
-[ext_resource type="PackedScene" uid="uid://brr2ppmwcwy00" path="res://LightEnvironment/orange_farol.tscn" id="14_vr1nl"]
-[ext_resource type="PackedScene" uid="uid://dhxdgsmkhja1y" path="res://LightEnvironment/green_light.tscn" id="15_4tvak"]
-[ext_resource type="Texture2D" uid="uid://bccpcdopfv7jj" path="res://Levels/Assets/green-light-1.png" id="16_04gv6"]
-[ext_resource type="Texture2D" uid="uid://eyxd0f56xkpy" path="res://Levels/Assets/orange-farol.png" id="17_ahe5o"]
-[ext_resource type="Texture2D" uid="uid://c5co4d52unj43" path="res://Levels/Assets/b1.png" id="18_a6m83"]
-[ext_resource type="Texture2D" uid="uid://bu8sv3c7h250f" path="res://Levels/Assets/b2.png" id="19_v12qh"]
-[ext_resource type="Texture2D" uid="uid://cioa2wvh8jiyk" path="res://Levels/Assets/b3.png" id="20_ltx8a"]
-[ext_resource type="Texture2D" uid="uid://mkwnuv6bundi" path="res://Levels/Assets/b4.png" id="21_424og"]
-[ext_resource type="PackedScene" uid="uid://ck3p64601iieq" path="res://DeathZone/DeathZone.tscn" id="22_1cb6i"]
-[ext_resource type="PackedScene" uid="uid://d2iacsk4tnmw" path="res://FinishCats/finish_cats.tscn" id="23_t7xpg"]
-[ext_resource type="AudioStream" uid="uid://wmj1unuubxf8" path="res://Levels/Level1/Level1.mp3" id="24_lnu5w"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0srnh"]
-atlas = ExtResource("16_04gv6")
-region = Rect2(0, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ttt05"]
-atlas = ExtResource("16_04gv6")
-region = Rect2(8, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t2irh"]
-atlas = ExtResource("16_04gv6")
-region = Rect2(16, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yrqoh"]
-atlas = ExtResource("16_04gv6")
-region = Rect2(24, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m8rnm"]
-atlas = ExtResource("16_04gv6")
-region = Rect2(32, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_frr0f"]
-atlas = ExtResource("16_04gv6")
-region = Rect2(40, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vohox"]
-atlas = ExtResource("16_04gv6")
-region = Rect2(48, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_svxkp"]
-atlas = ExtResource("16_04gv6")
-region = Rect2(56, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ea81g"]
-atlas = ExtResource("16_04gv6")
-region = Rect2(64, 0, 8, 8)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_w5133"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0srnh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ttt05")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t2irh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yrqoh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m8rnm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_frr0f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vohox")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_svxkp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ea81g")
-}],
-"loop": true,
-"name": &"default",
-"speed": 12.0
-}]
-
-[sub_resource type="Gradient" id="Gradient_ngmus"]
-offsets = PackedFloat32Array(0, 0.709677)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_7tcdf"]
-gradient = SubResource("Gradient_ngmus")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xcqe3"]
-atlas = ExtResource("17_ahe5o")
-region = Rect2(0, 0, 10, 26)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0bb50"]
-atlas = ExtResource("17_ahe5o")
-region = Rect2(10, 0, 10, 26)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ist40"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xcqe3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0bb50")
-}],
-"loop": true,
-"name": &"default",
-"speed": 8.0
-}]
-
-[sub_resource type="PackedScene" id="PackedScene_gy7tk"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"names": PackedStringArray("Level1", "Node2D", "level", "script", "word", "time_to_complete", "HeaderBar", "Player", "player", "position", "collision_mask", "StarsRain", "player", "goal_area", "debug", "LevelGoalArea", "position", "SpawnerEstrellas", "position", "RainEnviromentParticles", "position", "ParallaxBackground", "Lights", "Node2D", "z_index", "OrangeFarol", "GreenLight", "GreenLight2", "AnimatedSprite2D", "position", "sprite_frames", "autoplay", "PointLight2D", "PointLight2D", "position", "color", "texture", "texture_scale", "GreenLight3", "AnimatedSprite2D", "position", "sprite_frames", "autoplay", "PointLight2D", "PointLight2D", "position", "color", "texture", "texture_scale", "GreenLight4", "AnimatedSprite2D", "position", "sprite_frames", "autoplay", "PointLight2D", "PointLight2D", "position", "color", "texture", "texture_scale", "GreenLight5", "AnimatedSprite2D", "position", "sprite_frames", "autoplay", "PointLight2D", "PointLight2D", "position", "color", "texture", "texture_scale", "OrangeFarol2", "AnimatedSprite2D", "position", "scale", "sprite_frames", "autoplay", "frame_progress", "PointLight2D", "PointLight2D", "position", "color", "texture", "Platforms", "StaticBody2D", "collision_layer", "B1", "Sprite2D", "position", "scale", "texture", "CpB1", "CollisionPolygon2D", "visible", "position", "polygon", "B2", "Sprite2D", "position", "scale", "texture", "CpB2", "CollisionPolygon2D", "visible", "position", "polygon", "B3", "Sprite2D", "position", "scale", "texture", "CpB3", "CollisionPolygon2D", "visible", "position", "polygon", "B4", "Sprite2D", "position", "scale", "texture", "CpB4", "CollisionPolygon2D", "visible", "position", "polygon", "DeathZone", "FinishCats", "Settings", "AudioStreamPlayer", "AudioStreamPlayer", "process_mode", "stream", "autoplay"),
-"node_count": 34,
-"node_paths": [NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("./Lights"), NodePath("./Lights"), NodePath("./Lights"), NodePath("./Lights/GreenLight2"), NodePath("./Lights"), NodePath("./Lights/GreenLight3"), NodePath("./Lights"), NodePath("./Lights/GreenLight4"), NodePath("./Lights"), NodePath("./Lights/GreenLight5"), NodePath("./Lights"), NodePath("./Lights/OrangeFarol2"), NodePath("."), NodePath("./Platforms"), NodePath("./Platforms"), NodePath("./Platforms"), NodePath("./Platforms"), NodePath("./Platforms"), NodePath("./Platforms"), NodePath("./Platforms"), NodePath("./Platforms"), NodePath("."), NodePath("."), NodePath("."), NodePath(".")],
-"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 3, 3, 0, 4, 1, 5, 2, 1, 2, 1073741824, 0, 2147483647, 6, 3, 0, 0, 1073741825, 0, 2147483647, 7, 4, 2, 9, 5, 10, 6, 1, 8, 1073741826, 0, 2147483647, 11, 7, 3, 1073741836, 8, 1073741837, 9, 14, 10, 0, 1073741827, 0, 2147483647, 15, 11, 1, 16, 12, 0, 1073741828, 0, 2147483647, 17, 13, 1, 18, 14, 0, 1073741829, 0, 2147483647, 19, 15, 1, 20, 16, 0, 1073741830, 0, 2147483647, 21, 17, 0, 0, 1073741831, 0, 23, 22, -1, 1, 24, 18, 0, 1073741832, 0, 2147483647, 25, 19, 0, 0, 1073741833, 0, 2147483647, 26, 20, 0, 0, 1073741834, 0, 28, 27, -1, 3, 29, 21, 30, 22, 31, 23, 0, 1073741835, 0, 33, 32, -1, 4, 34, 24, 35, 25, 36, 26, 37, 27, 0, 1073741836, 0, 39, 38, -1, 3, 40, 28, 41, 29, 42, 30, 0, 1073741837, 0, 44, 43, -1, 4, 45, 31, 46, 32, 47, 33, 48, 34, 0, 1073741838, 0, 50, 49, -1, 3, 51, 35, 52, 36, 53, 37, 0, 1073741839, 0, 55, 54, -1, 4, 56, 38, 57, 39, 58, 40, 59, 41, 0, 1073741840, 0, 61, 60, -1, 3, 62, 42, 63, 43, 64, 44, 0, 1073741841, 0, 66, 65, -1, 4, 67, 45, 68, 46, 69, 47, 70, 48, 0, 1073741842, 0, 72, 71, -1, 5, 73, 49, 74, 50, 75, 51, 76, 52, 77, 53, 0, 1073741843, 0, 79, 78, -1, 3, 80, 54, 81, 55, 82, 56, 0, 1073741844, 0, 84, 83, -1, 1, 85, 57, 0, 1073741845, 0, 87, 86, -1, 3, 88, 58, 89, 59, 90, 60, 0, 1073741846, 0, 92, 91, -1, 3, 93, 61, 94, 62, 95, 63, 0, 1073741847, 0, 97, 96, -1, 3, 98, 64, 99, 65, 100, 66, 0, 1073741848, 0, 102, 101, -1, 3, 103, 67, 104, 68, 105, 69, 0, 1073741849, 0, 107, 106, -1, 3, 108, 70, 109, 71, 110, 72, 0, 1073741850, 0, 112, 111, -1, 3, 113, 73, 114, 74, 115, 75, 0, 1073741851, 0, 117, 116, -1, 3, 118, 76, 119, 77, 120, 78, 0, 1073741852, 0, 122, 121, -1, 3, 123, 79, 124, 80, 125, 81, 0, 1073741853, 0, 2147483647, 126, 82, 0, 0, 1073741854, 0, 2147483647, 127, 83, 0, 0, 1073741855, 0, 2147483647, 128, 84, 0, 0, 1073741856, 0, 130, 129, -1, 3, 131, 85, 132, 86, 133, 87, 0),
-"variants": [ExtResource("6_twhn4"), "ferter", 6.5, ExtResource("7_k48nq"), ExtResource("8_85qrw"), Vector2(0, 118), 9, ExtResource("9_qe120"), NodePath("../Player"), NodePath("../LevelGoalArea"), false, ExtResource("10_f663v"), Vector2(1522, -44), ExtResource("11_ipi7v"), Vector2(2, -65), ExtResource("12_3utvw"), Vector2(-7, -303), ExtResource("13_7blvx"), 1, ExtResource("14_vr1nl"), ExtResource("15_4tvak"), Vector2(702, 103), SubResource("SpriteFrames_w5133"), "default", Vector2(12, -2), Color(0, 4.01176, 0.188235, 0.309804), SubResource("GradientTexture2D_7tcdf"), 1.75, Vector2(976, 36), SubResource("SpriteFrames_w5133"), "default", Vector2(12, -2), Color(0, 4.01176, 0.188235, 0.309804), SubResource("GradientTexture2D_7tcdf"), 1.75, Vector2(1016, 36), SubResource("SpriteFrames_w5133"), "default", Vector2(12, -2), Color(0, 4.01176, 0.188235, 0.309804), SubResource("GradientTexture2D_7tcdf"), 1.75, Vector2(1056, 36), SubResource("SpriteFrames_w5133"), "default", Vector2(12, -2), Color(0, 4.01176, 0.188235, 0.309804), SubResource("GradientTexture2D_7tcdf"), 1.75, Vector2(776, 171), Vector2(3, 3), SubResource("SpriteFrames_ist40"), "default", 0.463731, Vector2(1.33334, -7), Color(76.93, 3.55, 0.6, 0.1), SubResource("GradientTexture2D_7tcdf"), 8, Vector2(-27, 67), Vector2(3, 3), ExtResource("18_a6m83"), false, Vector2(-450, -232), PackedVector2Array(-1, -6, 314, -8, 315, 368, 840, 368, 844, 633, 0, 630), Vector2(629.5, 241.2), Vector2(3, 3), ExtResource("19_v12qh"), false, Vector2(630, 192), PackedVector2Array(-53, 15.8, -60, -84, 131, -85, 128, 15.8, 186, 16.8, 178, 207, -189, 209, -185, 136, -173, 141, -183, 17.8), Vector2(1001.1, 245), Vector2(3, 3), ExtResource("20_ltx8a"), false, Vector2(1014.1, 181), PackedVector2Array(-39, 283, -40, -95, -82, -94, -81, -107, 55, -107, 55, -95, 43, -95, 45, 281), Vector2(1495, 268), Vector2(3, 3), ExtResource("21_424og"), false, Vector2(1500, 167), PackedVector2Array(-161, -16, -277, 44, -278, 219, 271, 221, 270, 43, 150, -18), ExtResource("22_1cb6i"), ExtResource("23_t7xpg"), ExtResource("2_4tn62"), 3, ExtResource("24_lnu5w"), true],
-"version": 3
-}
 
 [node name="StartMenu" type="Node2D"]
 script = ExtResource("1_keq2j")
@@ -178,7 +45,7 @@ layout_mode = 2
 layout_mode = 2
 text = "Start"
 script = ExtResource("1_wqmyn")
-nextScene = SubResource("PackedScene_gy7tk")
+nextScene = ExtResource("6_ext52")
 
 [node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
