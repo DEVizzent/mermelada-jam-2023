@@ -1,7 +1,7 @@
 [gd_scene load_steps=41 format=3 uid="uid://8l4e0feev8ra"]
 
 [ext_resource type="Script" path="res://TypeWordAtEnd/type_word_at_end.gd" id="1_c8wdt"]
-[ext_resource type="Texture2D" uid="uid://ccxvwsthy6mhk" path="res://Inicio/Background.png" id="2_ltl4i"]
+[ext_resource type="Texture2D" uid="uid://cxvlvpbd5bdfc" path="res://TypeWordAtEnd/BackgroundTypeWord.png" id="2_hh571"]
 [ext_resource type="PackedScene" uid="uid://dhcqkivmh5tqg" path="res://Levels/BloquesReutilizables/bloque_final.tscn" id="4_yacqs"]
 [ext_resource type="Texture2D" uid="uid://c01pn4s5jow3y" path="res://Player/Sprites/idle.png" id="5_c8225"]
 [ext_resource type="Texture2D" uid="uid://tpv64vn05nvs" path="res://Player/Sprites/jumping.png" id="6_yujig"]
@@ -357,8 +357,7 @@ script = ExtResource("1_c8wdt")
 
 [node name="Background" type="Sprite2D" parent="TypeWordAtEnd"]
 position = Vector2(641.5, 363.5)
-scale = Vector2(2.22743, 2.24383)
-texture = ExtResource("2_ltl4i")
+texture = ExtResource("2_hh571")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TypeWordAtEnd"]
 position = Vector2(523, 451)
