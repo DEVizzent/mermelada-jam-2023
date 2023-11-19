@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://cy53ls3dwj051"]
+
+[ext_resource type="PackedScene" uid="uid://b6uo2fy16fvxi" path="res://HumoChimeneas/intento_humo_1.tscn" id="1_qif4w"]
+[ext_resource type="Script" path="res://Levels/BloquesReutilizables/bloque_chimenea.gd" id="1_tvxdi"]
+[ext_resource type="Texture2D" uid="uid://dbuyc05b3eivx" path="res://Levels/Assets/Chimenea/Chimney.png" id="2_hdp66"]
+
+[sub_resource type="Gradient" id="Gradient_xceed"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hrx4y"]
+gradient = SubResource("Gradient_xceed")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfpmu"]
+size = Vector2(34, 36)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vhxla"]
+radius = 15.0
+height = 90.0
+
+[node name="BloqueChimenea" type="Node2D"]
+script = ExtResource("1_tvxdi")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-2, -80)
+scale = Vector2(0.734375, 2.125)
+color = Color(1, 0.843137, 0.137255, 1)
+energy = 1.03
+texture = SubResource("GradientTexture2D_hrx4y")
+height = 50.0
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("1_qif4w")]
+position = Vector2(-3, -8)
+scale = Vector2(0.5, 0.5)
+
+[node name="Chimney" type="Sprite2D" parent="."]
+position = Vector2(-2, 7)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_hdp66")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2, 8)
+shape = SubResource("RectangleShape2D_cfpmu")
+
+[node name="TimerCiclo" type="Timer" parent="."]
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AreaMuerte" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMuerte"]
+position = Vector2(-2, -40)
+shape = SubResource("CapsuleShape2D_vhxla")
+
+[node name="FairPlay" type="Timer" parent="AreaMuerte"]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="TimerCiclo" to="." method="_on_timer_ciclo_timeout"]
+[connection signal="timeout" from="AreaMuerte/FairPlay" to="." method="_on_fair_play_timeout"]
