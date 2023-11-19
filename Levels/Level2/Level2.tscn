@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://yhc18mcq1uk7"]
+[gd_scene load_steps=18 format=3 uid="uid://yhc18mcq1uk7"]
 
 [ext_resource type="Script" path="res://Levels/Level.gd" id="1_vdmso"]
 [ext_resource type="PackedScene" uid="uid://dwsqgd4tix7bb" path="res://HeaderLevelBar/header_bar.tscn" id="2_l5spm"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="14_2vlkn"]
 [ext_resource type="PackedScene" uid="uid://cy53ls3dwj051" path="res://Levels/BloquesReutilizables/BoqueChimenea/bloque_chimenea.tscn" id="15_a7oyw"]
 [ext_resource type="PackedScene" uid="uid://fudli33bukc1" path="res://Levels/BloquesReutilizables/BloqueVapor/bloque_salida_vapor.tscn" id="16_shsg0"]
+[ext_resource type="AudioStream" uid="uid://2t8bx7eigr7s" path="res://Levels/Level2/Level2.mp3" id="17_pawyh"]
 [ext_resource type="PackedScene" uid="uid://ck3p64601iieq" path="res://DeathZone/DeathZone.tscn" id="17_rjag8"]
 
 [node name="Level2" type="Node2D" groups=["level"]]
@@ -73,3 +74,8 @@ position = Vector2(291, 117)
 
 [node name="BloqueSalidaVapor" parent="." instance=ExtResource("16_shsg0")]
 position = Vector2(-77, 124)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("17_pawyh")
+autoplay = true
