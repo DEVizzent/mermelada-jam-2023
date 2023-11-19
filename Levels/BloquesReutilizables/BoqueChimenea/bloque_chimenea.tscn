@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://b6uo2fy16fvxi" path="res://HumoChimeneas/intento_humo_1.tscn" id="2_t212m"]
 [ext_resource type="Texture2D" uid="uid://dbuyc05b3eivx" path="res://Levels/Assets/Chimenea/Chimney.png" id="3_uyeby"]
 
-[sub_resource type="Gradient" id="Gradient_xceed"]
+[sub_resource type="Gradient" id="Gradient_70ufa"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_hrx4y"]
-gradient = SubResource("Gradient_xceed")
+gradient = SubResource("Gradient_70ufa")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfpmu"]
 size = Vector2(34, 36)
