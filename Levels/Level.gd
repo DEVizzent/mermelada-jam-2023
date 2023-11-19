@@ -16,7 +16,8 @@ func _on_level_completed()->void:
 	#Conectar aqui la introducion de texto
 	print("LevelCompleted")
 	var new_type_word_scene = type_word_scene.instantiate()
-	add_child(new_type_word_scene)
+	call_deferred("add_child",new_type_word_scene)
+	
 	
 func _on_word_submited(typed_word)->void:
 	if word == typed_word:
