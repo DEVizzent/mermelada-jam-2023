@@ -15,6 +15,7 @@ func _ready():
 		nodo_lluvia.queue_free()
 
 func _on_level_completed()->void:
+	$Platforms/ElectricTowers.queue_free()
 	var new_type_word_scene = type_word_scene.instantiate()
 	call_deferred("add_child",new_type_word_scene)
 
@@ -31,7 +32,7 @@ func _on_word_submited(typed_word)->void:
 
 func cambia_pantalla():
 	wait_one_second.stop()
-	if self.name == "Level2":
+	if self.name == "Level4":
 		get_tree().change_scene_to_file("res://Levels/LevelChimneys/LevelChimneys.tscn")
 	elif self.name == "LevelChimneys":
 		get_tree().change_scene_to_file("res://Levels/Level3/Level3.tscn")

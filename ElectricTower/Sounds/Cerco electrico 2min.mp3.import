@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djy3g1304lh86"
+path="res://.godot/imported/Cerco electrico 2min.mp3-9676b7a4cf5e7827d84383b5ae7a0db8.mp3str"
+
+[deps]
+
+source_file="res://ElectricTower/Sounds/Cerco electrico 2min.mp3"
+dest_files=["res://.godot/imported/Cerco electrico 2min.mp3-9676b7a4cf5e7827d84383b5ae7a0db8.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

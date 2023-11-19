@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://hnykdr510k4u"]
+[gd_scene load_steps=19 format=3 uid="uid://hnykdr510k4u"]
 
 [ext_resource type="Script" path="res://ElectricTower/ElectricTower5Sections.gd" id="1_be4en"]
 [ext_resource type="Texture2D" uid="uid://ddpr7v5oajmrk" path="res://ElectricTower/Sprites/BeginElectricTower.png" id="1_gupi0"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://bpsim4pv8n58e" path="res://ElectricTower/Sprites/SparksDamage2.png" id="11_a3uvt"]
 [ext_resource type="Texture2D" uid="uid://d4feoyrxggyi" path="res://ElectricTower/Sprites/SparksDamage3.png" id="12_c2gom"]
 [ext_resource type="Texture2D" uid="uid://bboim3s7jm6v1" path="res://ElectricTower/Sprites/SparksDamage4.png" id="13_svgru"]
+[ext_resource type="AudioStream" uid="uid://i0u1vt1ct07l" path="res://ElectricTower/Sounds/highvoltage-19930 pix a bay.mp3" id="15_k4q1b"]
+[ext_resource type="AudioStream" uid="uid://djy3g1304lh86" path="res://ElectricTower/Sounds/Cerco electrico 2min.mp3" id="15_vqcui"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_canu5"]
 animations = [{
@@ -57,7 +59,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"SparkDamage",
-"speed": 11.0
+"speed": 8.0
 }]
 
 [node name="ElectricTower5Sections" type="Area2D"]
@@ -237,7 +239,16 @@ autostart = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-18, 5, 4, -21, 14, -9, 47, -10, 66, -17, 78, -10, 109, -8, 134, -16, 110, 9, 95, 10, 72, 9, 53, 4, 39, 8, 13, 9, -7, 4)
 
+[node name="audioSpark" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_k4q1b")
+volume_db = -28.384
+
+[node name="audioSparkExplosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_vqcui")
+volume_db = -26.086
+
 [connection signal="body_entered" from="." to="." method="_on_electric_tower_5_sections_body_entered"]
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="animation_changed" from="SparkDamage2" to="." method="_on_spark_damage_2_animation_changed"]
 [connection signal="animation_finished" from="SparkDamage2" to="." method="_on_spark_damage_2_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

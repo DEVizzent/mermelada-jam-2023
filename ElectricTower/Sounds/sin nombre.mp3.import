@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://u0khttj1c1ri"
+path="res://.godot/imported/sin nombre.mp3-23aa19fe76d8cd9d283d0f6ddda9cd91.mp3str"
+
+[deps]
+
+source_file="res://ElectricTower/Sounds/sin nombre.mp3"
+dest_files=["res://.godot/imported/sin nombre.mp3-23aa19fe76d8cd9d283d0f6ddda9cd91.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

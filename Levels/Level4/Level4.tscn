@@ -19,8 +19,8 @@
 
 [node name="Level4" type="Node2D" groups=["level"]]
 script = ExtResource("1_gde85")
-word = "ferter"
-time_to_complete = 15.0
+word = "CAMALEON"
+time_to_complete = 20.0
 
 [node name="HeaderBar" parent="." instance=ExtResource("2_k2oft")]
 
@@ -49,7 +49,7 @@ position = Vector2(-7, -303)
 [node name="Bloque1" parent="Platforms" instance=ExtResource("9_ko4iy")]
 
 [node name="Bloque2" parent="Platforms" instance=ExtResource("10_mja5a")]
-position = Vector2(24, -82)
+position = Vector2(27, -32)
 
 [node name="Bloque3" parent="Platforms" instance=ExtResource("11_5ej4x")]
 position = Vector2(460, 4)
@@ -67,29 +67,29 @@ scale = Vector2(-1, 1)
 [node name="Bloque6" parent="Platforms" instance=ExtResource("11_5ej4x")]
 position = Vector2(999, -63)
 
-[node name="TorresElectrivas" type="Node2D" parent="Platforms"]
+[node name="ElectricTowers" type="Node2D" parent="Platforms"]
 
-[node name="ElectricTower5Sections" parent="Platforms/TorresElectrivas" instance=ExtResource("13_j4g1q")]
+[node name="ElectricTower5Sections" parent="Platforms/ElectricTowers" instance=ExtResource("13_j4g1q")]
 z_index = -1
 position = Vector2(311, 42)
 scale = Vector2(2, 2)
 
-[node name="ElectricTower5Sections2" parent="Platforms/TorresElectrivas" instance=ExtResource("13_j4g1q")]
+[node name="ElectricTower5Sections2" parent="Platforms/ElectricTowers" instance=ExtResource("13_j4g1q")]
 z_index = -1
 position = Vector2(784, 59)
 scale = Vector2(2, 2)
 
-[node name="ElectricTower5Sections3" parent="Platforms/TorresElectrivas" instance=ExtResource("13_j4g1q")]
+[node name="ElectricTower5Sections3" parent="Platforms/ElectricTowers" instance=ExtResource("13_j4g1q")]
 z_index = -1
 position = Vector2(1619, -55)
 scale = Vector2(2, 2)
 
-[node name="ElectricTower5Sections5" parent="Platforms/TorresElectrivas" instance=ExtResource("13_j4g1q")]
+[node name="ElectricTower5Sections5" parent="Platforms/ElectricTowers" instance=ExtResource("13_j4g1q")]
 z_index = -1
 position = Vector2(1876, -59)
 scale = Vector2(2, 2)
 
-[node name="ElectricTower5Sections4" parent="Platforms/TorresElectrivas" instance=ExtResource("13_j4g1q")]
+[node name="ElectricTower5Sections4" parent="Platforms/ElectricTowers" instance=ExtResource("13_j4g1q")]
 z_index = -1
 position = Vector2(1362, 13)
 scale = Vector2(2, 2)
