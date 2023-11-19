@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ch4qu2cv74nik"]
+[gd_scene load_steps=13 format=3 uid="uid://ch4qu2cv74nik"]
 
 [ext_resource type="Script" path="res://Levels/Level.gd" id="1_jfv7o"]
 [ext_resource type="PackedScene" uid="uid://dwsqgd4tix7bb" path="res://HeaderLevelBar/header_bar.tscn" id="2_57w8f"]
@@ -8,7 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://bueyv6qwi0jrw" path="res://StarsRain/EstrellaFugaz/SpawnerEstrellas/spawner_estrellas.tscn" id="6_gjp6n"]
 [ext_resource type="PackedScene" uid="uid://6eolvn4p0iw7" path="res://RainEnviroment/rain_enviroment_particles.tscn" id="7_iq0n7"]
 [ext_resource type="PackedScene" uid="uid://bt0q7q5tfblkb" path="res://Levels/Parallax/ParallaxBackground.tscn" id="9_folwc"]
+[ext_resource type="Texture2D" uid="uid://cioa2wvh8jiyk" path="res://Levels/Level1/Assets/b3.png" id="10_kjhee"]
 [ext_resource type="Texture2D" uid="uid://c5co4d52unj43" path="res://Levels/Level1/Assets/b1.png" id="10_nmo5c"]
+[ext_resource type="Texture2D" uid="uid://bu8sv3c7h250f" path="res://Levels/Level1/Assets/b2.png" id="10_oxdxp"]
+[ext_resource type="Texture2D" uid="uid://mkwnuv6bundi" path="res://Levels/Level1/Assets/b4.png" id="12_dsrjg"]
 
 [node name="Level1" type="Node2D" groups=["level"]]
 script = ExtResource("1_jfv7o")
@@ -18,7 +21,7 @@ word = "ferter"
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("2_y3ktd")]
 position = Vector2(0, 118)
-collision_mask = 1
+collision_mask = 9
 
 [node name="StarsRain" parent="." node_paths=PackedStringArray("player", "goal_area") instance=ExtResource("3_4b7tw")]
 player = NodePath("../Player")
@@ -36,12 +39,44 @@ position = Vector2(-7, -303)
 [node name="ParallaxBackground" parent="." instance=ExtResource("9_folwc")]
 
 [node name="Platforms" type="StaticBody2D" parent="."]
+collision_layer = 8
 
 [node name="B1" type="Sprite2D" parent="Platforms"]
 position = Vector2(-27, 67)
 scale = Vector2(3, 3)
 texture = ExtResource("10_nmo5c")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platforms"]
+[node name="CpB1" type="CollisionPolygon2D" parent="Platforms"]
+visible = false
 position = Vector2(-450, -232)
 polygon = PackedVector2Array(-1, -6, 314, -8, 315, 368, 840, 368, 844, 633, 0, 630)
+
+[node name="B2" type="Sprite2D" parent="Platforms"]
+position = Vector2(629.5, 241.2)
+scale = Vector2(3, 3)
+texture = ExtResource("10_oxdxp")
+
+[node name="CpB2" type="CollisionPolygon2D" parent="Platforms"]
+visible = false
+position = Vector2(628.5, 193.2)
+polygon = PackedVector2Array(-53, 15.8, -60, -84, 131, -85, 128, 15.8, 186, 16.8, 178, 207, -189, 209, -185, 136, -173, 141, -183, 17.8)
+
+[node name="B3" type="Sprite2D" parent="Platforms"]
+position = Vector2(1001.1, 245)
+scale = Vector2(3, 3)
+texture = ExtResource("10_kjhee")
+
+[node name="CpB3" type="CollisionPolygon2D" parent="Platforms"]
+visible = false
+position = Vector2(1014.1, 181)
+polygon = PackedVector2Array(-39, 283, -40, -95, -82, -94, -81, -107, 55, -107, 55, -95, 43, -95, 45, 281)
+
+[node name="B4" type="Sprite2D" parent="Platforms"]
+position = Vector2(1495, 268)
+scale = Vector2(3, 3)
+texture = ExtResource("12_dsrjg")
+
+[node name="CpB4" type="CollisionPolygon2D" parent="Platforms"]
+visible = false
+position = Vector2(1500, 167)
+polygon = PackedVector2Array(-161, -16, -277, 44, -278, 219, 271, 221, 270, 43, 150, -18)
