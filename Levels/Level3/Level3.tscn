@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://db1a7vjjncb55"]
+[gd_scene load_steps=19 format=3 uid="uid://db1a7vjjncb55"]
 
 [ext_resource type="Script" path="res://Levels/Level.gd" id="1_p3s2r"]
 [ext_resource type="PackedScene" uid="uid://dwsqgd4tix7bb" path="res://HeaderLevelBar/header_bar.tscn" id="2_xwcgy"]
@@ -16,8 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cxfxoc4bs7mff" path="res://Levels/BloquesReutilizables/bloqueToldos1.tscn" id="13_sd84l"]
 [ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="14_2sxeb"]
 [ext_resource type="PackedScene" path="res://Levels/BloquesReutilizables/bloque_puente.tscn" id="14_d2vmw"]
-[ext_resource type="Texture2D" uid="uid://x5j3qyspv63f" path="res://Levels/Assets/Toldo/TorreToldos.png" id="15_x3kdo"]
-[ext_resource type="PackedScene" uid="uid://dyci26obxjgta" path="res://Levels/Assets/Toldo/toldo.tscn" id="16_tnsdd"]
+[ext_resource type="PackedScene" uid="uid://iisjxxd5ttp7" path="res://Levels/BloquesReutilizables/bloque_torre_toldos.tscn" id="15_efo70"]
 [ext_resource type="AudioStream" uid="uid://cg2yd2103qw0o" path="res://Levels/Level3/Level3.mp3" id="17_wx7np"]
 
 [node name="Level3" type="Node2D" groups=["level"]]
@@ -67,23 +66,8 @@ position = Vector2(772, 145)
 [node name="bloque_puente" parent="Platforms" instance=ExtResource("14_d2vmw")]
 position = Vector2(1345, 266)
 
-[node name="Node2D" type="Node2D" parent="Platforms"]
-position = Vector2(1901, 197)
-
-[node name="Sprite2D" type="Sprite2D" parent="Platforms/Node2D"]
-z_index = -1
-position = Vector2(-128, -80)
-scale = Vector2(5, 3)
-texture = ExtResource("15_x3kdo")
-
-[node name="Toldo" parent="Platforms/Node2D" instance=ExtResource("16_tnsdd")]
-position = Vector2(-159, 6)
-
-[node name="Toldo2" parent="Platforms/Node2D" instance=ExtResource("16_tnsdd")]
-position = Vector2(-36, -80)
-
-[node name="Toldo3" parent="Platforms/Node2D" instance=ExtResource("16_tnsdd")]
-position = Vector2(-159, -184)
+[node name="bloque_torre_toldos" parent="Platforms" instance=ExtResource("15_efo70")]
+position = Vector2(1864, 42)
 
 [node name="DeathZone" parent="." instance=ExtResource("13_ll8n1")]
 
