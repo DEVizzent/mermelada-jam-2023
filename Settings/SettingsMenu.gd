@@ -10,6 +10,6 @@ func toggleMenu()->void:
 	visible = !visible
 	get_tree().paused = visible
 	if visible:
-		$Panel/CenterContainer/VBoxContainer/Button.grab_focus()
+		$Panel/CenterContainer/VBoxContainer/CenterContainer/Button.grab_focus()
 		return
 	emit_signal("settingsClosed")

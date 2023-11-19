@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl4ayh8478a6v"]
+[gd_scene load_steps=6 format=3 uid="uid://cl4ayh8478a6v"]
 
 [ext_resource type="Script" path="res://Settings/SettingsMenu.gd" id="1_bvmxg"]
 [ext_resource type="Script" path="res://Settings/AudioSlider.gd" id="1_xbsvi"]
 [ext_resource type="Script" path="res://Settings/EffectAudioSlider.gd" id="3_j8rcg"]
 [ext_resource type="Script" path="res://Settings/FullScreenToggle.gd" id="4_nwjrl"]
+[ext_resource type="Theme" uid="uid://cjtm05baiqrbl" path="res://Settings/ButtonTheme.tres" id="5_8qox8"]
 
 [node name="Settings" type="CanvasLayer"]
 process_mode = 3
-visible = false
 script = ExtResource("1_bvmxg")
 
 [node name="Panel" type="Panel" parent="."]
@@ -92,17 +92,18 @@ layout_mode = 2
 [node name="Space2" type="Label" parent="Panel/CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 
-[node name="FullScreen" type="Label" parent="Panel/CenterContainer/VBoxContainer/GridContainer"]
+[node name="FullScreenToggle" type="CheckButton" parent="Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Full Screen:"
-
-[node name="FullScreenToggle" type="CheckButton" parent="Panel/CenterContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
+text = "Full Screen: "
 script = ExtResource("4_nwjrl")
 
-[node name="Button" type="Button" parent="Panel/CenterContainer/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="Button" type="Button" parent="Panel/CenterContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+theme = ExtResource("5_8qox8")
 text = "Exit"
 
-[connection signal="toggled" from="Panel/CenterContainer/VBoxContainer/GridContainer/FullScreenToggle" to="Panel/CenterContainer/VBoxContainer/GridContainer/FullScreenToggle" method="_on_toggled"]
-[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/Button" to="." method="toggleMenu"]
+[connection signal="toggled" from="Panel/CenterContainer/VBoxContainer/FullScreenToggle" to="Panel/CenterContainer/VBoxContainer/FullScreenToggle" method="_on_toggled"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/CenterContainer/Button" to="." method="toggleMenu"]
