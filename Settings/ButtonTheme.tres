@@ -5,7 +5,12 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s3gl5"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6y2kf"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_acgtw"]
+texture = ExtResource("1_qymm5")
+expand_margin_left = 15.0
+expand_margin_top = 5.0
+expand_margin_right = 15.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rh0mv"]
 texture = ExtResource("1_qymm5")
@@ -22,7 +27,8 @@ expand_margin_right = 15.0
 expand_margin_bottom = 5.0
 
 [resource]
+Button/colors/font_color = Color(0.129412, 0.407843, 0.368627, 1)
 Button/styles/focus = SubResource("StyleBoxEmpty_s3gl5")
-Button/styles/hover = SubResource("StyleBoxEmpty_6y2kf")
+Button/styles/hover = SubResource("StyleBoxTexture_acgtw")
 Button/styles/normal = SubResource("StyleBoxTexture_rh0mv")
 Button/styles/pressed = SubResource("StyleBoxTexture_rw0a2")
