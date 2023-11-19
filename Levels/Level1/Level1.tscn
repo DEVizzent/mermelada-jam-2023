@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://ch4qu2cv74nik"]
+[gd_scene load_steps=33 format=3 uid="uid://ch4qu2cv74nik"]
 
 [ext_resource type="Script" path="res://Levels/Level.gd" id="1_jfv7o"]
 [ext_resource type="PackedScene" uid="uid://dwsqgd4tix7bb" path="res://HeaderLevelBar/header_bar.tscn" id="2_57w8f"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://mkwnuv6bundi" path="res://Levels/Level1/Assets/b4.png" id="12_dsrjg"]
 [ext_resource type="Texture2D" uid="uid://bccpcdopfv7jj" path="res://Levels/Level1/Assets/green-light-1.png" id="13_2b8jl"]
 [ext_resource type="Texture2D" uid="uid://eyxd0f56xkpy" path="res://Levels/Level1/Assets/orange-farol.png" id="13_tiy0v"]
+[ext_resource type="PackedScene" uid="uid://ck3p64601iieq" path="res://DeathZone/DeathZone.tscn" id="17_qk768"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0srnh"]
 atlas = ExtResource("13_2b8jl")
@@ -249,3 +250,5 @@ texture = ExtResource("12_dsrjg")
 visible = false
 position = Vector2(1500, 167)
 polygon = PackedVector2Array(-161, -16, -277, 44, -278, 219, 271, 221, 270, 43, 150, -18)
+
+[node name="DeathZone" parent="." instance=ExtResource("17_qk768")]
