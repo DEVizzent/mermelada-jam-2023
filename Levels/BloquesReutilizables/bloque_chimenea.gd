@@ -10,15 +10,6 @@ extends Node2D
 
 var cuenta_ciclo : int = 0
 
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
 func _on_timer_ciclo_timeout():
 	cuenta_ciclo += 1
 	if cuenta_ciclo > ciclo:
@@ -41,3 +32,8 @@ func turn_off():
 
 func _on_fair_play_timeout():
 	colision_muerte.disabled = false
+
+
+func _on_area_muerte_body_entered(body):
+	if body.is_in_group("player"):
+		EventBus.emit_signal("chimenea_hit")

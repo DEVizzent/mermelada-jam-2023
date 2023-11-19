@@ -16,6 +16,7 @@ var arrayStates : Array[State]
 
 func _ready():
 	EventBus.levelCompleted.connect(level_completed)
+	EventBus.chimenea_hit.connect(chimenea_hit)
 	init_states()
 
 func init_states():
@@ -45,3 +46,7 @@ func _on_animaciones_animation_finished():
 
 func level_completed():
 	current_state.next_state = stop_state
+
+func chimenea_hit():
+	print("chimenea hited cat!")
+	print("falta programar reaccion")
