@@ -1,0 +1,243 @@
+[gd_scene load_steps=17 format=3 uid="uid://hnykdr510k4u"]
+
+[ext_resource type="Script" path="res://ElectricTower/ElectricTower5Sections.gd" id="1_be4en"]
+[ext_resource type="Texture2D" uid="uid://ddpr7v5oajmrk" path="res://ElectricTower/Sprites/BeginElectricTower.png" id="1_gupi0"]
+[ext_resource type="Texture2D" uid="uid://g5clbc5t052h" path="res://ElectricTower/Sprites/LegsExtension.png" id="2_vh50r"]
+[ext_resource type="Texture2D" uid="uid://dbt3s7n0utw3f" path="res://ElectricTower/Sprites/WireExtension.png" id="3_t6v3u"]
+[ext_resource type="Texture2D" uid="uid://bvf467wnyjgns" path="res://ElectricTower/Sprites/extensionElectricTower.png" id="4_clacv"]
+[ext_resource type="Texture2D" uid="uid://dxb5blr55hr3l" path="res://ElectricTower/Sprites/EndElectricTower.png" id="5_jwbfa"]
+[ext_resource type="Texture2D" uid="uid://dy7se4wagnypg" path="res://ElectricTower/Sprites/SparksBegining1.png" id="6_6wbhy"]
+[ext_resource type="Texture2D" uid="uid://d3ghbl07rwora" path="res://ElectricTower/Sprites/SparksBegining2.png" id="7_f5o02"]
+[ext_resource type="Texture2D" uid="uid://cloq704mgrmpe" path="res://ElectricTower/Sprites/SparksBegining3.png" id="8_q8qse"]
+[ext_resource type="Texture2D" uid="uid://mr64lba4n5eo" path="res://ElectricTower/Sprites/SparksBegining4.png" id="9_oiuwu"]
+[ext_resource type="Texture2D" uid="uid://b0bw8v4r164m0" path="res://ElectricTower/Sprites/SparksDamage1.png" id="10_a2ela"]
+[ext_resource type="Texture2D" uid="uid://bpsim4pv8n58e" path="res://ElectricTower/Sprites/SparksDamage2.png" id="11_a3uvt"]
+[ext_resource type="Texture2D" uid="uid://d4feoyrxggyi" path="res://ElectricTower/Sprites/SparksDamage3.png" id="12_c2gom"]
+[ext_resource type="Texture2D" uid="uid://bboim3s7jm6v1" path="res://ElectricTower/Sprites/SparksDamage4.png" id="13_svgru"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_canu5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6wbhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f5o02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q8qse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oiuwu")
+}],
+"loop": true,
+"name": &"SparkBegining",
+"speed": 15.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"SparkDamage",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_84g68"]
+animations = [{
+"frames": [{
+"duration": 1.3,
+"texture": ExtResource("10_a2ela")
+}, {
+"duration": 1.3,
+"texture": ExtResource("11_a3uvt")
+}, {
+"duration": 1.3,
+"texture": ExtResource("12_c2gom")
+}, {
+"duration": 1.3,
+"texture": ExtResource("13_svgru")
+}],
+"loop": false,
+"name": &"SparkDamage",
+"speed": 11.0
+}]
+
+[node name="ElectricTower5Sections" type="Area2D"]
+position = Vector2(177, 92)
+collision_layer = 2
+script = ExtResource("1_be4en")
+
+[node name="BeginingElectricTower" type="Sprite2D" parent="."]
+texture = ExtResource("1_gupi0")
+
+[node name="Legs" type="Sprite2D" parent="BeginingElectricTower"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="BeginingElectricTower/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="BeginingElectricTower/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="BeginingElectricTower/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="BeginingElectricTower/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="BeginingElectricTower/Legs/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="BeginingElectricTower/Legs/Legs/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="BeginingElectricTower/Legs/Legs/Legs/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="BeginingElectricTower/Legs/Legs/Legs/Legs/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="WireExtension2" type="Sprite2D" parent="."]
+position = Vector2(96, 0)
+texture = ExtResource("3_t6v3u")
+
+[node name="WireExtension" type="Sprite2D" parent="."]
+position = Vector2(32, 0)
+texture = ExtResource("3_t6v3u")
+
+[node name="ExtensionElectricTower" type="Sprite2D" parent="."]
+position = Vector2(64, 0)
+texture = ExtResource("4_clacv")
+
+[node name="Legs" type="Sprite2D" parent="ExtensionElectricTower"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="ExtensionElectricTower/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="ExtensionElectricTower/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="ExtensionElectricTower/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="ExtensionElectricTower/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="ExtensionElectricTower/Legs/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="ExtensionElectricTower/Legs/Legs/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="ExtensionElectricTower/Legs/Legs/Legs/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="ExtensionElectricTower/Legs/Legs/Legs/Legs/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="EndElectricTower" type="Sprite2D" parent="."]
+position = Vector2(128, 0)
+texture = ExtResource("5_jwbfa")
+
+[node name="Legs" type="Sprite2D" parent="EndElectricTower"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="EndElectricTower/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="EndElectricTower/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="EndElectricTower/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="EndElectricTower/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="EndElectricTower/Legs/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="EndElectricTower/Legs/Legs/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="EndElectricTower/Legs/Legs/Legs/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="Legs" type="Sprite2D" parent="EndElectricTower/Legs/Legs/Legs/Legs/Legs/Legs/Legs/Legs"]
+position = Vector2(0, 27)
+texture = ExtResource("2_vh50r")
+
+[node name="SparksBegining1Section" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(1.34375, 1.47656)
+sprite_frames = SubResource("SpriteFrames_canu5")
+animation = &"SparkBegining"
+autoplay = "SparkBegining"
+speed_scale = 0.2
+
+[node name="SparksBegining2Section" type="AnimatedSprite2D" parent="."]
+position = Vector2(65, 2)
+scale = Vector2(1.34375, 1.47656)
+sprite_frames = SubResource("SpriteFrames_canu5")
+animation = &"SparkBegining"
+autoplay = "SparkBegining"
+speed_scale = 0.2
+
+[node name="SparksBegining3Section" type="AnimatedSprite2D" parent="."]
+position = Vector2(128, 2)
+scale = Vector2(1.34375, 1.47656)
+sprite_frames = SubResource("SpriteFrames_canu5")
+animation = &"SparkBegining"
+autoplay = "SparkBegining"
+speed_scale = 0.2
+
+[node name="SparkDamage" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(23, 4)
+scale = Vector2(1.625, 1.5)
+sprite_frames = SubResource("SpriteFrames_84g68")
+animation = &"SparkDamage"
+
+[node name="SparkDamage2" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(90, 4)
+scale = Vector2(1.625, 1.5)
+sprite_frames = SubResource("SpriteFrames_84g68")
+animation = &"SparkDamage"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-18, 5, 4, -21, 14, -9, 47, -10, 66, -17, 78, -10, 109, -8, 134, -16, 110, 9, 95, 10, 72, 9, 53, 4, 39, 8, 13, 9, -7, 4)
+
+[connection signal="body_entered" from="." to="." method="_on_electric_tower_5_sections_body_entered"]
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="animation_finished" from="SparkDamage2" to="." method="_on_spark_damage_2_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

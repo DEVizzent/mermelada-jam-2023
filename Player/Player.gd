@@ -41,5 +41,11 @@ func init_debug():
 	else:
 		state_debug.queue_free()
 func electric_damage() -> void:
+	$AnimatedSprite2D.play("damage")
 	
+	var tween = create_tween()# Crea el tween
+	tween.tween_property(
+		self, "position", # Self referencia al nodo raíz e indica que su posición será...
+		Vector2(global_position.x  -220, global_position.y -40), # Motion + -15 en la y
+		0.3) # Este valor indica la velocidad de desplazamiento hasta el punto final  
 	pass

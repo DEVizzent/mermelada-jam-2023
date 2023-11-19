@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://7lop8i3prupl"]
+[gd_scene load_steps=18 format=3 uid="uid://7lop8i3prupl"]
 
 [ext_resource type="Script" path="res://ElectricTower/ElectricTower.gd" id="1_ruqfl"]
 [ext_resource type="Texture2D" uid="uid://ddpr7v5oajmrk" path="res://ElectricTower/Sprites/BeginElectricTower.png" id="1_ttmb0"]
@@ -60,13 +60,15 @@ animations = [{
 "speed": 11.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qmpx"]
+size = Vector2(126, 23)
+
+[node name="Node2D" type="Area2D"]
 position = Vector2(35, 38)
 script = ExtResource("1_ruqfl")
 type = "5Sections"
 
 [node name="ElectricTower5Sections" type="Area2D" parent="."]
-visible = false
 collision_layer = 2
 
 [node name="BeginingElectricTower" type="Sprite2D" parent="ElectricTower5Sections"]
@@ -99,9 +101,6 @@ texture = ExtResource("3_kaowo")
 [node name="Legs" type="Sprite2D" parent="ElectricTower5Sections/EndElectricTower"]
 position = Vector2(0, 27)
 texture = ExtResource("3_wxefq")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ElectricTower5Sections"]
-polygon = PackedVector2Array(-8, 3, 4, 7, 11, 9, 25, 11, 43, 6, 48, 3, 53, 3, 62, 6, 77, 9, 84, 10, 97, 10, 114, 3, 114, 3, 114, 3)
 
 [node name="SparksBegining1Section" type="AnimatedSprite2D" parent="ElectricTower5Sections"]
 position = Vector2(1, 0)
@@ -143,6 +142,10 @@ position = Vector2(90, 4)
 scale = Vector2(1.625, 1.5)
 sprite_frames = SubResource("SpriteFrames_l2spq")
 animation = &"SparkDamage"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ElectricTower5Sections"]
+position = Vector2(58, -0.5)
+shape = SubResource("RectangleShape2D_1qmpx")
 
 [node name="ElectricTower3Sections" type="Area2D" parent="."]
 visible = false

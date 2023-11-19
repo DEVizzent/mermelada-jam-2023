@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://db1a7vjjncb55"]
+[gd_scene load_steps=19 format=3 uid="uid://db1a7vjjncb55"]
 
 [ext_resource type="Script" path="res://Levels/Level.gd" id="1_p3s2r"]
 [ext_resource type="PackedScene" uid="uid://dwsqgd4tix7bb" path="res://HeaderLevelBar/header_bar.tscn" id="2_xwcgy"]
@@ -15,12 +15,15 @@
 [ext_resource type="PackedScene" uid="uid://ck3p64601iieq" path="res://DeathZone/DeathZone.tscn" id="13_ll8n1"]
 [ext_resource type="PackedScene" uid="uid://cxfxoc4bs7mff" path="res://Levels/BloquesReutilizables/bloqueToldos1.tscn" id="13_sd84l"]
 [ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="14_2sxeb"]
+[ext_resource type="PackedScene" path="res://Levels/BloquesReutilizables/bloque_puente.tscn" id="14_d2vmw"]
+[ext_resource type="PackedScene" uid="uid://iisjxxd5ttp7" path="res://Levels/BloquesReutilizables/bloque_torre_toldos.tscn" id="15_efo70"]
 [ext_resource type="AudioStream" uid="uid://cg2yd2103qw0o" path="res://Levels/Level3/Level3.mp3" id="17_wx7np"]
 
 [node name="Level3" type="Node2D" groups=["level"]]
 script = ExtResource("1_p3s2r")
 word = "ferter"
 time_to_complete = 15.0
+metadata/_edit_horizontal_guides_ = [216.0]
 
 [node name="HeaderBar" parent="." instance=ExtResource("2_xwcgy")]
 
@@ -34,7 +37,7 @@ goal_area = NodePath("../LevelGoalArea")
 debug = false
 
 [node name="LevelGoalArea" parent="." instance=ExtResource("5_2te63")]
-position = Vector2(2544, 3)
+position = Vector2(2939, 3)
 
 [node name="SpawnerEstrellas" parent="." instance=ExtResource("6_4b8cr")]
 position = Vector2(2, -65)
@@ -49,16 +52,22 @@ position = Vector2(-7, -303)
 [node name="Bloque1" parent="Platforms" instance=ExtResource("9_og6jp")]
 
 [node name="BloqueFinal" parent="Platforms" instance=ExtResource("12_7xbjf")]
-position = Vector2(985, 13)
+position = Vector2(1401, 13)
 
 [node name="Bloque5" parent="Platforms" instance=ExtResource("10_bqrdo")]
-position = Vector2(972, 6)
+position = Vector2(1746, -17)
 
 [node name="Bloque6" parent="Platforms" instance=ExtResource("11_5gldh")]
-position = Vector2(1003, 0)
+position = Vector2(585, 143)
 
-[node name="Node2D" parent="Platforms" instance=ExtResource("13_sd84l")]
+[node name="BloqueCasaToldo" parent="Platforms" instance=ExtResource("13_sd84l")]
 position = Vector2(772, 145)
+
+[node name="bloque_puente" parent="Platforms" instance=ExtResource("14_d2vmw")]
+position = Vector2(1345, 266)
+
+[node name="bloque_torre_toldos" parent="Platforms" instance=ExtResource("15_efo70")]
+position = Vector2(1864, 42)
 
 [node name="DeathZone" parent="." instance=ExtResource("13_ll8n1")]
 

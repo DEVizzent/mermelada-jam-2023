@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://iisjxxd5ttp7"]
+
+[ext_resource type="Texture2D" uid="uid://x5j3qyspv63f" path="res://Levels/Assets/Toldo/TorreToldos.png" id="1_1gk7d"]
+[ext_resource type="PackedScene" uid="uid://dyci26obxjgta" path="res://Levels/Assets/Toldo/toldo.tscn" id="2_el5op"]
+[ext_resource type="PackedScene" uid="uid://dhxdgsmkhja1y" path="res://LightEnvironment/green_light.tscn" id="3_37laf"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-35, 59)
+scale = Vector2(6, 3)
+texture = ExtResource("1_1gk7d")
+
+[node name="Toldo" parent="." instance=ExtResource("2_el5op")]
+position = Vector2(-77, 70)
+
+[node name="Toldo2" parent="." instance=ExtResource("2_el5op")]
+position = Vector2(78, -20)
+
+[node name="Toldo3" parent="." instance=ExtResource("2_el5op")]
+position = Vector2(-77, -110)
+
+[node name="Toldo4" parent="." instance=ExtResource("2_el5op")]
+position = Vector2(78, -200)
+
+[node name="GreenLight" parent="." instance=ExtResource("3_37laf")]
+position = Vector2(-144, 41)
+
+[node name="GreenLight2" parent="." instance=ExtResource("3_37laf")]
+position = Vector2(144.464, -48.0255)
+
+[node name="GreenLight3" parent="." instance=ExtResource("3_37laf")]
+position = Vector2(-142.68, -138.431)
+
+[node name="GreenLight4" parent="." instance=ExtResource("3_37laf")]
+position = Vector2(144.671, -228.538)
