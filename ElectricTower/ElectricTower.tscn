@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://7lop8i3prupl"]
+[gd_scene load_steps=4 format=3 uid="uid://7lop8i3prupl"]
+
+[ext_resource type="Texture2D" uid="uid://ddpr7v5oajmrk" path="res://ElectricTower/Sprites/BeginElectricTower.png" id="1_ttmb0"]
+[ext_resource type="Texture2D" uid="uid://dbt3s7n0utw3f" path="res://ElectricTower/Sprites/WireExtension.png" id="2_rh35o"]
+[ext_resource type="Texture2D" uid="uid://dxb5blr55hr3l" path="res://ElectricTower/Sprites/EndElectricTower.png" id="3_kaowo"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="BeginingElectricTower" type="Sprite2D" parent="."]
+texture = ExtResource("1_ttmb0")
+
+[node name="WireExtension" type="Sprite2D" parent="."]
+position = Vector2(32, 0)
+texture = ExtResource("2_rh35o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 0)
+texture = ExtResource("3_kaowo")
