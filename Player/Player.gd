@@ -1,13 +1,19 @@
 extends CharacterBody2D
 class_name CharacterGato
 
+@export var debug : bool = true
+@onready var state_debug : Label = $DebugState
+
 @onready var machine_state : MachineState = $MachineState
 @onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
 
 var direction
 
+func _ready():
+	init_debug()
+
 func _physics_process(delta)->void:
-	# Add the gravity.
+	
 	if not is_on_floor():
 		velocity.y += machine_state.current_state.get_gravity() * delta
 	
@@ -19,6 +25,9 @@ func _physics_process(delta)->void:
 	
 	flip_sprite()
 	move_and_slide()
+	
+	if debug:
+		state_debug.text = machine_state.current_state.name
 
 func flip_sprite():
 	if direction < 0:
@@ -26,3 +35,8 @@ func flip_sprite():
 	elif direction > 0:
 		animated_sprite.flip_h = false
 
+func init_debug():
+	if debug:
+		state_debug.visible = true
+	else:
+		state_debug.queue_free()

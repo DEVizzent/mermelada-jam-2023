@@ -134,6 +134,7 @@ collision_mask = 9
 [node name="StarsRain" parent="." node_paths=PackedStringArray("player", "goal_area") instance=ExtResource("3_4b7tw")]
 player = NodePath("../Player")
 goal_area = NodePath("../LevelGoalArea")
+debug = false
 
 [node name="LevelGoalArea" parent="." instance=ExtResource("5_eqtli")]
 position = Vector2(1522, -44)

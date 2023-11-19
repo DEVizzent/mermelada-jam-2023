@@ -3,7 +3,6 @@ extends State
 var jump_down_gravity = 2500
 
 func get_gravity():
-	print("me preguntar npor ella")
 	return jump_down_gravity
 
 func state_process(_delta):
