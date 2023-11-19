@@ -59,4 +59,5 @@ func _on_hit_box_area_entered(area : Area2D):
 		current_state.next_state = chimenea_hit_state
 	elif area.is_in_group("vapor"):
 		animated_sprite.play("jump_up")
+		vapor_hit_state.posicion_chimenea = area.global_position
 		current_state.next_state = vapor_hit_state

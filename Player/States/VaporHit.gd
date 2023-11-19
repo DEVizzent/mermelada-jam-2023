@@ -1,11 +1,22 @@
 extends State
+class_name VaporHit
 
+var posicion_chimenea : Vector2
+var push_force_x : int = 900
+var push_force_y : int = -650
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func on_enter():
+	if character.global_position.x < posicion_chimenea.x:
+		push_from_left()
+	else:
+		push_from_right()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func push_from_left():
+	character.velocity = Vector2(push_force_x, push_force_y)
+	character.move_and_slide()
+	next_state = machine_state.air_up_state
+	
+func push_from_right():
+	character.velocity = Vector2(-push_force_x, push_force_y)
+	character.move_and_slide()
+	next_state = machine_state.air_up_state

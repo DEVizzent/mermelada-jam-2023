@@ -13,7 +13,6 @@ func _ready():
 		nodo_lluvia.queue_free()
 
 func _on_level_completed()->void:
-	#Conectar aqui la introducion de texto
 	print("LevelCompleted")
 	var new_type_word_scene = type_word_scene.instantiate()
 	call_deferred("add_child",new_type_word_scene)
