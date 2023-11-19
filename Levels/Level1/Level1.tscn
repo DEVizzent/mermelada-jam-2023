@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://ch4qu2cv74nik"]
+[gd_scene load_steps=36 format=3 uid="uid://ch4qu2cv74nik"]
 
 [ext_resource type="Script" path="res://Levels/Level.gd" id="1_jfv7o"]
 [ext_resource type="PackedScene" uid="uid://dwsqgd4tix7bb" path="res://HeaderLevelBar/header_bar.tscn" id="2_57w8f"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://ck3p64601iieq" path="res://DeathZone/DeathZone.tscn" id="17_qk768"]
 [ext_resource type="PackedScene" uid="uid://d2iacsk4tnmw" path="res://FinishCats/finish_cats.tscn" id="18_xd8en"]
 [ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="19_amu6i"]
+[ext_resource type="AudioStream" uid="uid://wmj1unuubxf8" path="res://Levels/Level1/Level1.mp3" id="20_1w73l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0srnh"]
 atlas = ExtResource("11_uguii")
@@ -260,3 +261,8 @@ polygon = PackedVector2Array(-161, -16, -277, 44, -278, 219, 271, 221, 270, 43, 
 [node name="FinishCats" parent="." instance=ExtResource("18_xd8en")]
 
 [node name="Settings" parent="." instance=ExtResource("19_amu6i")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("20_1w73l")
+autoplay = true

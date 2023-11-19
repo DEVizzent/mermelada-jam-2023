@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="2_4tn62"]
 [ext_resource type="Texture2D" uid="uid://ccxvwsthy6mhk" path="res://Inicio/Background.png" id="2_mt6pw"]
 [ext_resource type="Theme" uid="uid://cjtm05baiqrbl" path="res://Settings/ButtonTheme.tres" id="4_cceg4"]
-[ext_resource type="AudioStream" uid="uid://c3b4wpj0lnnj1" path="res://Inicio/Menu.wav" id="5_qw5x1"]
-[ext_resource type="PackedScene" uid="uid://yhc18mcq1uk7" path="res://Levels/Level2/Level2.tscn" id="6_slwkk"]
+[ext_resource type="PackedScene" uid="uid://ch4qu2cv74nik" path="res://Levels/Level1/Level1.tscn" id="6_ext52"]
+[ext_resource type="AudioStream" uid="uid://b88nyxqsn6pb" path="res://Inicio/Menu.mp3" id="7_ckv4g"]
 [ext_resource type="PackedScene" uid="uid://crvq24xrg2gdc" path="res://Settings/UISounds.tscn" id="8_p75bp"]
 
 [node name="StartMenu" type="Node2D"]
@@ -45,7 +45,7 @@ layout_mode = 2
 layout_mode = 2
 text = "Start"
 script = ExtResource("1_wqmyn")
-nextScene = ExtResource("6_slwkk")
+nextScene = ExtResource("6_ext52")
 
 [node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -57,7 +57,7 @@ text = "Exit Game"
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
-stream = ExtResource("5_qw5x1")
+stream = ExtResource("7_ckv4g")
 autoplay = true
 bus = &"Music"
 
