@@ -9,6 +9,7 @@
 
 [node name="Settings" type="CanvasLayer"]
 process_mode = 3
+visible = false
 script = ExtResource("1_bvmxg")
 
 [node name="Panel" type="Panel" parent="."]
