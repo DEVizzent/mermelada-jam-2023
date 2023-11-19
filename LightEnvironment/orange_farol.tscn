@@ -44,16 +44,3 @@ frame_progress = 0.97821
 position = Vector2(1.33334, -7)
 color = Color(76.93, 3.55, 0.6, 0.1)
 texture = SubResource("GradientTexture2D_7tcdf")
-
-[node name="OrangeFarol" type="AnimatedSprite2D" parent="."]
-position = Vector2(556, 171)
-rotation = -3.14159
-scale = Vector2(3, -3)
-sprite_frames = SubResource("SpriteFrames_ist40")
-autoplay = "default"
-frame_progress = 0.463731
-
-[node name="PointLight2D" type="PointLight2D" parent="OrangeFarol"]
-position = Vector2(1.33334, -7)
-color = Color(76.93, 3.55, 0.6, 0.1)
-texture = SubResource("GradientTexture2D_7tcdf")
