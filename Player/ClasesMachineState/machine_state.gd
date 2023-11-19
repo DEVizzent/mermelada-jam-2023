@@ -7,6 +7,8 @@ class_name MachineState
 @export var air_up_state : State
 @export var air_down_state : State
 @export var stop_state : State
+@export var chimenea_hit_state : ChimeneaHitState
+@export var vapor_hit_state : State
 
 @export var current_state : State
 @export_group("Array Miaus")
@@ -51,7 +53,10 @@ func chimenea_hit():
 	print("falta programar reaccion")
 
 func _on_hit_box_area_entered(area : Area2D):
-	if area.get_parent().is_in_group("chimenea"):
-		print("chimenea hit")
-	elif area.get_parent().is_in_group("vapor"):
-		print("vapor hit")
+	if area.is_in_group("chimenea"):
+		animated_sprite.play("damage")
+		chimenea_hit_state.posicion_chimenea = area.global_position
+		current_state.next_state = chimenea_hit_state
+	elif area.is_in_group("vapor"):
+		animated_sprite.play("jump_up")
+		current_state.next_state = vapor_hit_state

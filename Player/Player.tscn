@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://c71545ntm6a25"]
+[gd_scene load_steps=59 format=3 uid="uid://c71545ntm6a25"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_jp80u"]
 [ext_resource type="Texture2D" uid="uid://bn10v3jh2ovdd" path="res://Player/Sprites/damage.png" id="2_iyw37"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://etk3wp88goh2" path="res://Player/SoundEffects/miau1.mp3" id="10_f2ve2"]
 [ext_resource type="Script" path="res://Player/States/ChimeneaHit.gd" id="10_gcmi4"]
 [ext_resource type="AudioStream" uid="uid://qnocn6q6hcd6" path="res://Player/SoundEffects/miau2.mp3" id="11_ol40c"]
+[ext_resource type="Script" path="res://Player/States/VaporHit.gd" id="12_8usea"]
 [ext_resource type="AudioStream" uid="uid://osigtrnhmhdg" path="res://Player/SoundEffects/miau_muerte.mp3" id="12_80kx0"]
 [ext_resource type="AudioStream" uid="uid://wph7mpknp5cq" path="res://Player/SoundEffects/miau3.mp3" id="12_i44d4"]
 [ext_resource type="AudioStream" uid="uid://b2omhfempkadv" path="res://Player/SoundEffects/miau4.mp3" id="13_fdca7"]
@@ -307,7 +308,7 @@ animation = &"damage"
 frame = 7
 frame_progress = 1.0
 
-[node name="MachineState" type="Node" parent="." node_paths=PackedStringArray("character", "animated_sprite", "ground_state", "air_up_state", "air_down_state", "stop_state", "current_state", "array_miaus")]
+[node name="MachineState" type="Node" parent="." node_paths=PackedStringArray("character", "animated_sprite", "ground_state", "air_up_state", "air_down_state", "stop_state", "chimenea_hit_state", "vapor_hit_state", "current_state", "array_miaus")]
 script = ExtResource("6_hf7wk")
 character = NodePath("..")
 animated_sprite = NodePath("../AnimatedSprite2D")
@@ -315,6 +316,8 @@ ground_state = NodePath("Ground")
 air_up_state = NodePath("AirUp")
 air_down_state = NodePath("AirDown")
 stop_state = NodePath("Stop")
+chimenea_hit_state = NodePath("ChimeneaHit")
+vapor_hit_state = NodePath("VaporHit")
 current_state = NodePath("Ground")
 array_miaus = [NodePath("../Miaus/Miau1"), NodePath("../Miaus/Miau2"), NodePath("../Miaus/Miau3"), NodePath("../Miaus/Miau4"), NodePath("../Miaus/Miau5"), NodePath("../Miaus/Miau6"), NodePath("../Miaus/Miau7"), NodePath("../Miaus/Miau8"), NodePath("../Miaus/Miau9")]
 
@@ -340,6 +343,10 @@ can_move = false
 
 [node name="ChimeneaHit" type="Node" parent="MachineState"]
 script = ExtResource("10_gcmi4")
+can_move = false
+
+[node name="VaporHit" type="Node" parent="MachineState"]
+script = ExtResource("12_8usea")
 
 [node name="Miaus" type="Node" parent="."]
 
@@ -408,5 +415,6 @@ pitch_scale = 0.49
 position = Vector2(-1, -5)
 shape = SubResource("CapsuleShape2D_sx1in")
 
+[connection signal="animation_finished" from="AnimatedSprite2D" to="MachineState" method="_on_animaciones_animation_finished"]
 [connection signal="timeout" from="MachineState/Ground/CoyoteTimer" to="MachineState/Ground" method="coyote_time_end"]
 [connection signal="area_entered" from="hitBox" to="MachineState" method="_on_hit_box_area_entered"]
