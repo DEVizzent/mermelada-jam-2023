@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ch4qu2cv74nik"]
+[gd_scene load_steps=36 format=3 uid="uid://yhc18mcq1uk7"]
 
 [ext_resource type="Script" path="res://Levels/Level.gd" id="1_jfv7o"]
 [ext_resource type="PackedScene" uid="uid://dwsqgd4tix7bb" path="res://HeaderLevelBar/header_bar.tscn" id="2_57w8f"]
@@ -126,7 +126,7 @@ animations = [{
 [node name="Level1" type="Node2D" groups=["level"]]
 script = ExtResource("1_jfv7o")
 word = "ferter"
-time_to_complete = 6.5
+time_to_complete = 12.0
 
 [node name="HeaderBar" parent="." instance=ExtResource("2_57w8f")]
 
