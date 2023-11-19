@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://8l4e0feev8ra"]
+[gd_scene load_steps=40 format=3 uid="uid://8l4e0feev8ra"]
 
 [ext_resource type="Script" path="res://TypeWordAtEnd/type_word_at_end.gd" id="1_c8wdt"]
 [ext_resource type="Theme" uid="uid://cqwidxi43kv5d" path="res://ButtonTheme/new_theme1.tres" id="2_c31vg"]
@@ -207,6 +207,8 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaljn"]
 bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xcqko"]
 
 [sub_resource type="Animation" id="Animation_g5gko"]
 length = 0.001
@@ -420,6 +422,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_jaljn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xcqko")
 placeholder_text = "escribe aquí..."
 
 [node name="Button" type="Button" parent="TypeWordAtEnd/bocadillo3"]
