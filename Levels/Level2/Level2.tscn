@@ -73,7 +73,7 @@ position = Vector2(1003, 0)
 position = Vector2(291, 117)
 
 [node name="BloqueSalidaVapor" parent="." instance=ExtResource("16_shsg0")]
-position = Vector2(-77, 124)
+position = Vector2(491, 195)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
