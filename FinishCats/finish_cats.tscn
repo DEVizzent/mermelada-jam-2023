@@ -1,7 +1,7 @@
 [gd_scene load_steps=139 format=3 uid="uid://d2iacsk4tnmw"]
 
-[ext_resource type="Texture2D" uid="uid://l52sp2ahjcht" path="res://Levels/Level1/Assets/lying-cat1.png" id="1_aapup"]
-[ext_resource type="Texture2D" uid="uid://diucnkaj2xmjn" path="res://Levels/Level1/Assets/lying-cat2.png" id="2_ap0ud"]
+[ext_resource type="Texture2D" uid="uid://l52sp2ahjcht" path="res://Levels/Assets/lying-cat1.png" id="1_aapup"]
+[ext_resource type="Texture2D" uid="uid://diucnkaj2xmjn" path="res://Levels/Assets/lying-cat2.png" id="2_ap0ud"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uplc5"]
 atlas = ExtResource("1_aapup")

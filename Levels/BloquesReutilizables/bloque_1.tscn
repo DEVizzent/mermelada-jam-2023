@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://m1ogxiuopf84"]
+
+[ext_resource type="Texture2D" uid="uid://c5co4d52unj43" path="res://Levels/Assets/b1.png" id="1_nvy3y"]
+[ext_resource type="PackedScene" uid="uid://dhxdgsmkhja1y" path="res://LightEnvironment/green_light.tscn" id="2_swfp0"]
+
+[node name="Bloque1" type="Node2D"]
+
+[node name="B1" type="Sprite2D" parent="."]
+position = Vector2(-27, 67)
+scale = Vector2(3, 3)
+texture = ExtResource("1_nvy3y")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-27, 67)
+scale = Vector2(3, 3)
+
+[node name="CpB1" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(-141, -99.6667)
+scale = Vector2(0.333333, 0.333333)
+polygon = PackedVector2Array(-1, -6, 314, -8, 315, 368, 840, 368, 844, 633, 0, 630)
+
+[node name="GreenLight" parent="." instance=ExtResource("2_swfp0")]

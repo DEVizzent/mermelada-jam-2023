@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eyxd0f56xkpy"
-path="res://.godot/imported/orange-farol.png-9c9c8ed7cac470699d9de1cee4634858.ctex"
+uid="uid://l52sp2ahjcht"
+path="res://.godot/imported/lying-cat1.png-43ef56c2c0bbac91b06b5e3e8ef211e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/Level1/Assets/orange-farol.png"
-dest_files=["res://.godot/imported/orange-farol.png-9c9c8ed7cac470699d9de1cee4634858.ctex"]
+source_file="res://Levels/Assets/lying-cat1.png"
+dest_files=["res://.godot/imported/lying-cat1.png-43ef56c2c0bbac91b06b5e3e8ef211e4.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mkwnuv6bundi"
-path="res://.godot/imported/b4.png-ef9835e84c358f9be46284287ef99ce7.ctex"
+uid="uid://b1x2fbo62o4i0"
+path="res://.godot/imported/Smoke6.png-2989acd9873eb245234d2b2771b0362b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/Level1/Assets/b4.png"
-dest_files=["res://.godot/imported/b4.png-ef9835e84c358f9be46284287ef99ce7.ctex"]
+source_file="res://Levels/Assets/Chimenea/Smoke6.png"
+dest_files=["res://.godot/imported/Smoke6.png-2989acd9873eb245234d2b2771b0362b.ctex"]
 
 [params]
 

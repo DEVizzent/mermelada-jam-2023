@@ -10,49 +10,49 @@
 [ext_resource type="PackedScene" uid="uid://bt0q7q5tfblkb" path="res://Levels/Parallax/ParallaxBackground.tscn" id="9_folwc"]
 [ext_resource type="PackedScene" uid="uid://brr2ppmwcwy00" path="res://LightEnvironment/orange_farol.tscn" id="9_rh46a"]
 [ext_resource type="PackedScene" uid="uid://dhxdgsmkhja1y" path="res://LightEnvironment/green_light.tscn" id="10_72n1b"]
-[ext_resource type="Texture2D" uid="uid://cioa2wvh8jiyk" path="res://Levels/Level1/Assets/b3.png" id="10_kjhee"]
-[ext_resource type="Texture2D" uid="uid://c5co4d52unj43" path="res://Levels/Level1/Assets/b1.png" id="10_nmo5c"]
-[ext_resource type="Texture2D" uid="uid://bu8sv3c7h250f" path="res://Levels/Level1/Assets/b2.png" id="10_oxdxp"]
-[ext_resource type="Texture2D" uid="uid://mkwnuv6bundi" path="res://Levels/Level1/Assets/b4.png" id="12_dsrjg"]
-[ext_resource type="Texture2D" uid="uid://bccpcdopfv7jj" path="res://Levels/Level1/Assets/green-light-1.png" id="13_2b8jl"]
-[ext_resource type="Texture2D" uid="uid://eyxd0f56xkpy" path="res://Levels/Level1/Assets/orange-farol.png" id="13_tiy0v"]
+[ext_resource type="Texture2D" uid="uid://bccpcdopfv7jj" path="res://Levels/Assets/green-light-1.png" id="11_uguii"]
+[ext_resource type="Texture2D" uid="uid://eyxd0f56xkpy" path="res://Levels/Assets/orange-farol.png" id="12_3mjsw"]
+[ext_resource type="Texture2D" uid="uid://c5co4d52unj43" path="res://Levels/Assets/b1.png" id="13_e2jjv"]
+[ext_resource type="Texture2D" uid="uid://bu8sv3c7h250f" path="res://Levels/Assets/b2.png" id="14_orwlf"]
+[ext_resource type="Texture2D" uid="uid://cioa2wvh8jiyk" path="res://Levels/Assets/b3.png" id="15_o5btw"]
+[ext_resource type="Texture2D" uid="uid://mkwnuv6bundi" path="res://Levels/Assets/b4.png" id="16_krp2e"]
 [ext_resource type="PackedScene" uid="uid://ck3p64601iieq" path="res://DeathZone/DeathZone.tscn" id="17_qk768"]
 [ext_resource type="PackedScene" uid="uid://d2iacsk4tnmw" path="res://FinishCats/finish_cats.tscn" id="18_xd8en"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0srnh"]
-atlas = ExtResource("13_2b8jl")
+atlas = ExtResource("11_uguii")
 region = Rect2(0, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ttt05"]
-atlas = ExtResource("13_2b8jl")
+atlas = ExtResource("11_uguii")
 region = Rect2(8, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t2irh"]
-atlas = ExtResource("13_2b8jl")
+atlas = ExtResource("11_uguii")
 region = Rect2(16, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yrqoh"]
-atlas = ExtResource("13_2b8jl")
+atlas = ExtResource("11_uguii")
 region = Rect2(24, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m8rnm"]
-atlas = ExtResource("13_2b8jl")
+atlas = ExtResource("11_uguii")
 region = Rect2(32, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_frr0f"]
-atlas = ExtResource("13_2b8jl")
+atlas = ExtResource("11_uguii")
 region = Rect2(40, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vohox"]
-atlas = ExtResource("13_2b8jl")
+atlas = ExtResource("11_uguii")
 region = Rect2(48, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_svxkp"]
-atlas = ExtResource("13_2b8jl")
+atlas = ExtResource("11_uguii")
 region = Rect2(56, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ea81g"]
-atlas = ExtResource("13_2b8jl")
+atlas = ExtResource("11_uguii")
 region = Rect2(64, 0, 8, 8)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w5133"]
@@ -100,11 +100,11 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xcqe3"]
-atlas = ExtResource("13_tiy0v")
+atlas = ExtResource("12_3mjsw")
 region = Rect2(0, 0, 10, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0bb50"]
-atlas = ExtResource("13_tiy0v")
+atlas = ExtResource("12_3mjsw")
 region = Rect2(10, 0, 10, 26)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ist40"]
@@ -217,7 +217,7 @@ collision_layer = 8
 [node name="B1" type="Sprite2D" parent="Platforms"]
 position = Vector2(-27, 67)
 scale = Vector2(3, 3)
-texture = ExtResource("10_nmo5c")
+texture = ExtResource("13_e2jjv")
 
 [node name="CpB1" type="CollisionPolygon2D" parent="Platforms"]
 visible = false
@@ -227,7 +227,7 @@ polygon = PackedVector2Array(-1, -6, 314, -8, 315, 368, 840, 368, 844, 633, 0, 6
 [node name="B2" type="Sprite2D" parent="Platforms"]
 position = Vector2(629.5, 241.2)
 scale = Vector2(3, 3)
-texture = ExtResource("10_oxdxp")
+texture = ExtResource("14_orwlf")
 
 [node name="CpB2" type="CollisionPolygon2D" parent="Platforms"]
 visible = false
@@ -237,7 +237,7 @@ polygon = PackedVector2Array(-53, 15.8, -60, -84, 131, -85, 128, 15.8, 186, 16.8
 [node name="B3" type="Sprite2D" parent="Platforms"]
 position = Vector2(1001.1, 245)
 scale = Vector2(3, 3)
-texture = ExtResource("10_kjhee")
+texture = ExtResource("15_o5btw")
 
 [node name="CpB3" type="CollisionPolygon2D" parent="Platforms"]
 visible = false
@@ -247,7 +247,7 @@ polygon = PackedVector2Array(-39, 283, -40, -95, -82, -94, -81, -107, 55, -107, 
 [node name="B4" type="Sprite2D" parent="Platforms"]
 position = Vector2(1495, 268)
 scale = Vector2(3, 3)
-texture = ExtResource("12_dsrjg")
+texture = ExtResource("16_krp2e")
 
 [node name="CpB4" type="CollisionPolygon2D" parent="Platforms"]
 visible = false

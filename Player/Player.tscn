@@ -264,8 +264,9 @@ script = ExtResource("7_fanxp")
 [node name="AirDown" type="Node" parent="MachineState"]
 script = ExtResource("8_jkhww")
 
-[node name="Stop" type="Node" parent="MachineState"]
+[node name="Stop" type="Node" parent="MachineState" node_paths=PackedStringArray("walk_audio")]
 script = ExtResource("9_3crs1")
+walk_audio = NodePath("../../Walk")
 can_move = false
 
 [node name="Miaus" type="Node" parent="."]

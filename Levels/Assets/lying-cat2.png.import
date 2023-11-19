@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bccpcdopfv7jj"
-path="res://.godot/imported/green-light-1.png-ced47ebf5e76284ef01736c7f7ff9284.ctex"
+uid="uid://diucnkaj2xmjn"
+path="res://.godot/imported/lying-cat2.png-d654e21585fc9d54c4d53d66869aa29b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/Level1/Assets/green-light-1.png"
-dest_files=["res://.godot/imported/green-light-1.png-ced47ebf5e76284ef01736c7f7ff9284.ctex"]
+source_file="res://Levels/Assets/lying-cat2.png"
+dest_files=["res://.godot/imported/lying-cat2.png-d654e21585fc9d54c4d53d66869aa29b.ctex"]
 
 [params]
 

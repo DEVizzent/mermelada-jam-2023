@@ -1,0 +1,134 @@
+[gd_scene load_steps=15 format=3 uid="uid://bg00sa1mtcdsx"]
+
+[ext_resource type="Texture2D" uid="uid://cioa2wvh8jiyk" path="res://Levels/Assets/b3.png" id="1_38ygc"]
+[ext_resource type="Texture2D" uid="uid://bccpcdopfv7jj" path="res://Levels/Assets/green-light-1.png" id="2_fpmqc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0srnh"]
+atlas = ExtResource("2_fpmqc")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttt05"]
+atlas = ExtResource("2_fpmqc")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2irh"]
+atlas = ExtResource("2_fpmqc")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrqoh"]
+atlas = ExtResource("2_fpmqc")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8rnm"]
+atlas = ExtResource("2_fpmqc")
+region = Rect2(32, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frr0f"]
+atlas = ExtResource("2_fpmqc")
+region = Rect2(40, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vohox"]
+atlas = ExtResource("2_fpmqc")
+region = Rect2(48, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svxkp"]
+atlas = ExtResource("2_fpmqc")
+region = Rect2(56, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea81g"]
+atlas = ExtResource("2_fpmqc")
+region = Rect2(64, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w5133"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0srnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttt05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2irh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrqoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8rnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frr0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vohox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svxkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea81g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_ngmus"]
+offsets = PackedFloat32Array(0, 0.709677)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7tcdf"]
+gradient = SubResource("Gradient_ngmus")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Bloque3" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1001.1, 245)
+scale = Vector2(3, 3)
+
+[node name="CpB3" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(4.33331, -21.3333)
+scale = Vector2(0.333333, 0.333333)
+polygon = PackedVector2Array(-39, 283, -40, -95, -82, -94, -81, -107, 55, -107, 55, -95, 43, -95, 45, 281)
+
+[node name="B3" type="Sprite2D" parent="."]
+position = Vector2(1001.1, 245)
+scale = Vector2(3, 3)
+texture = ExtResource("1_38ygc")
+
+[node name="GreenLight3" type="AnimatedSprite2D" parent="."]
+position = Vector2(976, 36)
+sprite_frames = SubResource("SpriteFrames_w5133")
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="GreenLight3"]
+position = Vector2(12, -2)
+color = Color(0, 4.01176, 0.188235, 0.309804)
+texture = SubResource("GradientTexture2D_7tcdf")
+texture_scale = 1.75
+
+[node name="GreenLight4" type="AnimatedSprite2D" parent="."]
+position = Vector2(1016, 36)
+sprite_frames = SubResource("SpriteFrames_w5133")
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="GreenLight4"]
+position = Vector2(12, -2)
+color = Color(0, 4.01176, 0.188235, 0.309804)
+texture = SubResource("GradientTexture2D_7tcdf")
+texture_scale = 1.75
+
+[node name="GreenLight5" type="AnimatedSprite2D" parent="."]
+position = Vector2(1056, 36)
+sprite_frames = SubResource("SpriteFrames_w5133")
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="GreenLight5"]
+position = Vector2(12, -2)
+color = Color(0, 4.01176, 0.188235, 0.309804)
+texture = SubResource("GradientTexture2D_7tcdf")
+texture_scale = 1.75

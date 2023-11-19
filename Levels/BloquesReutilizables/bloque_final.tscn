@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhcqkivmh5tqg"]
+
+[ext_resource type="Texture2D" uid="uid://mkwnuv6bundi" path="res://Levels/Assets/b4.png" id="1_j4fok"]
+[ext_resource type="PackedScene" uid="uid://d2iacsk4tnmw" path="res://FinishCats/finish_cats.tscn" id="2_vqk2g"]
+
+[node name="BloqueFinal" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1495, 268)
+scale = Vector2(3, 3)
+
+[node name="CpB4" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(1.66666, -33.6667)
+scale = Vector2(0.333333, 0.333333)
+polygon = PackedVector2Array(-161, -16, -277, 44, -278, 219, 271, 221, 270, 43, 150, -18)
+
+[node name="B4" type="Sprite2D" parent="."]
+position = Vector2(1495, 268)
+scale = Vector2(3, 3)
+texture = ExtResource("1_j4fok")
+
+[node name="FinishCats" parent="." instance=ExtResource("2_vqk2g")]

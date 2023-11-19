@@ -1,0 +1,152 @@
+[gd_scene load_steps=20 format=3 uid="uid://bonv1t645efqn"]
+
+[ext_resource type="Texture2D" uid="uid://bu8sv3c7h250f" path="res://Levels/Assets/b2.png" id="1_grpfd"]
+[ext_resource type="PackedScene" uid="uid://brr2ppmwcwy00" path="res://LightEnvironment/orange_farol.tscn" id="2_wxyph"]
+[ext_resource type="Texture2D" uid="uid://bccpcdopfv7jj" path="res://Levels/Assets/green-light-1.png" id="3_e0dhl"]
+[ext_resource type="Texture2D" uid="uid://eyxd0f56xkpy" path="res://Levels/Assets/orange-farol.png" id="4_ww6hm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0srnh"]
+atlas = ExtResource("3_e0dhl")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttt05"]
+atlas = ExtResource("3_e0dhl")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2irh"]
+atlas = ExtResource("3_e0dhl")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrqoh"]
+atlas = ExtResource("3_e0dhl")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8rnm"]
+atlas = ExtResource("3_e0dhl")
+region = Rect2(32, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frr0f"]
+atlas = ExtResource("3_e0dhl")
+region = Rect2(40, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vohox"]
+atlas = ExtResource("3_e0dhl")
+region = Rect2(48, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svxkp"]
+atlas = ExtResource("3_e0dhl")
+region = Rect2(56, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea81g"]
+atlas = ExtResource("3_e0dhl")
+region = Rect2(64, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w5133"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0srnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttt05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2irh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrqoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8rnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frr0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vohox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svxkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea81g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_ngmus"]
+offsets = PackedFloat32Array(0, 0.709677)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7tcdf"]
+gradient = SubResource("Gradient_ngmus")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcqe3"]
+atlas = ExtResource("4_ww6hm")
+region = Rect2(0, 0, 10, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bb50"]
+atlas = ExtResource("4_ww6hm")
+region = Rect2(10, 0, 10, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ist40"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcqe3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bb50")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Bloque2" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(629.5, 241.2)
+scale = Vector2(3, 3)
+
+[node name="CpB2" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(0.166656, -16.4)
+scale = Vector2(0.333333, 0.333333)
+polygon = PackedVector2Array(-53, 15.8, -60, -84, 131, -85, 128, 15.8, 186, 16.8, 178, 207, -189, 209, -185, 136, -173, 141, -183, 17.8)
+
+[node name="B2" type="Sprite2D" parent="."]
+position = Vector2(629.5, 241.2)
+scale = Vector2(3, 3)
+texture = ExtResource("1_grpfd")
+
+[node name="OrangeFarol" parent="." instance=ExtResource("2_wxyph")]
+rotation = 3.14159
+scale = Vector2(3, -3)
+
+[node name="GreenLight2" type="AnimatedSprite2D" parent="."]
+position = Vector2(702, 103)
+sprite_frames = SubResource("SpriteFrames_w5133")
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="GreenLight2"]
+position = Vector2(12, -2)
+color = Color(0, 4.01176, 0.188235, 0.309804)
+texture = SubResource("GradientTexture2D_7tcdf")
+texture_scale = 1.75
+
+[node name="OrangeFarol2" type="AnimatedSprite2D" parent="."]
+position = Vector2(776, 171)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_ist40")
+autoplay = "default"
+frame_progress = 0.463731
+
+[node name="PointLight2D" type="PointLight2D" parent="OrangeFarol2"]
+position = Vector2(1.33334, -7)
+color = Color(76.93, 3.55, 0.6, 0.1)
+texture = SubResource("GradientTexture2D_7tcdf")

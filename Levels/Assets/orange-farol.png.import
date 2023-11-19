@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cioa2wvh8jiyk"
-path="res://.godot/imported/b3.png-732243777e25f9c557183543b17791cf.ctex"
+uid="uid://eyxd0f56xkpy"
+path="res://.godot/imported/orange-farol.png-73d47cad591160db6f8b22b380bd8607.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/Level1/Assets/b3.png"
-dest_files=["res://.godot/imported/b3.png-732243777e25f9c557183543b17791cf.ctex"]
+source_file="res://Levels/Assets/orange-farol.png"
+dest_files=["res://.godot/imported/orange-farol.png-73d47cad591160db6f8b22b380bd8607.ctex"]
 
 [params]
 
