@@ -1,0 +1,75 @@
+[gd_scene load_steps=17 format=3 uid="uid://d02b7gd44jbe5"]
+
+[ext_resource type="Script" path="res://Levels/Level.gd" id="1_4xaku"]
+[ext_resource type="PackedScene" uid="uid://dwsqgd4tix7bb" path="res://HeaderLevelBar/header_bar.tscn" id="2_4cjy4"]
+[ext_resource type="PackedScene" uid="uid://c71545ntm6a25" path="res://Player/Player.tscn" id="3_k5swp"]
+[ext_resource type="PackedScene" uid="uid://61rh154cdswe" path="res://StarsRain/StarsRain.tscn" id="4_38fy0"]
+[ext_resource type="PackedScene" uid="uid://hop855rd06b8" path="res://Levels/LevelGoalArea.tscn" id="5_7cl4s"]
+[ext_resource type="PackedScene" uid="uid://bueyv6qwi0jrw" path="res://StarsRain/EstrellaFugaz/SpawnerEstrellas/spawner_estrellas.tscn" id="6_yfjnn"]
+[ext_resource type="PackedScene" uid="uid://6eolvn4p0iw7" path="res://RainEnviroment/rain_enviroment_particles.tscn" id="7_pxodc"]
+[ext_resource type="PackedScene" uid="uid://bt0q7q5tfblkb" path="res://Levels/Parallax/ParallaxBackground.tscn" id="8_aijxs"]
+[ext_resource type="PackedScene" uid="uid://m1ogxiuopf84" path="res://Levels/BloquesReutilizables/bloque_1.tscn" id="9_y5j10"]
+[ext_resource type="PackedScene" uid="uid://bonv1t645efqn" path="res://Levels/BloquesReutilizables/bloque_2.tscn" id="10_u12ye"]
+[ext_resource type="PackedScene" uid="uid://bg00sa1mtcdsx" path="res://Levels/BloquesReutilizables/bloque_3.tscn" id="11_00id1"]
+[ext_resource type="PackedScene" uid="uid://dhcqkivmh5tqg" path="res://Levels/BloquesReutilizables/bloque_final.tscn" id="12_ecwor"]
+[ext_resource type="PackedScene" uid="uid://ck3p64601iieq" path="res://DeathZone/DeathZone.tscn" id="13_q5q47"]
+[ext_resource type="Texture2D" uid="uid://c7nql3l278q4o" path="res://Levels/Assets/Toldo/casaToldo.png" id="13_x06c5"]
+[ext_resource type="PackedScene" uid="uid://dyci26obxjgta" path="res://Levels/Assets/Toldo/toldo.tscn" id="14_05tnx"]
+[ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="14_y4ufs"]
+
+[node name="Level2" type="Node2D" groups=["level"]]
+script = ExtResource("1_4xaku")
+word = "ferter"
+time_to_complete = 15.0
+
+[node name="HeaderBar" parent="." instance=ExtResource("2_4cjy4")]
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("3_k5swp")]
+position = Vector2(0, 118)
+collision_mask = 9
+
+[node name="StarsRain" parent="." node_paths=PackedStringArray("player", "goal_area") instance=ExtResource("4_38fy0")]
+player = NodePath("../Player")
+goal_area = NodePath("../LevelGoalArea")
+debug = false
+
+[node name="LevelGoalArea" parent="." instance=ExtResource("5_7cl4s")]
+position = Vector2(2544, 3)
+
+[node name="SpawnerEstrellas" parent="." instance=ExtResource("6_yfjnn")]
+position = Vector2(2, -65)
+
+[node name="RainEnviromentParticles" parent="." instance=ExtResource("7_pxodc")]
+position = Vector2(-7, -303)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("8_aijxs")]
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="Bloque1" parent="Platforms" instance=ExtResource("9_y5j10")]
+
+[node name="BloqueFinal" parent="Platforms" instance=ExtResource("12_ecwor")]
+position = Vector2(985, 13)
+
+[node name="Bloque5" parent="Platforms" instance=ExtResource("10_u12ye")]
+position = Vector2(972, 6)
+
+[node name="Bloque6" parent="Platforms" instance=ExtResource("11_00id1")]
+position = Vector2(1003, 0)
+
+[node name="Node2D" type="Node2D" parent="Platforms"]
+position = Vector2(772, 179)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Node2D"]
+self_modulate = Color(0, 0, 0, 1)
+z_index = -1
+position = Vector2(18, -139)
+scale = Vector2(4, 4)
+texture = ExtResource("13_x06c5")
+
+[node name="Toldo" parent="Platforms/Node2D" instance=ExtResource("14_05tnx")]
+position = Vector2(-228, -54)
+
+[node name="DeathZone" parent="." instance=ExtResource("13_q5q47")]
+
+[node name="Settings" parent="." instance=ExtResource("14_y4ufs")]
