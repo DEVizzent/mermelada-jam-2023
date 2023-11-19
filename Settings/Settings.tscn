@@ -9,7 +9,6 @@
 
 [node name="Settings" type="CanvasLayer"]
 process_mode = 3
-visible = false
 script = ExtResource("1_bvmxg")
 
 [node name="Panel" type="Panel" parent="."]
@@ -40,7 +39,7 @@ alignment = 1
 [node name="Label" type="Label" parent="Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Settings"
+text = "Opciones"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -51,7 +50,7 @@ columns = 2
 
 [node name="GlobalVolSlider" type="Label" parent="Panel/CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Global Volume: "
+text = "Volumen Global: "
 
 [node name="MasterAudioSlider" type="HSlider" parent="Panel/CenterContainer/VBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(250, 0)
@@ -64,7 +63,7 @@ bus_name = "Master"
 
 [node name="MusicVolSlider" type="Label" parent="Panel/CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Music Volume: "
+text = "Volumen Música: "
 
 [node name="MusicAudioSlider" type="HSlider" parent="Panel/CenterContainer/VBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(250, 0)
@@ -77,7 +76,7 @@ bus_name = "Music"
 
 [node name="EffectVolSlider" type="Label" parent="Panel/CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Effects Volume: "
+text = "Volumen Efectos: "
 
 [node name="EffectAudioSlider" type="HSlider" parent="Panel/CenterContainer/VBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(250, 0)
@@ -96,7 +95,7 @@ layout_mode = 2
 
 [node name="FullScreenToggle" type="CheckButton" parent="Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Full Screen: "
+text = "Pantalla Completa: "
 script = ExtResource("4_nwjrl")
 
 [node name="CenterContainer" type="CenterContainer" parent="Panel/CenterContainer/VBoxContainer"]
@@ -105,7 +104,7 @@ layout_mode = 2
 [node name="Button" type="Button" parent="Panel/CenterContainer/VBoxContainer/CenterContainer"]
 layout_mode = 2
 theme = ExtResource("5_8qox8")
-text = "Exit"
+text = "Salir"
 
 [node name="UISounds" parent="." instance=ExtResource("6_vcka0")]
 
