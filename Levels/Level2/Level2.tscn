@@ -31,7 +31,7 @@ goal_area = NodePath("../LevelGoalArea")
 debug = false
 
 [node name="LevelGoalArea" parent="." instance=ExtResource("5_ysqjd")]
-position = Vector2(2081, -47)
+position = Vector2(2544, 3)
 
 [node name="SpawnerEstrellas" parent="." instance=ExtResource("6_cr1db")]
 position = Vector2(2, -65)
@@ -50,12 +50,15 @@ position = Vector2(-7, -303)
 [node name="Bloque3" parent="Platforms" instance=ExtResource("11_ocuuo")]
 
 [node name="BloqueFinal" parent="Platforms" instance=ExtResource("12_eyiku")]
-position = Vector2(506, 7)
+position = Vector2(985, 13)
 
 [node name="Bloque4" parent="Platforms" instance=ExtResource("11_ocuuo")]
 position = Vector2(264, -4)
 
 [node name="Bloque5" parent="Platforms" instance=ExtResource("10_0oj1w")]
 position = Vector2(972, 6)
+
+[node name="Bloque6" parent="Platforms" instance=ExtResource("11_ocuuo")]
+position = Vector2(1003, 0)
 
 [node name="DeathZone" parent="." instance=ExtResource("17_rjag8")]
