@@ -35,3 +35,5 @@ func cambia_pantalla():
 		get_tree().change_scene_to_file("res://Levels/LevelChimneys/LevelChimneys.tscn")
 	elif self.name == "LevelChimneys":
 		get_tree().change_scene_to_file("res://Levels/Level3/Level3.tscn")
+	elif self.name == "Level3":
+		get_tree().change_scene_to_file("res://Levels/Level4/Level4.tscn")
