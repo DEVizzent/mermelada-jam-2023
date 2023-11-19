@@ -23,6 +23,7 @@ func state_input(event : InputEvent):
 		jump()
 
 func jump():
+	random_miau()
 	character.velocity.y = jump_velocity
 	animated_sprite.play("jump_up")
 	next_state = machine_state.air_up_state
@@ -35,3 +36,7 @@ func start_coyote_time():
 func coyote_time_end():
 	animated_sprite.play("jump_down")
 	next_state = machine_state.air_down_state
+	
+func random_miau():
+	var index = randi_range(0,machine_state.array_miaus.size()-1)
+	machine_state.array_miaus[index].play()

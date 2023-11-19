@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://c71545ntm6a25"]
+[gd_scene load_steps=45 format=3 uid="uid://c71545ntm6a25"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_jp80u"]
 [ext_resource type="Texture2D" uid="uid://c01pn4s5jow3y" path="res://Player/Sprites/idle.png" id="3_gc34y"]
@@ -9,6 +9,16 @@
 [ext_resource type="Script" path="res://Player/States/AirUp.gd" id="7_fanxp"]
 [ext_resource type="Script" path="res://Player/States/AirDown.gd" id="8_jkhww"]
 [ext_resource type="Script" path="res://Player/Stop.gd" id="9_3crs1"]
+[ext_resource type="AudioStream" uid="uid://etk3wp88goh2" path="res://Player/SoundEffects/miau1.mp3" id="10_f2ve2"]
+[ext_resource type="AudioStream" uid="uid://qnocn6q6hcd6" path="res://Player/SoundEffects/miau2.mp3" id="11_ol40c"]
+[ext_resource type="AudioStream" uid="uid://osigtrnhmhdg" path="res://Player/SoundEffects/miau_muerte.mp3" id="12_80kx0"]
+[ext_resource type="AudioStream" uid="uid://wph7mpknp5cq" path="res://Player/SoundEffects/miau3.mp3" id="12_i44d4"]
+[ext_resource type="AudioStream" uid="uid://b2omhfempkadv" path="res://Player/SoundEffects/miau4.mp3" id="13_fdca7"]
+[ext_resource type="AudioStream" uid="uid://b51v7noetdgx1" path="res://Player/SoundEffects/miau5.mp3" id="14_7ehx6"]
+[ext_resource type="AudioStream" uid="uid://fy0ar1kv76fc" path="res://Player/SoundEffects/miau6.mp3" id="15_7yf0m"]
+[ext_resource type="AudioStream" uid="uid://d1awyye1y1jax" path="res://Player/SoundEffects/miau7.mp3" id="16_uldso"]
+[ext_resource type="AudioStream" uid="uid://dsokm3j4jtb5i" path="res://Player/SoundEffects/miau8.mp3" id="17_rb4pv"]
+[ext_resource type="AudioStream" uid="uid://cg6wnlllch4h0" path="res://Player/SoundEffects/miau9.mp3" id="18_tbug3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcoms"]
 size = Vector2(33, 31)
@@ -226,7 +236,7 @@ scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_y10sk")
 animation = &"jump_up"
 
-[node name="MachineState" type="Node" parent="." node_paths=PackedStringArray("character", "animated_sprite", "ground_state", "air_up_state", "air_down_state", "stop_state", "current_state")]
+[node name="MachineState" type="Node" parent="." node_paths=PackedStringArray("character", "animated_sprite", "ground_state", "air_up_state", "air_down_state", "stop_state", "current_state", "array_miaus")]
 script = ExtResource("6_hf7wk")
 character = NodePath("..")
 animated_sprite = NodePath("../AnimatedSprite2D")
@@ -235,6 +245,7 @@ air_up_state = NodePath("AirUp")
 air_down_state = NodePath("AirDown")
 stop_state = NodePath("Stop")
 current_state = NodePath("Ground")
+array_miaus = [NodePath("../Miaus/Miau1"), NodePath("../Miaus/Miau2"), NodePath("../Miaus/Miau3"), NodePath("../Miaus/Miau4"), NodePath("../Miaus/Miau5"), NodePath("../Miaus/Miau6"), NodePath("../Miaus/Miau7"), NodePath("../Miaus/Miau8"), NodePath("../Miaus/Miau9")]
 
 [node name="Ground" type="Node" parent="MachineState"]
 script = ExtResource("6_hurey")
@@ -253,7 +264,48 @@ script = ExtResource("8_jkhww")
 script = ExtResource("9_3crs1")
 can_move = false
 
-[node name="Miau" type="AudioStreamPlayer2D" parent="."]
+[node name="Miaus" type="Node" parent="."]
+
+[node name="Miau1" type="AudioStreamPlayer2D" parent="Miaus"]
+stream = ExtResource("10_f2ve2")
+bus = &"Effect"
+
+[node name="Miau2" type="AudioStreamPlayer2D" parent="Miaus"]
+stream = ExtResource("11_ol40c")
+volume_db = 4.379
+bus = &"Effect"
+
+[node name="Miau3" type="AudioStreamPlayer2D" parent="Miaus"]
+stream = ExtResource("12_i44d4")
+volume_db = 3.831
+
+[node name="Miau4" type="AudioStreamPlayer2D" parent="Miaus"]
+stream = ExtResource("13_fdca7")
+volume_db = 8.803
+
+[node name="Miau5" type="AudioStreamPlayer2D" parent="Miaus"]
+stream = ExtResource("14_7ehx6")
+volume_db = -5.474
+
+[node name="Miau6" type="AudioStreamPlayer2D" parent="Miaus"]
+stream = ExtResource("15_7yf0m")
+volume_db = -4.378
+
+[node name="Miau7" type="AudioStreamPlayer2D" parent="Miaus"]
+stream = ExtResource("16_uldso")
+volume_db = -3.284
+
+[node name="Miau8" type="AudioStreamPlayer2D" parent="Miaus"]
+stream = ExtResource("17_rb4pv")
+volume_db = 2.737
+
+[node name="Miau9" type="AudioStreamPlayer2D" parent="Miaus"]
+stream = ExtResource("18_tbug3")
+volume_db = 4.379
+
+[node name="MiauMuerte" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_80kx0")
+volume_db = 5.474
 bus = &"Effect"
 
 [node name="DebugState" type="Label" parent="."]
