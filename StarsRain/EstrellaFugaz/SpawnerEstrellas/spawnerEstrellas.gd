@@ -7,8 +7,8 @@ func _ready():
 	EventBus.showStar.connect(spawn)
 
 func _random_position_estrella():
-	var x = randi_range(0,spawnArea.shape.get_rect().size.x)
-	var y = randi_range(0,spawnArea.shape.get_rect().size.y)
+	var x = randi_range(0,int(spawnArea.shape.get_rect().size.x))
+	var y = randi_range(0,int(spawnArea.shape.get_rect().size.y))
 	x = x - (spawnArea.shape.get_rect().size.x/2)
 	y = y - (spawnArea.shape.get_rect().size.y/2)
 	return Vector2(x,y) + spawnArea.global_position
