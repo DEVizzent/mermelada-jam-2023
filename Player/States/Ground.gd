@@ -7,6 +7,10 @@ func state_process(delta):
 	else:
 		animated_sprite.play("idle")
 	
+	if !character.is_on_floor():
+		animated_sprite.play("jump_down")
+		next_state = machine_state.air_down_state
+	
 func state_input(event : InputEvent):
 	if event.is_action_pressed("jump"):
 		jump()
