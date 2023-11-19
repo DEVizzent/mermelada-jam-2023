@@ -33,8 +33,12 @@ func draw_time_on_label():
 func timer_timeout():
 	actual_time = actual_time - timer.wait_time
 	draw_time_on_label()
+	
 	if actual_time < 10:
 		label.label_settings.font_color = Color(0.812, 0.42, 0.294)
+	elif label.label_settings.font_color == Color(0.812, 0.42, 0.294):
+		label.label_settings.font_color = Color(0.584, 0.78, 0.694)
+		
 	if actual_time < 0:
 		timer.stop()
 		EventBus.emit_signal("levelTimeFinished")
