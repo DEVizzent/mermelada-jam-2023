@@ -19,7 +19,7 @@
 
 [node name="Level4" type="Node2D" groups=["level"]]
 script = ExtResource("1_gde85")
-word = "snowball"
+word = "SNOWBALL"
 time_to_complete = 20.0
 
 [node name="HeaderBar" parent="." instance=ExtResource("2_k2oft")]

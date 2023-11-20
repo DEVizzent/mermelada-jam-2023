@@ -18,7 +18,7 @@
 
 [node name="Level2" type="Node2D" groups=["level"]]
 script = ExtResource("1_vdmso")
-word = "salem"
+word = "SALEM"
 time_to_complete = 10.0
 
 [node name="HeaderBar" parent="." instance=ExtResource("2_l5spm")]

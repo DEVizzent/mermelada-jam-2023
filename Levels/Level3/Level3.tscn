@@ -21,7 +21,7 @@
 
 [node name="Level3" type="Node2D" groups=["level"]]
 script = ExtResource("1_p3s2r")
-word = "silvestre"
+word = "SILVESTRE"
 time_to_complete = 15.0
 metadata/_edit_horizontal_guides_ = [216.0]
 
