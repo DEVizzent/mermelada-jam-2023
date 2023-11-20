@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cxfxoc4bs7mff" path="res://Levels/BloquesReutilizables/bloqueToldos1.tscn" id="13_sd84l"]
 [ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="14_2sxeb"]
 [ext_resource type="PackedScene" uid="uid://c07f4g3u4hq6e" path="res://Levels/BloquesReutilizables/bloque_puente.tscn" id="14_d2vmw"]
-[ext_resource type="PackedScene" path="res://Levels/BloquesReutilizables/bloque_torre_toldos.tscn" id="15_efo70"]
+[ext_resource type="PackedScene" uid="uid://iisjxxd5ttp7" path="res://Levels/BloquesReutilizables/bloque_torre_toldos.tscn" id="15_efo70"]
 [ext_resource type="AudioStream" uid="uid://cg2yd2103qw0o" path="res://Levels/Level3/Level3.mp3" id="17_wx7np"]
 
 [node name="Level3" type="Node2D" groups=["level"]]
