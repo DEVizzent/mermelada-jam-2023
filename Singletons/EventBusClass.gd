@@ -6,6 +6,7 @@ signal levelCompleted()
 signal levelTimeFinished()
 signal levelWordSubmited(word:String)
 signal levelWrongWord()
+signal levelRightWord()
 signal inicio_cuenta_atras()
 signal fin_cuenta_atras()
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://8l4e0feev8ra"]
+[gd_scene load_steps=45 format=3 uid="uid://8l4e0feev8ra"]
 
 [ext_resource type="Script" path="res://TypeWordAtEnd/type_word_at_end.gd" id="1_c8wdt"]
 [ext_resource type="Texture2D" uid="uid://cxvlvpbd5bdfc" path="res://TypeWordAtEnd/BackgroundTypeWord.png" id="2_hh571"]
@@ -303,6 +303,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TypeWordAtEnd/bocadilloCorrecto:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_tun4p"]
 resource_name = "new_animation"
@@ -433,8 +445,36 @@ tracks/3/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_ty7xd"]
+resource_name = "AnimationRightPass"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TypeWordAtEnd/bocadilloCorrecto:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TypeWordAtEnd/bocadillo3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_se7jy"]
 _data = {
+"AnimationRightPass": SubResource("Animation_ty7xd"),
 "AnimationWrongPass": SubResource("Animation_toora"),
 "RESET": SubResource("Animation_g5gko"),
 "new_animation": SubResource("Animation_tun4p")
@@ -565,6 +605,25 @@ offset_top = 298.0
 offset_right = 942.0
 offset_bottom = 376.0
 text = "LARGO DE AQUI!!"
+label_settings = SubResource("LabelSettings_qclgm")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="bocadilloCorrecto" type="Node2D" parent="TypeWordAtEnd"]
+visible = false
+position = Vector2(194, -15)
+
+[node name="Bocadillo" type="Sprite2D" parent="TypeWordAtEnd/bocadilloCorrecto"]
+position = Vector2(817, 359)
+texture = ExtResource("8_c867i")
+flip_h = true
+
+[node name="Label" type="Label" parent="TypeWordAtEnd/bocadilloCorrecto"]
+offset_left = 701.0
+offset_top = 328.0
+offset_right = 942.0
+offset_bottom = 445.0
+text = "Bienvenide"
 label_settings = SubResource("LabelSettings_qclgm")
 horizontal_alignment = 1
 autowrap_mode = 3

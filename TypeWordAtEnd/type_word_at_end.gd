@@ -4,10 +4,14 @@ extends Node2D
 
 func _ready()->void:
 	EventBus.levelWrongWord.connect(_on_failure_animation)
+	EventBus.levelRightWord.connect(_on_success_animation)
 	$AnimationPlayer.animation_finished.connect(_restartLevel)
 
 func _on_failure_animation()->void:
 	$AnimationPlayer.play("AnimationWrongPass")
+
+func _on_success_animation()->void:
+	$AnimationPlayer.play("AnimationRightPass")
 	
 func _restartLevel(animationName:StringName)->void:
 	if animationName == "AnimationWrongPass":
