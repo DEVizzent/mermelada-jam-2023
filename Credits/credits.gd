@@ -14,6 +14,7 @@ func _ready():
 	noms.shuffle()
 	posa_noms()
 	inicia_tween()
+	$Button.grab_focus()
 
 func posa_noms():
 	var i = 0
@@ -29,4 +30,7 @@ func inicia_tween():
 
 func _on_button_pressed():
 	$PressedButton.play()
+	get_tree().create_timer(0.7).timeout.connect(_back_to_menu)
+
+func _back_to_menu()->void:
 	get_tree().change_scene_to_file("res://Inicio/StartMenu.tscn")

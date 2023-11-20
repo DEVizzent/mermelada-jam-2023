@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://xviyat66ggib"]
+[gd_scene load_steps=10 format=3 uid="uid://xviyat66ggib"]
 
 [ext_resource type="Script" path="res://Inicio/StartMenu.gd" id="1_keq2j"]
 [ext_resource type="Script" path="res://Inicio/ButtonJumpScene.gd" id="1_wqmyn"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://cjtm05baiqrbl" path="res://Settings/ButtonTheme.tres" id="4_cceg4"]
 [ext_resource type="PackedScene" uid="uid://yhc18mcq1uk7" path="res://Levels/Level2/Level2.tscn" id="6_ext52"]
 [ext_resource type="AudioStream" uid="uid://b88nyxqsn6pb" path="res://Inicio/Menu.mp3" id="7_ckv4g"]
+[ext_resource type="PackedScene" uid="uid://4aga0uypoiv2" path="res://Credits/credits.tscn" id="7_g140n"]
 [ext_resource type="PackedScene" uid="uid://crvq24xrg2gdc" path="res://Settings/UISounds.tscn" id="8_p75bp"]
 
 [node name="StartMenu" type="Node2D"]
@@ -43,17 +44,24 @@ layout_mode = 2
 
 [node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Start"
+text = "Empezar"
 script = ExtResource("1_wqmyn")
 nextScene = ExtResource("6_ext52")
 
 [node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Settings"
+text = "Opciones"
+
+[node name="ChangeSceneButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Creador@s
+"
+script = ExtResource("1_wqmyn")
+nextScene = ExtResource("7_g140n")
 
 [node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Exit Game"
+text = "Salir"
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
@@ -69,6 +77,8 @@ bus = &"Music"
 [connection signal="focus_entered" from="CenterContainer/VBoxContainer/SettingsButton" to="UISounds" method="_on_focus_entered_button"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/SettingsButton" to="UISounds" method="_on_button_pressed"]
+[connection signal="focus_entered" from="CenterContainer/VBoxContainer/ChangeSceneButton" to="UISounds" method="_on_focus_entered_button"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ChangeSceneButton" to="UISounds" method="_on_pressed_button"]
 [connection signal="focus_entered" from="CenterContainer/VBoxContainer/ExitButton" to="UISounds" method="_on_focus_entered_button"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ExitButton" to="UISounds" method="_on_button_pressed"]
