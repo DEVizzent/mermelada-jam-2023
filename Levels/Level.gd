@@ -28,10 +28,9 @@ func _on_level_completed()->void:
 
 func _on_word_submited(typed_word)->void:
 	if word == typed_word:
-		print("el juegador a ganado")
 		wait_one_second.start()
 	else:
-		print("el jugador a perdido")
+		EventBus.emit_signal("levelWrongWord")
 
 func cambia_pantalla():
 	if self.name == "Level2":

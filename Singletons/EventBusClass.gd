@@ -5,6 +5,7 @@ class_name EventBusClass
 signal levelCompleted()
 signal levelTimeFinished()
 signal levelWordSubmited(word:String)
+signal levelWrongWord()
 
 signal chimenea_hit()
 

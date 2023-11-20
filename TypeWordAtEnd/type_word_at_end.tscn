@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://8l4e0feev8ra"]
+[gd_scene load_steps=43 format=3 uid="uid://8l4e0feev8ra"]
 
 [ext_resource type="Script" path="res://TypeWordAtEnd/type_word_at_end.gd" id="1_c8wdt"]
 [ext_resource type="Texture2D" uid="uid://cxvlvpbd5bdfc" path="res://TypeWordAtEnd/BackgroundTypeWord.png" id="2_hh571"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cimakeeym1fmm" path="res://Player/Sprites/running.png" id="7_yiahf"]
 [ext_resource type="Theme" uid="uid://cjtm05baiqrbl" path="res://Settings/ButtonTheme.tres" id="8_6a87u"]
 [ext_resource type="Texture2D" uid="uid://bbo4h1ght4j8t" path="res://TypeWordAtEnd/bocadillo.png" id="8_c867i"]
+[ext_resource type="Texture2D" uid="uid://dt5mu7ofmamhy" path="res://TypeWordAtEnd/bocadilloGrito.png" id="9_js7q7"]
 [ext_resource type="PackedScene" uid="uid://hxij2mcb8i5o" path="res://StarsRain/EstrellaFugaz/estrella.tscn" id="9_vebo4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4h12y"]
@@ -265,6 +266,30 @@ tracks/3/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TypeWordAtEnd/bocadilloPalabraIncorrecta:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TypeWordAtEnd/bocadilloPalabraIncorrecta/Sprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(852, 352)]
+}
 
 [sub_resource type="Animation" id="Animation_tun4p"]
 resource_name = "new_animation"
@@ -344,8 +369,48 @@ tracks/5/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_toora"]
+resource_name = "AnimationWrongPass"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TypeWordAtEnd/bocadilloPalabraIncorrecta:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TypeWordAtEnd/bocadilloPalabraIncorrecta/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(852, 352), Vector2(853, 346), Vector2(852, 352), Vector2(853, 346), Vector2(852, 352), Vector2(853, 346), Vector2(852, 352), Vector2(853, 346), Vector2(852, 352), Vector2(853, 346)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TypeWordAtEnd/bocadillo3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_se7jy"]
 _data = {
+"AnimationWrongPass": SubResource("Animation_toora"),
 "RESET": SubResource("Animation_g5gko"),
 "new_animation": SubResource("Animation_tun4p")
 }
@@ -363,7 +428,7 @@ texture = ExtResource("2_hh571")
 position = Vector2(523, 451)
 scale = Vector2(3.6, 3.6)
 sprite_frames = SubResource("SpriteFrames_7pdrg")
-animation = &"idle"
+animation = &"run"
 autoplay = "idle"
 
 [node name="bocadillo1" type="Node2D" parent="TypeWordAtEnd"]
@@ -448,6 +513,24 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_6a87u")
 text = "Aceptar"
+
+[node name="bocadilloPalabraIncorrecta" type="Node2D" parent="TypeWordAtEnd"]
+visible = false
+position = Vector2(16, 9)
+
+[node name="Sprite2D" type="Sprite2D" parent="TypeWordAtEnd/bocadilloPalabraIncorrecta"]
+position = Vector2(852, 352)
+texture = ExtResource("9_js7q7")
+
+[node name="Label" type="Label" parent="TypeWordAtEnd/bocadilloPalabraIncorrecta"]
+offset_left = 752.0
+offset_top = 298.0
+offset_right = 942.0
+offset_bottom = 376.0
+text = "LARGO DE AQUI!!"
+label_settings = SubResource("LabelSettings_qclgm")
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TypeWordAtEnd"]
 root_node = NodePath("../..")
