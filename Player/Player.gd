@@ -44,6 +44,7 @@ func init_debug():
 
 func electric_damage() -> void:
 	$AnimatedSprite2D.play("damage")
+	$MiauMuerte.play()
 	
 	var tween = create_tween()# Crea el tween
 	tween.tween_property(
