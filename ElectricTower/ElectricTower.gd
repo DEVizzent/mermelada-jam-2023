@@ -17,8 +17,7 @@ func _ready():
 func _on_electric_tower_5_sections_body_entered(body):
 	if body.is_in_group("Player"):
 		print("entra")
-		
-	if body.has_method('electric_Damage'):
+	if body.has_method('electric_damage'):
 		body.electric_damage()
 	
 
