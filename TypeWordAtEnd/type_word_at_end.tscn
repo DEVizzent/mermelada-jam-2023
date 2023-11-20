@@ -696,6 +696,7 @@ position = Vector2(616, 227)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TypeWordAtEnd"]
 stream = ExtResource("12_5rgjt")
+bus = &"Effect"
 
 [node name="bocadilloEndGame" type="Node2D" parent="TypeWordAtEnd"]
 visible = false

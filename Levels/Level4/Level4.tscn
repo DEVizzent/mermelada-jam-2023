@@ -102,3 +102,4 @@ scale = Vector2(2, 2)
 process_mode = 3
 stream = ExtResource("15_t8egl")
 autoplay = true
+bus = &"Effect"

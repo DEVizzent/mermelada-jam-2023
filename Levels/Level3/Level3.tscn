@@ -77,3 +77,4 @@ position = Vector2(1864, 42)
 process_mode = 3
 stream = ExtResource("17_wx7np")
 autoplay = true
+bus = &"Music"

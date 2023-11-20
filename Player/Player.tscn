@@ -286,7 +286,6 @@ height = 44.0
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 8
 script = ExtResource("1_jp80u")
-debug = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(40, -80)
@@ -361,30 +360,37 @@ bus = &"Effect"
 [node name="Miau3" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("12_i44d4")
 volume_db = 3.831
+bus = &"Effect"
 
 [node name="Miau4" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("13_fdca7")
 volume_db = 8.803
+bus = &"Effect"
 
 [node name="Miau5" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("14_7ehx6")
 volume_db = -5.474
+bus = &"Effect"
 
 [node name="Miau6" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("15_7yf0m")
 volume_db = -4.378
+bus = &"Effect"
 
 [node name="Miau7" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("16_uldso")
 volume_db = -3.284
+bus = &"Effect"
 
 [node name="Miau8" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("17_rb4pv")
 volume_db = 2.737
+bus = &"Effect"
 
 [node name="Miau9" type="AudioStreamPlayer" parent="Miaus"]
 stream = ExtResource("18_tbug3")
 volume_db = 4.379
+bus = &"Effect"
 
 [node name="MiauMuerte" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_80kx0")
@@ -407,6 +413,7 @@ bus = &"Effect"
 [node name="Land" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("21_lhtp5")
 pitch_scale = 0.49
+bus = &"Effect"
 
 [node name="hitBox" type="Area2D" parent="."]
 

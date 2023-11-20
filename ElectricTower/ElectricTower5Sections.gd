@@ -30,11 +30,10 @@ func _on_timer_timeout():
 		sparkDamage = false
 		
 	if speed <= 1.2:
-		
 		$SparksBegining1Section.set_speed_scale(speed)
 		$SparksBegining2Section.set_speed_scale(speed)
 		$SparksBegining3Section.set_speed_scale(speed)
-	
+
 	else:
 		soundExplosion = true
 		$audioSpark.stop()

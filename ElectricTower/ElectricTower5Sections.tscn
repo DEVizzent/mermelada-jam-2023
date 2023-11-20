@@ -241,11 +241,13 @@ polygon = PackedVector2Array(-18, 5, 4, -21, 14, -9, 47, -10, 66, -17, 78, -10, 
 
 [node name="audioSpark" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_k4q1b")
-volume_db = -28.384
+volume_db = -30.0
+bus = &"Effect"
 
 [node name="audioSparkExplosion" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_vqcui")
-volume_db = -26.086
+volume_db = -28.0
+bus = &"Effect"
 
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
 [connection signal="animation_changed" from="SparkDamage2" to="." method="_on_spark_damage_2_animation_changed"]
