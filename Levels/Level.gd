@@ -46,7 +46,7 @@ func cambia_pantalla():
 		get_tree().change_scene_to_file("res://Credits/credits.tscn")
 
 func inicia_cuenta_atras():
-	timer_ready_go.wait_time = 1
+	timer_ready_go.wait_time = 0.5
 	timer_ready_go.timeout.connect(_on_timer_ready_go_timeout)
 	add_child(timer_ready_go)
 	EventBus.emit_signal("inicio_cuenta_atras")

@@ -18,7 +18,7 @@
 
 [node name="Level2" type="Node2D" groups=["level"]]
 script = ExtResource("1_vdmso")
-word = "ferter"
+word = "salem"
 time_to_complete = 15.0
 
 [node name="HeaderBar" parent="." instance=ExtResource("2_l5spm")]
@@ -73,5 +73,6 @@ stream = ExtResource("17_pawyh")
 autoplay = true
 
 [node name="TimerReadyGo" type="Timer" parent="."]
+wait_time = 0.3
 
 [connection signal="timeout" from="TimerReadyGo" to="." method="_on_timer_ready_go_timeout"]
