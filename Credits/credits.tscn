@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://4aga0uypoiv2"]
+[gd_scene load_steps=50 format=3 uid="uid://4aga0uypoiv2"]
 
 [ext_resource type="Texture2D" uid="uid://ccxvwsthy6mhk" path="res://Inicio/Background.png" id="1_fg8yg"]
 [ext_resource type="Script" path="res://Credits/credits.gd" id="1_nxdvi"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://b1rm6o5fseg5d" path="res://Levels/Parallax/3.png" id="3_va7oc"]
 [ext_resource type="Texture2D" uid="uid://d2s2q4htthtpt" path="res://Levels/Parallax/5.png" id="4_0wymp"]
 [ext_resource type="PackedScene" uid="uid://b6uo2fy16fvxi" path="res://HumoChimeneas/intento_humo_1.tscn" id="5_cvbsn"]
-[ext_resource type="FontFile" uid="uid://djwbyyw3bm3p2" path="res://Credits/joystix monospace.otf" id="7_e88pb"]
 [ext_resource type="PackedScene" uid="uid://dhxdgsmkhja1y" path="res://LightEnvironment/green_light.tscn" id="7_oxdoh"]
 [ext_resource type="Texture2D" uid="uid://bn10v3jh2ovdd" path="res://Player/Sprites/damage.png" id="8_fh023"]
 [ext_resource type="PackedScene" uid="uid://c0v2xj684cwdm" path="res://LightEnvironment/orange_light.tscn" id="9_ou255"]
@@ -19,7 +18,6 @@
 [ext_resource type="AudioStream" uid="uid://b88nyxqsn6pb" path="res://Inicio/Menu.mp3" id="17_bssgt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v4jcc"]
-font = ExtResource("7_e88pb")
 font_size = 23
 font_color = Color(0.258824, 0.647059, 0.447059, 1)
 
