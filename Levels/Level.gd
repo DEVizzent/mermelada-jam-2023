@@ -31,6 +31,11 @@ func _on_level_completed()->void:
 
 func _on_word_submited(typed_word)->void:
 	if word.naturalnocasecmp_to(typed_word) == 0:
+		if (self.name == "Level4"):
+			EventBus.emit_signal("levelEndGame")
+			wait_one_second.wait_time = 8.0
+			wait_one_second.start()
+			return
 		EventBus.emit_signal("levelRightWord")
 		wait_one_second.start()
 	else:

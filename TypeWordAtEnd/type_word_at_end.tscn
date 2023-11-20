@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://8l4e0feev8ra"]
+[gd_scene load_steps=47 format=3 uid="uid://8l4e0feev8ra"]
 
 [ext_resource type="Script" path="res://TypeWordAtEnd/type_word_at_end.gd" id="1_c8wdt"]
 [ext_resource type="Texture2D" uid="uid://cxvlvpbd5bdfc" path="res://TypeWordAtEnd/BackgroundTypeWord.png" id="2_hh571"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dt5mu7ofmamhy" path="res://TypeWordAtEnd/bocadilloGrito.png" id="9_js7q7"]
 [ext_resource type="PackedScene" uid="uid://hxij2mcb8i5o" path="res://StarsRain/EstrellaFugaz/estrella.tscn" id="9_vebo4"]
 [ext_resource type="AudioStream" uid="uid://ce58k3j82g0eb" path="res://Player/SoundEffects/Scream.mp3" id="12_5rgjt"]
+[ext_resource type="AudioStream" uid="uid://b4f50takgqesb" path="res://TypeWordAtEnd/Sound/Song.mp3" id="13_c56m7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4h12y"]
 atlas = ExtResource("5_c8225")
@@ -393,6 +394,18 @@ tracks/7/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TypeWordAtEnd/bocadilloEndGame:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_tun4p"]
 resource_name = "new_animation"
@@ -472,8 +485,36 @@ tracks/5/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_6vwx0"]
+resource_name = "AnimationEndGame"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TypeWordAtEnd/bocadilloEndGame:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TypeWordAtEnd/bocadillo3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_se7jy"]
 _data = {
+"AnimationEndGame": SubResource("Animation_6vwx0"),
 "AnimationRightPass": SubResource("Animation_ty7xd"),
 "AnimationWrongPass": SubResource("Animation_toora"),
 "RESET": SubResource("Animation_g5gko"),
@@ -538,6 +579,17 @@ offset_left = 677.0
 offset_top = 237.0
 offset_right = 918.0
 offset_bottom = 354.0
+rotation = 0.647255
+text = "'"
+label_settings = SubResource("LabelSettings_qclgm")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="TypeWordAtEnd/bocadillo2"]
+offset_left = 737.0
+offset_top = 277.0
+offset_right = 978.0
+offset_bottom = 394.0
 rotation = 0.647255
 text = "'"
 label_settings = SubResource("LabelSettings_qclgm")
@@ -644,6 +696,27 @@ position = Vector2(616, 227)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TypeWordAtEnd"]
 stream = ExtResource("12_5rgjt")
+
+[node name="bocadilloEndGame" type="Node2D" parent="TypeWordAtEnd"]
+visible = false
+position = Vector2(16, 9)
+
+[node name="Sprite2D" type="Sprite2D" parent="TypeWordAtEnd/bocadilloEndGame"]
+position = Vector2(852, 352)
+texture = ExtResource("9_js7q7")
+
+[node name="Label" type="Label" parent="TypeWordAtEnd/bocadilloEndGame"]
+offset_left = 759.0
+offset_top = 299.0
+offset_right = 944.0
+offset_bottom = 377.0
+text = "POR FIN SOMOS..."
+label_settings = SubResource("LabelSettings_qclgm")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="AudioAmigos" type="AudioStreamPlayer" parent="TypeWordAtEnd"]
+stream = ExtResource("13_c56m7")
 
 [connection signal="text_submitted" from="TypeWordAtEnd/bocadillo3/LineEdit" to="TypeWordAtEnd" method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="TypeWordAtEnd/bocadillo3/Button" to="TypeWordAtEnd" method="_on_button_pressed"]
