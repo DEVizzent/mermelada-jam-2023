@@ -11,12 +11,16 @@ var wait_one_second : Timer = Timer.new()
 func _ready():
 	EventBus.levelCompleted.connect(_on_level_completed)
 	EventBus.levelWordSubmited.connect(_on_word_submited)
+	EventBus.levelTimeFinished.connect(_on_level_time_finished)
 	wait_one_second.wait_time = 1
 	wait_one_second.one_shot = true
 	wait_one_second.timeout.connect(cambia_pantalla)
 	add_child(wait_one_second)
 	if !con_lluvia:
 		nodo_lluvia.queue_free()
+
+func _on_level_time_finished():
+	get_tree().reload_current_scene()
 
 func _on_level_completed()->void:
 	var new_type_word_scene = type_word_scene.instantiate()
@@ -26,7 +30,6 @@ func _on_word_submited(typed_word)->void:
 	if word == typed_word:
 		print("el juegador a ganado")
 		wait_one_second.start()
-		
 	else:
 		print("el jugador a perdido")
 

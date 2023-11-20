@@ -10,20 +10,15 @@ func on_enter():
 		push_left()
 	else:
 		push_right()
-	print(character.global_position.x, " i ", posicion_chimenea.x)
-	print("im on chimenea hit y hay que progrmar aquí la reaccion del gatete")
 
 func push_left():
-	print("push left")
 	character.velocity = Vector2(-push_force_x, push_force_y)
 	character.move_and_slide()
 	
 func push_right():
-	print("psh right")
 	character.velocity = Vector2(push_force_x, push_force_y)
 	character.move_and_slide()
 
 func on_animatedSprite2D_anim_finish(anim_name):
-	print("end animation, ", anim_name)
 	if anim_name == "damage":
 		next_state = machine_state.ground_state
