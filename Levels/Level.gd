@@ -31,6 +31,7 @@ func _on_level_completed()->void:
 
 func _on_word_submited(typed_word)->void:
 	if word == typed_word:
+		EventBus.emit_signal("levelRightWord")
 		wait_one_second.start()
 	else:
 		EventBus.emit_signal("levelWrongWord")

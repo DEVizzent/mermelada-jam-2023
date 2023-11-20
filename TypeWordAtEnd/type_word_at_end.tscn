@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://8l4e0feev8ra"]
+[gd_scene load_steps=45 format=3 uid="uid://8l4e0feev8ra"]
 
 [ext_resource type="Script" path="res://TypeWordAtEnd/type_word_at_end.gd" id="1_c8wdt"]
 [ext_resource type="Texture2D" uid="uid://cxvlvpbd5bdfc" path="res://TypeWordAtEnd/BackgroundTypeWord.png" id="2_hh571"]
@@ -303,6 +303,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TypeWordAtEnd/bocadilloCorrecto:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_tun4p"]
 resource_name = "new_animation"
@@ -350,7 +362,7 @@ tracks/3/path = NodePath("TypeWordAtEnd/bocadillo2:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 2.3, 4.1),
+"times": PackedFloat32Array(0, 2.3, 4.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -362,10 +374,10 @@ tracks/4/path = NodePath("TypeWordAtEnd/bocadillo3:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 4.1, 4.1001),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 4.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false, true, true]
+"values": [false, true]
 }
 tracks/5/type = "method"
 tracks/5/imported = false
@@ -374,7 +386,7 @@ tracks/5/path = NodePath("TypeWordAtEnd")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(4.1),
+"times": PackedFloat32Array(4.5),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -433,8 +445,36 @@ tracks/3/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_ty7xd"]
+resource_name = "AnimationRightPass"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TypeWordAtEnd/bocadilloCorrecto:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TypeWordAtEnd/bocadillo3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_se7jy"]
 _data = {
+"AnimationRightPass": SubResource("Animation_ty7xd"),
 "AnimationWrongPass": SubResource("Animation_toora"),
 "RESET": SubResource("Animation_g5gko"),
 "new_animation": SubResource("Animation_tun4p")
@@ -453,7 +493,7 @@ texture = ExtResource("2_hh571")
 position = Vector2(523, 451)
 scale = Vector2(3.6, 3.6)
 sprite_frames = SubResource("SpriteFrames_7pdrg")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="bocadillo1" type="Node2D" parent="TypeWordAtEnd"]
@@ -475,19 +515,31 @@ autowrap_mode = 3
 
 [node name="bocadillo2" type="Node2D" parent="TypeWordAtEnd"]
 visible = false
-position = Vector2(169, 8)
+position = Vector2(194, -15)
 
 [node name="Bocadillo" type="Sprite2D" parent="TypeWordAtEnd/bocadillo2"]
 position = Vector2(817, 359)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("8_c867i")
 flip_h = true
 
 [node name="Label" type="Label" parent="TypeWordAtEnd/bocadillo2"]
-offset_left = 745.0
-offset_top = 303.0
-offset_right = 904.0
-offset_bottom = 381.0
-text = "quien eres tu?"
+offset_left = 699.0
+offset_top = 313.0
+offset_right = 940.0
+offset_bottom = 430.0
+text = "Que estrellas te guian?"
+label_settings = SubResource("LabelSettings_qclgm")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="TypeWordAtEnd/bocadillo2"]
+offset_left = 677.0
+offset_top = 237.0
+offset_right = 918.0
+offset_bottom = 354.0
+rotation = 0.647255
+text = "'"
 label_settings = SubResource("LabelSettings_qclgm")
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -553,6 +605,25 @@ offset_top = 298.0
 offset_right = 942.0
 offset_bottom = 376.0
 text = "LARGO DE AQUI!!"
+label_settings = SubResource("LabelSettings_qclgm")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="bocadilloCorrecto" type="Node2D" parent="TypeWordAtEnd"]
+visible = false
+position = Vector2(194, -15)
+
+[node name="Bocadillo" type="Sprite2D" parent="TypeWordAtEnd/bocadilloCorrecto"]
+position = Vector2(817, 359)
+texture = ExtResource("8_c867i")
+flip_h = true
+
+[node name="Label" type="Label" parent="TypeWordAtEnd/bocadilloCorrecto"]
+offset_left = 701.0
+offset_top = 328.0
+offset_right = 942.0
+offset_bottom = 445.0
+text = "Bienvenide"
 label_settings = SubResource("LabelSettings_qclgm")
 horizontal_alignment = 1
 autowrap_mode = 3
