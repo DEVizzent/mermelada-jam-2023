@@ -34,7 +34,7 @@ tooltip_text = "Settings"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/CenterContainer"]
 layout_mode = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 40
 alignment = 1
 
 [node name="Label" type="Label" parent="Panel/CenterContainer/VBoxContainer"]
@@ -99,13 +99,20 @@ layout_mode = 2
 text = "Pantalla Completa: "
 script = ExtResource("4_nwjrl")
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel/CenterContainer/VBoxContainer"]
+[node name="CenterContainer" type="HBoxContainer" parent="Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
 
-[node name="Button" type="Button" parent="Panel/CenterContainer/VBoxContainer/CenterContainer"]
+[node name="ContinueButton" type="Button" parent="Panel/CenterContainer/VBoxContainer/CenterContainer"]
 layout_mode = 2
 theme = ExtResource("5_8qox8")
-text = "Salir"
+text = "Continuar"
+
+[node name="CerrarButton" type="Button" parent="Panel/CenterContainer/VBoxContainer/CenterContainer" groups=["onlyInGame"]]
+layout_mode = 2
+theme = ExtResource("5_8qox8")
+text = "Cerrar"
 
 [node name="UISounds" parent="." instance=ExtResource("6_vcka0")]
 
@@ -118,6 +125,9 @@ text = "Salir"
 [connection signal="focus_entered" from="Panel/CenterContainer/VBoxContainer/FullScreenToggle" to="UISounds" method="_on_focus_entered_button"]
 [connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/FullScreenToggle" to="UISounds" method="_on_pressed_button"]
 [connection signal="toggled" from="Panel/CenterContainer/VBoxContainer/FullScreenToggle" to="Panel/CenterContainer/VBoxContainer/FullScreenToggle" method="_on_toggled"]
-[connection signal="focus_entered" from="Panel/CenterContainer/VBoxContainer/CenterContainer/Button" to="UISounds" method="_on_focus_entered_button"]
-[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/CenterContainer/Button" to="." method="toggleMenu"]
-[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/CenterContainer/Button" to="UISounds" method="_on_button_pressed"]
+[connection signal="focus_entered" from="Panel/CenterContainer/VBoxContainer/CenterContainer/ContinueButton" to="UISounds" method="_on_focus_entered_button"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/CenterContainer/ContinueButton" to="." method="toggleMenu"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/CenterContainer/ContinueButton" to="UISounds" method="_on_button_pressed"]
+[connection signal="focus_entered" from="Panel/CenterContainer/VBoxContainer/CenterContainer/CerrarButton" to="UISounds" method="_on_focus_entered_button"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/CenterContainer/CerrarButton" to="." method="closeGame"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/CenterContainer/CerrarButton" to="UISounds" method="_on_button_pressed"]

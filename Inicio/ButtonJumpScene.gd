@@ -6,6 +6,8 @@ class_name ChangeSceneButton
 func _pressed():
 	var tween = get_tree().create_tween()
 	var music:AudioStreamPlayer = $/root/StartMenu/MusicPlayer
+	if music == null:
+		_changeScene()
 	tween.tween_property(music, "volume_db", -40.0, 0.5)
 	tween.tween_callback(_changeScene).set_delay(0.5)
 	
