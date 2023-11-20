@@ -247,7 +247,6 @@ volume_db = -28.384
 stream = ExtResource("15_vqcui")
 volume_db = -26.086
 
-[connection signal="body_entered" from="." to="." method="_on_electric_tower_5_sections_body_entered"]
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
 [connection signal="animation_changed" from="SparkDamage2" to="." method="_on_spark_damage_2_animation_changed"]
 [connection signal="animation_finished" from="SparkDamage2" to="." method="_on_spark_damage_2_animation_finished"]

@@ -1,6 +1,6 @@
 extends Area2D
 
-func _process(delta):
+func _process(_delta):
 	var player = get_tree().get_first_node_in_group("player")
 	position.x = player.position.x
 

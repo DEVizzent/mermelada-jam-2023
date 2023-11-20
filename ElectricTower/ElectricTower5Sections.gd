@@ -7,13 +7,13 @@ func _ready():
 	$audioSpark.play()
 	pass
 
-func _process(delta):
+func _process(_delta):
 	audio()
 """func _on_electric_tower_5_sections_body_entered(body):
 	if $SparkDamage.is_playing():
 		body.electric_damage()
 		"""
-func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+func _on_body_shape_entered(_body_rid, body, _body_shape_index, _local_shape_index):
 	if $SparkDamage.is_playing():
 		body.electric_damage()
 

@@ -8,7 +8,7 @@ func _on_pressed_button()->void:
 	$PressedButton.play()
 
 
-func _on_slider_drag_ended(value_changed)->void:
+func _on_slider_drag_ended(_value_changed)->void:
 	_on_pressed_button()
 
 func _on_button_pressed()->void:
