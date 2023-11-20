@@ -13,13 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://bg00sa1mtcdsx" path="res://Levels/BloquesReutilizables/bloque_3.tscn" id="11_5ej4x"]
 [ext_resource type="PackedScene" uid="uid://dhcqkivmh5tqg" path="res://Levels/BloquesReutilizables/bloque_final.tscn" id="12_pn10v"]
 [ext_resource type="PackedScene" uid="uid://ck3p64601iieq" path="res://DeathZone/DeathZone.tscn" id="13_aq1m5"]
-[ext_resource type="PackedScene" path="res://ElectricTower/ElectricTower5Sections.tscn" id="13_j4g1q"]
+[ext_resource type="PackedScene" uid="uid://hnykdr510k4u" path="res://ElectricTower/ElectricTower5Sections.tscn" id="13_j4g1q"]
 [ext_resource type="PackedScene" uid="uid://cl4ayh8478a6v" path="res://Settings/Settings.tscn" id="14_j7pcv"]
 [ext_resource type="AudioStream" uid="uid://2t8bx7eigr7s" path="res://Levels/Level2/Level2.mp3" id="15_t8egl"]
 
 [node name="Level4" type="Node2D" groups=["level"]]
 script = ExtResource("1_gde85")
-word = "CAMALEON"
+word = "snowball"
 time_to_complete = 20.0
 
 [node name="HeaderBar" parent="." instance=ExtResource("2_k2oft")]

@@ -125,7 +125,7 @@ animations = [{
 
 [node name="Level1" type="Node2D" groups=["level"]]
 script = ExtResource("1_jfv7o")
-word = "ferter"
+word = "salem"
 time_to_complete = 6.5
 
 [node name="HeaderBar" parent="." instance=ExtResource("2_57w8f")]
