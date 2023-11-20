@@ -38,4 +38,4 @@ func cambia_pantalla():
 	elif self.name == "Level3":
 		get_tree().change_scene_to_file("res://Levels/Level4/Level4.tscn")
 	elif self.name == "Level4":
-		get_tree().change_scene_to_file("res://Inicio/StartMenu.tscn")
+		get_tree().change_scene_to_file("res://Credits/credits.tscn")
