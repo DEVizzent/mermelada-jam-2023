@@ -134,7 +134,7 @@ _data = {
 size = Vector2(122, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvgvx"]
-size = Vector2(122, 7)
+size = Vector2(117, 4)
 
 [node name="Toldo" type="Node2D"]
 script = ExtResource("1_ibxlv")
@@ -161,7 +161,7 @@ shape = SubResource("RectangleShape2D_eokni")
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -35.5)
+position = Vector2(0.5, -34)
 shape = SubResource("RectangleShape2D_bvgvx")
 
 [node name="RegenerationTimer" type="Timer" parent="."]
