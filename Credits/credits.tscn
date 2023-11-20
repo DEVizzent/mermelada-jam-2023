@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://4aga0uypoiv2"]
+
+[ext_resource type="Texture2D" uid="uid://ccxvwsthy6mhk" path="res://Inicio/Background.png" id="1_fg8yg"]
+[ext_resource type="Texture2D" uid="uid://c2sskiufaeu74" path="res://Levels/Parallax/2.png" id="2_in84s"]
+[ext_resource type="Texture2D" uid="uid://b1rm6o5fseg5d" path="res://Levels/Parallax/3.png" id="3_va7oc"]
+[ext_resource type="Texture2D" uid="uid://d2s2q4htthtpt" path="res://Levels/Parallax/5.png" id="4_0wymp"]
+[ext_resource type="PackedScene" uid="uid://b6uo2fy16fvxi" path="res://HumoChimeneas/intento_humo_1.tscn" id="5_cvbsn"]
+
+[node name="Credits" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Background3" type="Sprite2D" parent="Node2D"]
+position = Vector2(640.063, 501.401)
+scale = Vector2(3.10066, 3.55623)
+texture = ExtResource("1_fg8yg")
+region_enabled = true
+region_rect = Rect2(0, 0, 416, 128)
+
+[node name="Background" type="Sprite2D" parent="Node2D"]
+position = Vector2(973, 206)
+scale = Vector2(2.23611, 2.24074)
+texture = ExtResource("1_fg8yg")
+region_enabled = true
+region_rect = Rect2(302, 0, 276, 184)
+
+[node name="Background2" type="Sprite2D" parent="Node2D"]
+position = Vector2(354, 136)
+scale = Vector2(2.2309, 2.21914)
+texture = ExtResource("1_fg8yg")
+region_enabled = true
+region_rect = Rect2(-1, -2, 321, 125)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 716.0
+offset_top = 99.0
+offset_right = 839.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 25
+text = "CREDITS "
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(642.5, 459.5)
+scale = Vector2(2.2309, 1.55864)
+texture = ExtResource("2_in84s")
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(643, 534)
+scale = Vector2(2.21875, 1.16667)
+texture = ExtResource("3_va7oc")
+
+[node name="5" type="Sprite2D" parent="."]
+position = Vector2(651.75, 534)
+scale = Vector2(2.23872, 1.10494)
+texture = ExtResource("4_0wymp")
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("5_cvbsn")]
+position = Vector2(94, 410)
