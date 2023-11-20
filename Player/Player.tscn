@@ -387,7 +387,7 @@ volume_db = 4.379
 
 [node name="MiauMuerte" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_80kx0")
-volume_db = 14.011
+volume_db = 9.326
 bus = &"Effect"
 
 [node name="DebugState" type="Label" parent="."]

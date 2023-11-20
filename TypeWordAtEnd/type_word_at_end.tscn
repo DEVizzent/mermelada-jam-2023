@@ -350,7 +350,7 @@ tracks/3/path = NodePath("TypeWordAtEnd/bocadillo2:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 2.3, 4.1),
+"times": PackedFloat32Array(0, 2.3, 4.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -362,10 +362,10 @@ tracks/4/path = NodePath("TypeWordAtEnd/bocadillo3:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 4.1, 4.1001),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 4.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false, true, true]
+"values": [false, true]
 }
 tracks/5/type = "method"
 tracks/5/imported = false
@@ -374,7 +374,7 @@ tracks/5/path = NodePath("TypeWordAtEnd")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(4.1),
+"times": PackedFloat32Array(4.5),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -453,7 +453,7 @@ texture = ExtResource("2_hh571")
 position = Vector2(523, 451)
 scale = Vector2(3.6, 3.6)
 sprite_frames = SubResource("SpriteFrames_7pdrg")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="bocadillo1" type="Node2D" parent="TypeWordAtEnd"]
@@ -475,19 +475,31 @@ autowrap_mode = 3
 
 [node name="bocadillo2" type="Node2D" parent="TypeWordAtEnd"]
 visible = false
-position = Vector2(169, 8)
+position = Vector2(194, -15)
 
 [node name="Bocadillo" type="Sprite2D" parent="TypeWordAtEnd/bocadillo2"]
 position = Vector2(817, 359)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("8_c867i")
 flip_h = true
 
 [node name="Label" type="Label" parent="TypeWordAtEnd/bocadillo2"]
-offset_left = 745.0
-offset_top = 303.0
-offset_right = 904.0
-offset_bottom = 381.0
-text = "quien eres tu?"
+offset_left = 699.0
+offset_top = 313.0
+offset_right = 940.0
+offset_bottom = 430.0
+text = "Que estrellas te guian?"
+label_settings = SubResource("LabelSettings_qclgm")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="TypeWordAtEnd/bocadillo2"]
+offset_left = 677.0
+offset_top = 237.0
+offset_right = 918.0
+offset_bottom = 354.0
+rotation = 0.647255
+text = "'"
 label_settings = SubResource("LabelSettings_qclgm")
 horizontal_alignment = 1
 autowrap_mode = 3
