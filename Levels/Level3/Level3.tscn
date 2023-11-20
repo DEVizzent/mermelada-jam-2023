@@ -55,7 +55,7 @@ position = Vector2(-7, -303)
 position = Vector2(1825, -10)
 
 [node name="Bloque5" parent="Platforms" instance=ExtResource("10_bqrdo")]
-position = Vector2(2102, -147)
+position = Vector2(2102, -64)
 
 [node name="Bloque6" parent="Platforms" instance=ExtResource("11_5gldh")]
 position = Vector2(585, 143)

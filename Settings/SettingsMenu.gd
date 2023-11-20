@@ -22,9 +22,4 @@ func toggleMenu()->void:
 
 func closeGame()->void:
 	get_tree().quit()
-	
-func jumpToWelcome()->void:
-	get_tree().create_timer(0.5).timeout.connect(_jumpToWelcome)
-	pass
-func _jumpToWelcome()->void:
-	get_tree().change_scene_to_file("res://Inicio/StartMenu.tscn")
+
