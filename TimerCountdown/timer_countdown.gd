@@ -8,6 +8,7 @@ var actual_time : float = 13.0
 
 func _ready():
 	await get_parent().ready
+	EventBus.levelCompleted.connect(_stop_timer)
 	init_timer()
 
 func init_timer():
@@ -30,6 +31,9 @@ func draw_time_on_label():
 	if actual_time < 0:
 		mount_string = "0:00"
 	label.text = mount_string
+
+func _stop_timer()->void:
+	timer.stop()
 
 func timer_timeout():
 	actual_time = actual_time - timer.wait_time
