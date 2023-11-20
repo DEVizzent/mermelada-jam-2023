@@ -6,6 +6,7 @@ var push_force_x : int = 900
 var push_force_y : int = -400
 
 func on_enter():
+	$"../../MiauMuerte".play()
 	if character.global_position.x < posicion_chimenea.x:
 		push_left()
 	else:
