@@ -286,6 +286,7 @@ height = 44.0
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 8
 script = ExtResource("1_jp80u")
+debug = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(40, -80)
