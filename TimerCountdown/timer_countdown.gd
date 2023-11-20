@@ -7,6 +7,7 @@ var timer_tick : float = 0.1
 var actual_time : float = 13.0
 
 func _ready():
+	EventBus.fin_cuenta_atras.connect(start_counter)
 	await get_parent().ready
 	EventBus.levelCompleted.connect(_stop_timer)
 	init_timer()
@@ -15,6 +16,9 @@ func init_timer():
 	actual_time = get_tree().get_first_node_in_group("level").time_to_complete
 	timer.wait_time = timer_tick
 	timer.timeout.connect(timer_timeout)
+	draw_time_on_label()
+
+func start_counter():
 	timer.start()
 
 func draw_time_on_label():

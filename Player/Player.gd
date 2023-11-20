@@ -3,6 +3,7 @@ class_name CharacterGato
 
 @export var debug : bool = true
 @onready var state_debug : Label = $DebugState
+@onready var label_ready_go : Label = $LabelReadoGo
 
 @onready var machine_state : MachineState = $MachineState
 @onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D

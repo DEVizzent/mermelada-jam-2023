@@ -71,3 +71,7 @@ position = Vector2(1003, 0)
 process_mode = 3
 stream = ExtResource("17_pawyh")
 autoplay = true
+
+[node name="TimerReadyGo" type="Timer" parent="."]
+
+[connection signal="timeout" from="TimerReadyGo" to="." method="_on_timer_ready_go_timeout"]

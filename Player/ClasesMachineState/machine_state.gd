@@ -18,6 +18,8 @@ var arrayStates : Array[State]
 
 func _ready():
 	EventBus.levelCompleted.connect(level_completed)
+	EventBus.inicio_cuenta_atras.connect(inicia_cuenta_atras)
+	EventBus.fin_cuenta_atras.connect(fin_cuenta_atras)
 	init_states()
 
 func init_states():
@@ -61,3 +63,11 @@ func _on_hit_box_area_entered(area : Area2D):
 		animated_sprite.play("jump_up")
 		vapor_hit_state.posicion_chimenea = area.global_position
 		current_state.next_state = vapor_hit_state
+
+func inicia_cuenta_atras():
+	print("emitida inicia")
+	ground_state.can_move = false
+
+func fin_cuenta_atras():
+	print("emitida fin")
+	ground_state.can_move = true

@@ -5,10 +5,13 @@ extends Node2D
 @export var con_lluvia : bool = true
 @export var word : String = "abracadabra"
 @export var time_to_complete : float = 24.5
+@onready var timer_ready_go = Timer.new()
 
+var tres_dos_uno : int = 3
 var wait_one_second : Timer = Timer.new()
 
 func _ready():
+	inicia_cuenta_atras()
 	EventBus.levelCompleted.connect(_on_level_completed)
 	EventBus.levelWordSubmited.connect(_on_word_submited)
 	EventBus.levelTimeFinished.connect(_on_level_time_finished)
@@ -41,3 +44,22 @@ func cambia_pantalla():
 		get_tree().change_scene_to_file("res://Levels/Level4/Level4.tscn")
 	elif self.name == "Level4":
 		get_tree().change_scene_to_file("res://Credits/credits.tscn")
+
+func inicia_cuenta_atras():
+	timer_ready_go.wait_time = 1
+	timer_ready_go.timeout.connect(_on_timer_ready_go_timeout)
+	add_child(timer_ready_go)
+	EventBus.emit_signal("inicio_cuenta_atras")
+	timer_ready_go.start()
+
+func _on_timer_ready_go_timeout():
+	tres_dos_uno -= 1
+	get_tree().get_first_node_in_group("player").label_ready_go.text = str(tres_dos_uno)
+	if tres_dos_uno == 0:
+		get_tree().get_first_node_in_group("player").label_ready_go.text = "GO!!!"
+		EventBus.emit_signal("fin_cuenta_atras")
+	elif  tres_dos_uno < 0:
+		timer_ready_go.stop()
+		get_tree().get_first_node_in_group("player").label_ready_go.visible = false
+		tres_dos_uno = 3
+	
