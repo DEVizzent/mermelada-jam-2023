@@ -26,7 +26,6 @@ func inicia_tween():
 	var new_tween = create_tween()
 	new_tween.tween_property($Noms, "position", Vector2($Noms.position.x, 238), 8)
 
-
 func _on_button_pressed():
 	$PressedButton.play()
 	get_tree().change_scene_to_file("res://Inicio/StartMenu.tscn")
