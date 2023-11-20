@@ -27,6 +27,7 @@ func state_process(_delta):
 		start_coyote_time()
 
 func state_input(event : InputEvent):
+	if !can_move: return
 	if event.is_action_pressed("jump"):
 		walk_sound.stop()
 		jump()
