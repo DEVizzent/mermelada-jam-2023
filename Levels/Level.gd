@@ -33,7 +33,15 @@ func _on_word_submited(typed_word)->void:
 	if word.naturalnocasecmp_to(typed_word) == 0:
 		if (self.name == "Level4"):
 			EventBus.emit_signal("levelEndGame")
-			wait_one_second.wait_time = 8.0
+			AudioServer.set_bus_volume_db(
+				AudioServer.get_bus_index("Music"),
+				linear_to_db(0)
+			)
+			AudioServer.set_bus_volume_db(
+				AudioServer.get_bus_index("Effect"),
+				linear_to_db(0)
+			)
+			wait_one_second.wait_time = 4.8
 			wait_one_second.start()
 			return
 		EventBus.emit_signal("levelRightWord")
@@ -49,6 +57,14 @@ func cambia_pantalla():
 	elif self.name == "Level3":
 		get_tree().change_scene_to_file("res://Levels/Level4/Level4.tscn")
 	elif self.name == "Level4":
+		AudioServer.set_bus_volume_db(
+			AudioServer.get_bus_index("Music"),
+			linear_to_db(1)
+		)
+		AudioServer.set_bus_volume_db(
+			AudioServer.get_bus_index("Effect"),
+			linear_to_db(1)
+		)
 		get_tree().change_scene_to_file("res://Credits/credits.tscn")
 
 func inicia_cuenta_atras():
