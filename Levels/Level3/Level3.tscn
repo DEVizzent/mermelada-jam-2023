@@ -22,7 +22,7 @@
 [node name="Level3" type="Node2D" groups=["level"]]
 script = ExtResource("1_p3s2r")
 word = "SILVESTRE"
-time_to_complete = 15.0
+time_to_complete = 17.5
 metadata/_edit_horizontal_guides_ = [216.0]
 
 [node name="HeaderBar" parent="." instance=ExtResource("2_xwcgy")]
@@ -37,7 +37,7 @@ goal_area = NodePath("../LevelGoalArea")
 debug = false
 
 [node name="LevelGoalArea" parent="." instance=ExtResource("5_2te63")]
-position = Vector2(2939, 3)
+position = Vector2(3327, 1)
 
 [node name="SpawnerEstrellas" parent="." instance=ExtResource("6_4b8cr")]
 position = Vector2(2, -65)
@@ -52,10 +52,10 @@ position = Vector2(-7, -303)
 [node name="Bloque1" parent="Platforms" instance=ExtResource("9_og6jp")]
 
 [node name="BloqueFinal" parent="Platforms" instance=ExtResource("12_7xbjf")]
-position = Vector2(1401, 13)
+position = Vector2(1825, -10)
 
 [node name="Bloque5" parent="Platforms" instance=ExtResource("10_bqrdo")]
-position = Vector2(1746, -17)
+position = Vector2(2102, -147)
 
 [node name="Bloque6" parent="Platforms" instance=ExtResource("11_5gldh")]
 position = Vector2(585, 143)
@@ -68,6 +68,9 @@ position = Vector2(1345, 266)
 
 [node name="bloque_torre_toldos" parent="Platforms" instance=ExtResource("15_efo70")]
 position = Vector2(1864, 42)
+
+[node name="Bloque7" parent="Platforms" instance=ExtResource("11_5gldh")]
+position = Vector2(1253, -160)
 
 [node name="DeathZone" parent="." instance=ExtResource("13_ll8n1")]
 
