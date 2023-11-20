@@ -71,6 +71,7 @@ position = Vector2(1003, 0)
 process_mode = 3
 stream = ExtResource("17_pawyh")
 autoplay = true
+stream_paused = true
 bus = &"Music"
 
 [node name="TimerReadyGo" type="Timer" parent="."]
