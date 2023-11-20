@@ -18,6 +18,7 @@ boot_splash/bg_color=Color(0.00392157, 0.109804, 0.25098, 1)
 [autoload]
 
 EventBus="*res://Singletons/EventBusClass.gd"
+GobalState="*res://Singletons/gobalState.gd"
 
 [display]
 
