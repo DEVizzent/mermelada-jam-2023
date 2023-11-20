@@ -30,7 +30,7 @@ func _on_level_completed()->void:
 	call_deferred("add_child",new_type_word_scene)
 
 func _on_word_submited(typed_word)->void:
-	if word == typed_word:
+	if word.naturalnocasecmp_to(typed_word) == 0:
 		EventBus.emit_signal("levelRightWord")
 		wait_one_second.start()
 	else:
