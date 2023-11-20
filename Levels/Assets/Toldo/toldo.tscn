@@ -140,7 +140,7 @@ size = Vector2(117, 4)
 script = ExtResource("1_ibxlv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-speed_scale = 2.0
+speed_scale = 2.25
 libraries = {
 "": SubResource("AnimationLibrary_cemc6")
 }
