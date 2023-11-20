@@ -3,7 +3,7 @@ extends Node2D
 var noms : Array = [
 	"FerTer",
 	"DEVizzent - Vicent Valls",
-	"Antía",
+	"A. Roig",
 	"Kalamar",
 	"Santiago"
 ]
